@@ -110,17 +110,16 @@
 					<div class="projects_fillter">
 						<ul class="filter list">
 							<li class="active" data-filter="*">All Categories</li>
-							<li data-filter=".brand">Branding</li>
-							<li data-filter=".creative">Creative Work </li>
-							<li data-filter=".web">Web Design</li>
-							<li data-filter=".app">Mobile App</li>
+							<li data-filter="#brand">Branding</li>
+							<li data-filter="#creative">Creative Work </li>
+							<li data-filter="#web">Web Design</li>
+							<li data-filter="#app">Mobile App</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="projects_inner row grid gallery">
-				<div class="grid-sizer col-sm-6 col-md-3 col-lg-3"></div>
-				<div class="col-lg-6 col-sm-6 col-sm-12 brand grid-item">
+				<div class="col-lg-6 col-sm-6 col-sm-12 grid-item" id="brand">
 					<div class="projects_item " >
 						<img class="img-fluid w-100" src="https://i.imgur.com/jvZexiO.jpg" alt="">
 						<div class="projects_text">
