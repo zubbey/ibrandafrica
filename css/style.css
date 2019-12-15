@@ -74,7 +74,8 @@ button:focus {
 .p0 {
   padding-left: 0px;
   padding-right: 0px; }
-
+/*.owl-item.active{width: 100% !important;}
+.owl-stage{width: 100% !important;}*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .section_gap {

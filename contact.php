@@ -8,20 +8,8 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
     <title>iBrand Africa | Contact</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="vendors/linericon/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-    <link rel="stylesheet" href="vendors/animate-css/animate.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <?php include("components/navbar.php"); ?>
 
-</head>
-
-<body>
     <?php
 // define variables and set to empty values
     $name = $email = $subject = $message = $phone = "";
@@ -125,41 +113,6 @@
       return $data;
   }
   ?>
-  <!--================Header Menu Area =================-->
-  <header class="header_area">
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand" href="index.php"><img class="logo" src="logo.svg" width="220" height="40" alt="ibrand africa logo"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav justify-content-end">
-                            <li class="nav-item "><a class="nav-link" href="index.php">Home</a></li>
-                            <li class="nav-item "><a class="nav-link" href="about-us.php">About</a></li>
-                            <li class="nav-item submenu dropdown ">
-
-                                <a id="work" class="nav-link " href="#">Works <i class="fa fa fa-caret-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item "><a class="nav-link" href="services.php">Services  <i class="fa fa-angle-double-right"></i></a></li>
-                                    <li class="nav-item"><a class="nav-link" href="photos.php">Photos <i class="fa fa-angle-double-right"></i></a>
-                                </ul>
-                            </li>
-                            <li class="nav-item active"><a class="nav-link" href="contact.php">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!--================Header Menu Area =================-->
-
 
     <!--================ Start Contact Banner Area =================-->
     <section class="banner_area">
@@ -298,7 +251,7 @@
                     </aside>
                     <div class="copyright">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed by <a href="https://coloredigit.com" target="_blank">ColoreDigit</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="https://coloredigit.com" target="_blank">ibrandafrica</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>
