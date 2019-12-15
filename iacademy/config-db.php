@@ -1,35 +1,40 @@
 <?php
 
+// 
 
-$host = "localhost";
-$userName = "ibrandafricaDB";
-$password = "mangoboy1987@@@";
-$dbName = "ibrandafrica";
+// 30a444d1
 
-// Create database connection
-$conn = new mysqli($host, $userName, $password, $dbName);
+// 
 
-// Check connection
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}else{
-	// echo(
-	// 		"<div class='container'>
-	// 		<div class='row'>
-	// 		<div class='col'>
-	// 		<div class='alert alert-success p-4' style='width:50%; position:fixed;z-index:9999;'>
-	// 		<button onclick='reFresh()' type='button' class='close btn' data-dismiss='alert' aria-hidden='true'>
-	// 		×</button>
-	// 		<span class='glyphicon glyphicon-ok'></span> <strong>Success</strong>
-	// 		<hr class='message-inner-separator'>
-	// 		<p>
-	// 			New record successfully added!.
-	// 		</p>
-	// 		<hr class='message-inner-separator'>
-	// 		</div>
-	// 		</div>
-	// 		</div>
-	// 		</div>
-	// 		");}
+// 
+
+
+// set a default environment
+$WEBSITE_ENVIRONMENT = "Development";
+// detect the URL to determine if it's development or production
+if(stristr($_SERVER['HTTP_HOST'], 'localhost') === FALSE) $WEBSITE_ENVIRONMENT = "Production";
+// value of variables will change depending on if Development vs Production
+if ($WEBSITE_ENVIRONMENT =="Development") {
+    $host 		= "localhost";
+    $user 		= "root";
+    $password 	= "Inno070687";
+    $database 	= "ibrandafrica_database";
+    define("APP_ENVIRONMENT", "Development");
+    define("APP_BASE_URL", "http://localhost/ibrandafrica");
+    error_reporting(E_ALL ^ E_NOTICE); // turn ON showing errors
+} else {
+    $host 		= "us-cdbr-iron-east-05.cleardb.net";
+    $user 		= "b7bd3b3fcedd88";
+    $password 	= "30a444d1";
+    $database 	= "heroku_95201e1feb4578d";
+    define("APP_ENVIRONMENT", "Production");
+    define("APP_BASE_URL", "http://ibrandafrica.one");
+    #error_reporting(0); // turn OFF showing errors
+    error_reporting(E_ALL ^ E_NOTICE); // turn ON showing errors
 }
+// connect to the database server
+$conn = mysqli_connect($host, $user, $password) or die("Could not connect to database");
+// select the right database
+mysqli_select_db($conn, $database);
+// END Database connection and Configuration
 ?>

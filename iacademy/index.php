@@ -28,78 +28,7 @@
 
 </head>
 <body id="page-top">
-<?php
 
-// define variables and set to empty values
-
-$fnameErr = $lnameErr = $emailErr = $phoneErr = "";
-$courses = $fname = $lname = $email = $phone = $about = $country = $nationality = $state = $comments = "";
-
-if (($_SERVER["REQUEST_METHOD"] == "POST")) {
-
-
-  $courses = $_POST['courses'];
-  $fname = $_POST['fname'];
-  $lname = $_POST['lname'];
-  $email = $_POST['email'];
-  $phone = $_POST['phone'];
-  $about = $_POST['about'];
-  $country = $_POST['country'];
-  $nationality = $_POST['nationality'];
-  $state = $_POST['state'];
-  $comments = $_POST['comments'];
-
-  if (empty($_POST["fname"])) {
-    $fnameErr = "<div style='padding:10px'>First Name is required</div>";
-
-  } else {
-    $fname = test_input($_POST["fname"]);
-    // check if fname only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
-      $fnameErr = "<div style='padding:10px'>Only letters and white space allowed</div>"; 
-    }
-  }
-
-  if (empty($_POST["lname"])) {
-    $lnameErr = "<div style='padding:10px'>Last Name is required</div>";
-  } else {
-    $lname = test_input($_POST["lname"]);
-    // check if lname only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$lname)) {
-      $lnameErr = "<div style='padding:10px'>Only letters and white space allowed</div>"; 
-    }
-  }
-
-  if (empty($_POST["email"])) {
-    $emailErr = "<div style='padding:10px'>Email Address is required</div>";
-  } else {
-    $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "<div style='padding:10px'>Invalid email format</div>"; 
-    }
-  }
-
-  if (empty($_POST["phone"])) {
-    $phoneErr = "<div style='padding:10px'>Phone is required</div>";
-  } else {
-    $phone = test_input($_POST["phone"]);
-  }
-
-  if((isset($_POST['fname'])&& $_POST['fname'] !='') && (isset($_POST['email'])&& $_POST['email'] !='')){
-    require_once("response.php");
-  }else{
-
-  }
-}
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-?>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -210,201 +139,201 @@ function test_input($data) {
   <section id="courses" class="courses-section bg-light mb-lg-5">
     <div class="container">
       <h2 class="mx-auto mb-lg-5">Available Courses</h2>
-        <div class="card-deck mb-lg-5" id="card-deck0">
+      <div class="card-deck mb-lg-5" id="card-deck0">
 
-          <div class="card card-hover">
-            <img src="./img/icons/camera.svg" class="img-fluid card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">Photography</h4>
-              <p class="card-text">This course provides an introduction to the fundamentals of photography. A systematic and thorough approach is emphasized in the area of image sensors and digital workflow. Students develop essential skills for obtaining consistent results and a foundation in photography as a visual language..</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$15 <small class="text-muted">/ 4weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">20th Feb 2019</span></li>
-                  <li>Qualification: <span class="text-muted">iA Photography Certificate</span></li>
-                  <li>Days: <span class="text-muted">2 Weekdays</span></li>
-                  <li>Usual Timings: <span class="text-muted">9am-12pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="photo_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        <div class="card card-hover">
+          <img src="./img/icons/camera.svg" class="img-fluid card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Photography</h4>
+            <p class="card-text">This course provides an introduction to the fundamentals of photography. A systematic and thorough approach is emphasized in the area of image sensors and digital workflow. Students develop essential skills for obtaining consistent results and a foundation in photography as a visual language..</p>
           </div>
-
-          <div class="card card-hover">
-            <img src="./img/icons/web.svg" class="img-fluid card-img-top" alt="Web Design icon">
-            <div class="card-body">
-              <h4 class="card-title">Web Design Course</h4>
-              <p class="card-text">This course introduces students to the world of web design. It focuses on the fundamentals of website creation from preparing the graphics in Photoshop to constructing the page using HTML and CSS. Participants will have a hands-on approach using the appropriate formatting languages and software. The course focuses on the front-end creation of websites...</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$16 <small class="text-muted">/ 6weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">27th Feb 2019</span></li>
-                  <li>Qualification: <span class="text-muted">Motion Graphics Certificate</span></li>
-                  <li>Days: <span class="text-muted">4 Weekdays</span></li>
-                  <li>Usual Timings: <span class="text-muted">9am-2pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="web_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$15 <small class="text-muted">/ 4weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">20th Feb 2019</span></li>
+                <li>Qualification: <span class="text-muted">iA Photography Certificate</span></li>
+                <li>Days: <span class="text-muted">2 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">9am-12pm</span></li>
+              </ul>
+            </small>
           </div>
-
-          <div class="card card-hover">
-            <img src="./img/icons/motion.svg" class="img-fluid card-img-top" alt="Motion graphics icon">
-            <div class="card-body">
-              <h4 class="card-title">Motion Graphics Course</h4>
-              <p class="card-text">Motion graphics are widely used in film and television post production to create title sequences, bumpers, and logo animations. This course has been designed as a jumpstart for any aspiring motion graphics artist....</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$18 <small class="text-muted">/ 4weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">20th Feb 2019</span></li>
-                  <li>Qualification: <span class="text-muted">iA Photography Certificate</span></li>
-                  <li>Days: <span class="text-muted">2 Weekdays</span></li>
-                  <li>Usual Timings: <span class="text-muted">9am-12pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="motions_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
-          </div>
-
+          <button type="button" id="photo_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
         </div>
 
-        <!-- ================================= SECOND CARD DESK ======================================== -->
-
-        <div class="card-deck mb-lg-5" id="card-deck1">
-
-          <div class="card card-hover">
-            <img src="./img/icons/3d.svg" class="img-fluid card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">3D Animation with Maya</h4>
-              <p class="card-text">This 3D with Maya short course caters to the growing demand for 3D animation skills. Animation is one of the rapidly expanding areas of creativity and technical development. Animated products can be found in computer games, films, television, and advertising...</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$15 <small class="text-muted">/ 4weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">19th Feb 2019</span></li>
-                  <li>Qualification: <span class="text-muted">Maya 3D Certificate</span></li>
-                  <li>Days: <span class="text-muted">3 Weekdays</span></li>
-                  <li>Usual Timings: <span class="text-muted">1am-4pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="3d_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        <div class="card card-hover">
+          <img src="./img/icons/web.svg" class="img-fluid card-img-top" alt="Web Design icon">
+          <div class="card-body">
+            <h4 class="card-title">Web Design Course</h4>
+            <p class="card-text">This course introduces students to the world of web design. It focuses on the fundamentals of website creation from preparing the graphics in Photoshop to constructing the page using HTML and CSS. Participants will have a hands-on approach using the appropriate formatting languages and software. The course focuses on the front-end creation of websites...</p>
           </div>
-
-          <div class="card card-hover">
-            <img src="./img/icons/games.svg" class="img-fluid card-img-top" alt="Web Design icon">
-            <div class="card-body">
-              <h4 class="card-title">Games Development Course</h4>
-              <p class="card-text">This short course introduces students to the basics of development of video games on Unity3D and C#.</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$20 <small class="text-muted">/ 8weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">27th Feb 2019</span></li>
-                  <li>Qualification: <span class="text-muted">IA Game Design Certificate</span></li>
-                  <li>Days: <span class="text-muted">3 Weekdays</span></li>
-                  <li>Usual Timings: <span class="text-muted">10am-4pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="games_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$16 <small class="text-muted">/ 6weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">27th Feb 2019</span></li>
+                <li>Qualification: <span class="text-muted">Motion Graphics Certificate</span></li>
+                <li>Days: <span class="text-muted">4 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">9am-2pm</span></li>
+              </ul>
+            </small>
           </div>
-
-          <div class="card card-hover">
-            <img src="./img/icons/editing.svg" class="img-fluid card-img-top" alt=" Video Editing icon">
-            <div class="card-body">
-              <h4 class="card-title">Digital Video Editing Course</h4>
-              <p class="card-text">Editing video is about movement, choreography, lighting, and color.
-                This 12-session course covers the art and craft of editing videos using Adobe Premiere and Final Cut Pro. The course will give you substantial knowledge required to train you in the multiple skills 
-              ....</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$10 <small class="text-muted">/ 6weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">13th Feb 2019</span></li>
-                  <li>Qualification: <span class="text-muted">Digital Video Editing Certificate</span></li>
-                  <li>Days: <span class="text-muted">2 Weekdays</span></li>
-                  <li>Usual Timings: <span class="text-muted">9am-2pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="editing_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
-          </div>
-
+          <button type="button" id="web_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
         </div>
 
-        <!-- ================================= THIRD CARD DESK ======================================== -->
-
-        <div class="card-deck mb-lg-5 d-none" id="card-deck2">
-
-          <div class="card card-hover">
-            <img src="./img/icons/app.svg" class="img-fluid card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">Mobile App Development <span class="span">Short Course</span></h4>
-              <p class="card-text">This course focuses on the fundamentals of programming for mobile phones (iOS and Android devices). Along with application development, the business model of the Apple App Store and Android Market will be explored...</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$25 <small class="text-muted">/ 6weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">28th march 2019</span></li>
-                  <li>Qualification: <span class="text-muted">Mobile App Development Certificate</span></li>
-                  <li>Days: <span class="text-muted">Weekends</span></li>
-                  <li>Usual Timings: <span class="text-muted">10am-2pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="app_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        <div class="card card-hover">
+          <img src="./img/icons/motion.svg" class="img-fluid card-img-top" alt="Motion graphics icon">
+          <div class="card-body">
+            <h4 class="card-title">Motion Graphics Course</h4>
+            <p class="card-text">Motion graphics are widely used in film and television post production to create title sequences, bumpers, and logo animations. This course has been designed as a jumpstart for any aspiring motion graphics artist....</p>
           </div>
-
-          <div class="card card-hover">
-            <img src="./img/icons/graphics.svg" class="img-fluid card-img-top" alt="Graphic Design icon">
-            <div class="card-body">
-              <h4 class="card-title">Graphic Design Course</h4>
-              <p class="card-text">This course introduces students to the world of graphic design and visual communication. The course equips you with professional skills enabling you to create and design your own publications for print...</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$8 <small class="text-muted">/ 12weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">14th march 2019</span></li>
-                  <li>Qualification: <span class="text-muted">Graphic Design Certificate</span></li>
-                  <li>Days: <span class="text-muted">4 Weekdays</span></li>
-                  <li>Usual Timings: <span class="text-muted">10am-3pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="graphics_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$18 <small class="text-muted">/ 4weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">20th Feb 2019</span></li>
+                <li>Qualification: <span class="text-muted">iA Photography Certificate</span></li>
+                <li>Days: <span class="text-muted">2 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">9am-12pm</span></li>
+              </ul>
+            </small>
           </div>
+          <button type="button" id="motions_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
 
-          <div class="card card-hover">
-            <img src="./img/icons/market.svg" class="img-fluid card-img-top" alt="Social Media Marketing icon">
-            <div class="card-body">
-              <h4 class="card-title">Social Media Marketing Course</h4>
-              <p class="card-text">This course is a practical Social Media Marketing and Online Advertising. It covers a wide range of topics such as social media follower generation, brand positioning on social media, use of Google Adwords...</p>
-            </div>
-            <div class="card-footer">
-              <small>
-                <h3 class="card-title pricing-card-title">$18 <small class="text-muted">/ 6weeks</small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Date: <span class="text-muted">30th march 2019</span></li>
-                  <li>Qualification: <span class="text-muted">Social Media Certificate</span></li>
-                  <li>Days: <span class="text-muted">2 Weekdays</span></li>
-                  <li>Usual Timings: <span class="text-muted">9am-1pm</span></li>
-                </ul>
-              </small>
-            </div>
-            <button type="button" id="social_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+      </div>
+
+      <!-- ================================= SECOND CARD DESK ======================================== -->
+
+      <div class="card-deck mb-lg-5" id="card-deck1">
+
+        <div class="card card-hover">
+          <img src="./img/icons/3d.svg" class="img-fluid card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">3D Animation with Maya</h4>
+            <p class="card-text">This 3D with Maya short course caters to the growing demand for 3D animation skills. Animation is one of the rapidly expanding areas of creativity and technical development. Animated products can be found in computer games, films, television, and advertising...</p>
           </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$15 <small class="text-muted">/ 4weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">19th Feb 2019</span></li>
+                <li>Qualification: <span class="text-muted">Maya 3D Certificate</span></li>
+                <li>Days: <span class="text-muted">3 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">1am-4pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <button type="button" id="3d_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
+
+        <div class="card card-hover">
+          <img src="./img/icons/games.svg" class="img-fluid card-img-top" alt="Web Design icon">
+          <div class="card-body">
+            <h4 class="card-title">Games Development Course</h4>
+            <p class="card-text">This short course introduces students to the basics of development of video games on Unity3D and C#.</p>
+          </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$20 <small class="text-muted">/ 8weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">27th Feb 2019</span></li>
+                <li>Qualification: <span class="text-muted">IA Game Design Certificate</span></li>
+                <li>Days: <span class="text-muted">3 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">10am-4pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <button type="button" id="games_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
+
+        <div class="card card-hover">
+          <img src="./img/icons/editing.svg" class="img-fluid card-img-top" alt=" Video Editing icon">
+          <div class="card-body">
+            <h4 class="card-title">Digital Video Editing Course</h4>
+            <p class="card-text">Editing video is about movement, choreography, lighting, and color.
+              This 12-session course covers the art and craft of editing videos using Adobe Premiere and Final Cut Pro. The course will give you substantial knowledge required to train you in the multiple skills 
+            ....</p>
+          </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$10 <small class="text-muted">/ 6weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">13th Feb 2019</span></li>
+                <li>Qualification: <span class="text-muted">Digital Video Editing Certificate</span></li>
+                <li>Days: <span class="text-muted">2 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">9am-2pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <button type="button" id="editing_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
+
+      </div>
+
+      <!-- ================================= THIRD CARD DESK ======================================== -->
+
+      <div class="card-deck mb-lg-5 d-none" id="card-deck2">
+
+        <div class="card card-hover">
+          <img src="./img/icons/app.svg" class="img-fluid card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Mobile App Development <span class="span">Short Course</span></h4>
+            <p class="card-text">This course focuses on the fundamentals of programming for mobile phones (iOS and Android devices). Along with application development, the business model of the Apple App Store and Android Market will be explored...</p>
+          </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$25 <small class="text-muted">/ 6weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">28th march 2019</span></li>
+                <li>Qualification: <span class="text-muted">Mobile App Development Certificate</span></li>
+                <li>Days: <span class="text-muted">Weekends</span></li>
+                <li>Usual Timings: <span class="text-muted">10am-2pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <button type="button" id="app_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
+
+        <div class="card card-hover">
+          <img src="./img/icons/graphics.svg" class="img-fluid card-img-top" alt="Graphic Design icon">
+          <div class="card-body">
+            <h4 class="card-title">Graphic Design Course</h4>
+            <p class="card-text">This course introduces students to the world of graphic design and visual communication. The course equips you with professional skills enabling you to create and design your own publications for print...</p>
+          </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$8 <small class="text-muted">/ 12weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">14th march 2019</span></li>
+                <li>Qualification: <span class="text-muted">Graphic Design Certificate</span></li>
+                <li>Days: <span class="text-muted">4 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">10am-3pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <button type="button" id="graphics_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
+
+        <div class="card card-hover">
+          <img src="./img/icons/market.svg" class="img-fluid card-img-top" alt="Social Media Marketing icon">
+          <div class="card-body">
+            <h4 class="card-title">Social Media Marketing Course</h4>
+            <p class="card-text">This course is a practical Social Media Marketing and Online Advertising. It covers a wide range of topics such as social media follower generation, brand positioning on social media, use of Google Adwords...</p>
+          </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$18 <small class="text-muted">/ 6weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">30th march 2019</span></li>
+                <li>Qualification: <span class="text-muted">Social Media Certificate</span></li>
+                <li>Days: <span class="text-muted">2 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">9am-1pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <button type="button" id="social_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
       </div>
 
       <nav class="" aria-label="Page navigation example">
@@ -423,6 +352,78 @@ function test_input($data) {
     <!-- enroll Section -->
     <section id="enroll" class="enroll-section">
       <div class="container-fluid">
+        <?php
+
+// define variables and set to empty values
+
+        $fnameErr = $lnameErr = $emailErr = $phoneErr = "";
+        $courses = $fname = $lname = $email = $phone = $about = $country = $nationality = $state = $comments = "";
+
+        if (($_SERVER["REQUEST_METHOD"] == "POST")) {
+
+
+          $courses = $_POST['courses'];
+          $fname = $_POST['fname'];
+          $lname = $_POST['lname'];
+          $email = $_POST['email'];
+          $phone = $_POST['phone'];
+          $about = $_POST['about'];
+          $country = $_POST['country'];
+          $nationality = $_POST['nationality'];
+          $state = $_POST['state'];
+          $comments = $_POST['comments'];
+
+          if (empty($_POST["fname"])) {
+            $fnameErr = "<div style='padding:10px'>First Name is required</div>";
+
+          } else {
+            $fname = test_input($_POST["fname"]);
+    // check if fname only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
+              $fnameErr = "<div style='padding:10px'>Only letters and white space allowed</div>"; 
+            }
+          }
+
+          if (empty($_POST["lname"])) {
+            $lnameErr = "<div style='padding:10px'>Last Name is required</div>";
+          } else {
+            $lname = test_input($_POST["lname"]);
+    // check if lname only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z ]*$/",$lname)) {
+              $lnameErr = "<div style='padding:10px'>Only letters and white space allowed</div>"; 
+            }
+          }
+
+          if (empty($_POST["email"])) {
+            $emailErr = "<div style='padding:10px'>Email Address is required</div>";
+          } else {
+            $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+              $emailErr = "<div style='padding:10px'>Invalid email format</div>"; 
+            }
+          }
+
+          if (empty($_POST["phone"])) {
+            $phoneErr = "<div style='padding:10px'>Phone is required</div>";
+          } else {
+            $phone = test_input($_POST["phone"]);
+          }
+
+          if((isset($_POST['fname'])&& $_POST['fname'] !='') && (isset($_POST['email'])&& $_POST['email'] !='')){
+            require_once("response.php");
+          }else{
+
+          }
+        }
+        function test_input($data) {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+          return $data;
+        }
+
+        ?>
         <div class="container">
           <div class="formBox">
             <form class="js-scroll-trigger" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#enroll">
@@ -705,6 +706,7 @@ function test_input($data) {
     </footer>
 
     <!-- Bootstrap core JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
@@ -715,9 +717,9 @@ function test_input($data) {
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
     <script src="js/custom.js"></script>
-    <script src="../js/typed.js"></script>
-    <script src="../js/instafeed.min.js"></script>
-    <script src="../js/magnific.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdn.boomcdn.com/libs/instafeed-js/1.4.1/instafeed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="./vendor/player/lottie.js" type="text/javascript"></script>
 
     <script>
@@ -823,20 +825,20 @@ function test_input($data) {
 
 
       var userFeed = new Instafeed({
-          get: 'user',
-          userId: '1216467727',
-          filter: function(image) {
-            return image.tags.indexOf('appdevelopment') >= 0;
-          },
-          limit: 4,
-          resolution: 'standard_resolution',
-          accessToken: '1216467727.1677ed0.f48401b90f4c4132afc776b9be779352',
-          sortBy: 'most-recent',
-          template: '<div class="col-lg-3 instaimg hovereffect"><a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid img-responsive"/></a></div>',
-        });
+        get: 'user',
+        userId: '1216467727',
+        filter: function(image) {
+          return image.tags.indexOf('appdevelopment') >= 0;
+        },
+        limit: 4,
+        resolution: 'standard_resolution',
+        accessToken: '1216467727.1677ed0.f48401b90f4c4132afc776b9be779352',
+        sortBy: 'most-recent',
+        template: '<div class="col-lg-3 instaimg hovereffect"><a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid img-responsive"/></a></div>',
+      });
 
 
-        userFeed.run();
+      userFeed.run();
 
 
         // This will create a single gallery from all elements that have class "gallery-item"
@@ -870,8 +872,8 @@ function test_input($data) {
             }]
           });
         });
-    </script>
+      </script>
 
-  </body>
+    </body>
 
-  </html>
+    </html>
