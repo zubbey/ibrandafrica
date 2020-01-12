@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>iAcademy </title>
+  <title>iAcademy&trade; </title>
 
   <!-- Bootstrap core CSS -->
   <link rel="icon" href="img/logoicon.png" type="image/png">
@@ -198,7 +198,9 @@
               </ul>
             </small>
           </div>
+          <a href="/comingsoon/">
           <button type="button" id="motions_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          </a>
         </div>
 
       </div>
@@ -207,6 +209,69 @@
 
       <div class="card-deck mb-lg-5" id="card-deck1">
 
+      <div class="card card-hover">
+          <img src="./img/icons/app.svg" class="img-fluid card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Mobile App Development <span class="span">Short Course</span></h4>
+            <p class="card-text">This course focuses on the fundamentals of programming for mobile phones (iOS and Android devices). Along with application development, the business model of the Apple App Store and Android Market will be explored...</p>
+          </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$25 <small class="text-muted">/ 6weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">28th march 2019</span></li>
+                <li>Qualification: <span class="text-muted">Mobile App Development Certificate</span></li>
+                <li>Days: <span class="text-muted">Weekends</span></li>
+                <li>Usual Timings: <span class="text-muted">10am-2pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <a href="/comingsoon/">
+          <button type="button" id="app_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          </a>
+        </div>
+
+        <div class="card card-hover">
+          <img src="./img/icons/graphics.svg" class="img-fluid card-img-top" alt="Graphic Design icon">
+          <div class="card-body">
+            <h4 class="card-title">Graphic Design Course</h4>
+            <p class="card-text">This course introduces students to the world of graphic design and visual communication. The course equips you with professional skills enabling you to create and design your own publications for print...</p>
+          </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$8 <small class="text-muted">/ 12weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">14th march 2019</span></li>
+                <li>Qualification: <span class="text-muted">Graphic Design Certificate</span></li>
+                <li>Days: <span class="text-muted">4 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">10am-3pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <button type="button" id="graphics_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
+
+        <div class="card card-hover">
+          <img src="./img/icons/market.svg" class="img-fluid card-img-top" alt="Social Media Marketing icon">
+          <div class="card-body">
+            <h4 class="card-title">Social Media Marketing Course</h4>
+            <p class="card-text">This course is a practical Social Media Marketing and Online Advertising. It covers a wide range of topics such as social media follower generation, brand positioning on social media, use of Google Adwords...</p>
+          </div>
+          <div class="card-footer">
+            <small>
+              <h3 class="card-title pricing-card-title">$18 <small class="text-muted">/ 6weeks</small></h3>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Date: <span class="text-muted">30th march 2019</span></li>
+                <li>Qualification: <span class="text-muted">Social Media Certificate</span></li>
+                <li>Days: <span class="text-muted">2 Weekdays</span></li>
+                <li>Usual Timings: <span class="text-muted">9am-1pm</span></li>
+              </ul>
+            </small>
+          </div>
+          <button type="button" id="social_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+        </div>
+      </div>
+<!--
         <div class="card card-hover">
           <img src="./img/icons/3d.svg" class="img-fluid card-img-top" alt="...">
           <div class="card-body">
@@ -224,7 +289,9 @@
               </ul>
             </small>
           </div>
+          <a href="/comingsoon/">
           <button type="button" id="3d_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          </a>
         </div>
 
         <div class="card card-hover">
@@ -244,7 +311,9 @@
               </ul>
             </small>
           </div>
+          <a href="/comingsoon/">
           <button type="button" id="games_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          </a>
         </div>
 
         <div class="card card-hover">
@@ -266,14 +335,17 @@
               </ul>
             </small>
           </div>
+          <a href="/comingsoon/">
           <button type="button" id="editing_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          </a>
         </div>
 
       </div>
+-->
 
       <!-- ================================= THIRD CARD DESK ======================================== -->
-
-      <div class="card-deck mb-lg-5 d-none" id="card-deck2">
+<!--
+      <div class="card-deck mb-lg-5 d-none" id="card-deck1">
 
         <div class="card card-hover">
           <img src="./img/icons/app.svg" class="img-fluid card-img-top" alt="...">
@@ -292,7 +364,9 @@
               </ul>
             </small>
           </div>
+          <a href="/comingsoon/">
           <button type="button" id="app_btn" class="btn-primary btn btn-lg btn-block ">Enroll Now</button>
+          </a>
         </div>
 
         <div class="card card-hover">
@@ -348,8 +422,9 @@
       </nav>
 
     </section>
-
+-->
     <!-- enroll Section -->
+
     <section id="enroll" class="enroll-section">
       <div class="container-fluid">
         <?php
@@ -587,6 +662,7 @@
         </div>
       </div>
     </section>
+      -->
 
     <div class="container ">
       <h2>Meet Your Instructors</h2>
@@ -697,6 +773,7 @@
       </div>
     </section>
 
+  <?php require_once'tawkto.php'; ?>
     <!-- Footer -->
 
     <footer class=" text-center text-white-50">
