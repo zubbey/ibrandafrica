@@ -48,7 +48,7 @@
 	</section>
 	<!--================ End Gallery Area =================-->
 
-<?php include("components/footer.php")?>
+<?php include("components/footer.php") ?>
 
     <script>
 		$(document).ready(function() {

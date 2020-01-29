@@ -80,7 +80,7 @@
 	</section>
 	<!--================ Start Portfolio Details Area =================-->
 	
-<?php include("components/footer.php")?>
+<?php include("components/footer.php") ?>
 	<script>			
 
 		$('#work').on('click',function(){

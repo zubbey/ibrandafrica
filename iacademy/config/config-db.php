@@ -1,13 +1,5 @@
 <?php
 
-// 
-
-// 30a444d1
-
-// 
-
-// 
-
 
 // set a default environment
 $WEBSITE_ENVIRONMENT = "Development";
@@ -18,7 +10,7 @@ if ($WEBSITE_ENVIRONMENT =="Development") {
     $host 		= "localhost";
     $user 		= "root";
     $password 	= "Inno070687";
-    $database 	= "ibrandafrica_database";
+    $database 	= "ibrandafrica_db";
     define("APP_ENVIRONMENT", "Development");
     define("APP_BASE_URL", "http://localhost/ibrandafrica");
     error_reporting(E_ALL ^ E_NOTICE); // turn ON showing errors

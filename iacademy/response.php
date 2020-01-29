@@ -1,6 +1,6 @@
 <?php
 
-require_once("config-db.php");
+require_once("config/config-db.php");
 
 
 if((isset($_POST['fname'])&& $_POST['fname'] !='') && (isset($_POST['email'])&& $_POST['email'] !=''))
@@ -16,9 +16,10 @@ if((isset($_POST['fname'])&& $_POST['fname'] !='') && (isset($_POST['email'])&& 
 	$nationality = $conn->real_escape_string($_POST['nationality']);
 	$state = $conn->real_escape_string($_POST['state']);
 	$comments = $conn->real_escape_string($_POST['comments']);
+    $session = $conn->real_escape_string($_POST['course_session']);
 
 
-	$sql="INSERT INTO enrollment_form (courses, fname, lname, email, phone, about, country, nationality, state, comments) VALUES ('".$courses."','".$fname."', '".$lname."', '".$email."', '".$phone."','".$about."', '".$country."', '".$nationality."','".$state."','".$comments."')";
+	$sql="INSERT INTO enrollment_form (courses, fname, lname, email, phone, about, country, nationality, state, comments, course_session) VALUES ('".$courses."','".$fname."', '".$lname."', '".$email."', '".$phone."','".$about."', '".$country."', '".$nationality."','".$state."','".$comments."','".$session."')";
 
 
 	if(!$result = $conn->query($sql)){

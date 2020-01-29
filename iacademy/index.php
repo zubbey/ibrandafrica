@@ -667,40 +667,37 @@
     <div class="container ">
       <h2>Meet Your Instructors</h2>
       <section class="customer-logos slider mt-5 mb-lg-5">
-        <div class="slide"><img src="./img/instruct1-50.jpg">
-          <p class="h5 text-center pt-3">Jenevive Peters</p>
-          <p class=" text-center text-muted">Mobile App and Software instructor</p>
-        </div>
-        <div class="slide"><img src="./img/instruct2-50.jpg">
+        <div class="slide"><img src="./img/instruct2-50.jpg" alt="Herny Dennis">
           <p class="h5 text-center pt-3">Herny Dennis</p>
           <p class=" text-center text-muted">Photography instructor</p>
         </div>
-        <div class="slide"><img src="./img/instruct3-50.jpg">
+        <div class="slide"><img src="./img/instruct3-50.jpg" alt="Ernest Nnadi">
           <p class="h5 text-center pt-3">Mr Ernest Nnadi</p>
           <p class=" text-center text-muted">Marketing And Mobile Business Instructor</p>
         </div>
-        <div class="slide"><img src="./img/instruct4-50.jpg">
-          <p class="h5 text-center pt-3">Bright Tony</p>
-          <p class=" text-center text-muted">Web Application and Game Design Instructor</p>
+        <div class="slide"><img src="./img/instruct4-50.jpg" alt="Thankgod Okoro">
+          <p class="h5 text-center pt-3">Thankgod Okoro</p>
+          <p class=" text-center text-muted">Web Design /Graphics Design Instructor</p>
         </div>
-        <div class="slide"><img src="./img/instruct5-50.jpg">
+        <div class="slide"><img src="./img/instruct5-50.jpg" alt="Innocent Wanyanwu, Zubbey">
           <p class="h5 text-center pt-3">Innocent Wanyanwu</p>
-          <p class=" text-center text-muted">3d Maya Model & Animation Instructor</p>
-        </div>
-        <div class="slide"><img src="./img/instruct6-50.jpg">
-          <p class="h5 text-center pt-3">Gafield White</p>
-          <p class=" text-center text-muted">Game Development Instructor</p>
+          <p class=" text-center text-muted">Web Development /Motion Graphics Instructor</p>
         </div>
 
-        <div class="slide"><img src="./img/instruct7-50.jpg">
-          <p class="h5 text-center pt-3">Ifeoma Madi</p>
+        <div class="slide"><img src="./img/instruct7-50.jpg" alt="Augustine Chidiebere">
+          <p class="h5 text-center pt-3">Augustine Chidiebere</p>
           <p class=" text-center text-muted">Online Social Networking Instructor</p>
         </div>
 
-        <div class="slide"><img src="./img/instruct8-50.jpg">
-          <p class="h5 text-center pt-3">Lucky Somari</p>
+        <div class="slide"><img src="./img/instruct8-50.jpg" alt="Ginikachi Arthur">
+          <p class="h5 text-center pt-3">Ginikachi Arthur</p>
           <p class=" text-center text-muted">UX /UI Instructor</p>
         </div>
+
+          <div class="slide"><img src="./img/instruct6-50.jpg" alt="Gift Chukwuka">
+              <p class="h5 text-center pt-3">Gift Chukwuka</p>
+              <p class=" text-center text-muted">Film Production / Cinematography</p>
+          </div>
 
       </section>
     </div>
