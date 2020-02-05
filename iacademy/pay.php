@@ -58,7 +58,7 @@ require ("./components/menu.php");
     const courseAmount = "<?php echo $_SESSION['amount']; ?>";
     function payWithPaystack(){
         var handler = PaystackPop.setup({
-            key: 'pk_test_a0b2d09cde9da255242e4e94c01bc0c8accb9aad',
+            key: 'pk_live_6dd98d765b992e7f7b8f1cdb3efe9df157daef43',
             email: '<?php echo $_SESSION['emailaddress']; ?>',
             firstname: '<?php echo $_SESSION['fristname']; ?>',
             lastname: '<?php echo $_SESSION['lastname']; ?>',
