@@ -1,6 +1,3 @@
-=====================================================================*/
-/*----------------------------------------------------*/
-/*font Variables*/
 /*Color Variables*/
 /*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500|Rubik:500, 600");
@@ -83,7 +80,7 @@ button:focus {
   /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .section_gap {
-  padding: 30px 0; }
+  padding: 10px 0; }
   @media (max-width: 991px) {
     .section_gap {
       padding: 70px 0; } }
@@ -151,6 +148,17 @@ button:focus {
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+
+/*COURSE IMAGES*/
+#courseImage {
+  height: 400px;
+  object-fit: contain;
+  padding: 30px;
+}
+input.input.is-invalid {
+  border-bottom: 1px solid rgba(251, 10, 10, 0.93) !important;
+}
+
 .header_area {
   position: absolute;
   width: 100%;
@@ -439,6 +447,7 @@ button:focus {
             .banner_area .banner_inner .banner_content .page_link a:last-child:before {
               display: none; }
 
+
 /* End Home Banner Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
@@ -545,7 +554,6 @@ button:focus {
     .popular_courses .owl-nav .owl-next img {
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
       -o-filter: grayscale(100%);
       filter: grayscale(100%);
       -webkit-transition: all 0.3s ease 0s;
@@ -556,7 +564,6 @@ button:focus {
       .popular_courses .owl-nav .owl-next img:hover {
         -webkit-filter: grayscale(0%);
         -moz-filter: grayscale(0%);
-        -ms-filter: grayscale(0%);
         -o-filter: grayscale(0%);
         filter: grayscale(0%); }
 
@@ -654,7 +661,7 @@ button:focus {
   font-size: 21px;
   border: none;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 1px;
   border-bottom: 1px solid #eeeeee;
   position: relative;
   padding-bottom: 10px;
@@ -1595,7 +1602,6 @@ button:focus {
   .contact_info .info_item h6 {
     font-size: 16px;
     line-height: 24px;
-    color: "Roboto", sans-serif;
     font-weight: bold;
     margin-bottom: 0px;
     color: #002347; }
@@ -1640,6 +1646,12 @@ button:focus {
 
 /* Contact Success and error Area css
 ============================================================================================ */
+.modal-lg{
+  max-width: 1200px;
+}
+.modal-open .modal {
+  /*overflow: inherit !important;*/
+}
 .modal-message .modal-dialog {
   position: absolute;
   top: 36%;
@@ -1857,10 +1869,19 @@ button:focus {
 
 @media (max-width: 991.98px) {
   .generic-banner .generic-banner-content h2 br {
-    display: none; } }
+    display: none; }
+  .modal {
+    max-width: 1020px;
+  }
+}
 .generic-banner .generic-banner-content p {
   text-align: center;
   font-size: 16px; }
+@media (min-width: 992px){
+  .modal-lg {
+    max-width: 1050px;
+  }
+}
 
 @media (max-width: 991.98px) {
   .generic-banner .generic-banner-content p br {
@@ -1992,7 +2013,6 @@ h6 {
   border-radius: 20px; }
 
 .genric-btn.arrow {
-  display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
@@ -2143,7 +2163,6 @@ h6 {
   border: 1px solid transparent; }
 
 .genric-btn.disable {
-  color: #222222, 0.3;
   background: #f9f9ff;
   border: 1px solid transparent;
   cursor: not-allowed; }
@@ -3060,7 +3079,8 @@ h6 {
 
   .header_area .navbar-collapse {
     max-height: 340px;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+  }
 
   .header_area .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
     padding: 0px 15px; }

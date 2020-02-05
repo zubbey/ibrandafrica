@@ -31,14 +31,7 @@ a.navbar-brand{
   background: #c3d5f5; /* Gecko Browsers */
   color: #6187c9;
 }
-::-webkit-selection {
-  background: #c3d5f5; /* Gecko Browsers */
-  color: #6187c9;
-}
-::-ms-selection {
-  background: #c3d5f5; /* Gecko Browsers */
-  color: #6187c9;
-}
+
 p{font-size:20px;}
 .footer_area{background-color: #374661;}
 .header_area.navbar_fixed .main_menu,.projects_fillter{background-color: #c3d1eb;}
@@ -1030,7 +1023,7 @@ uncomment this part if you haven't added this code anywhere else
     background-color: #fff;
     border-color: #7087c9;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(93, 119, 172, .2);
+    box-shadow: 0 0 0 0.2rem rgb(93, 119, 172, 0.2);
 }
 
 .contact-form{

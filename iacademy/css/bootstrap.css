@@ -89,6 +89,7 @@ hr {
     overflow: visible
 }
 
+
 h1,
 h2,
 h3,
@@ -5749,6 +5750,18 @@ button.close {
         max-width: 800px
     }
 }
+
+
+@media (min-width:992px) {
+    .modal-lg {
+        max-width: 1140px
+    }
+}
+
+.modal-dialog.modal-dialog-centered.modal-lg {
+    max-width: 1140px;
+}
+
 
 .tooltip {
     position: absolute;

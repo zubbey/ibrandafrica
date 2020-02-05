@@ -39,7 +39,7 @@
         </div>
         <h1 class="mx-auto my-0 text-uppercase"><img class="logo" src="./img/iAcademy.svg" width="100%" height="150px" alt="iAcademy"></h1>
         <h2 class="text-20 mx-auto mt-3 mb-5" style="height: 120px;"><span id="typed1">Course<br>Coming Soon!</span></h2>
-        <a class="btn js-scroll-trigger" href="\">Go Back</a>
+        <a class="btn js-scroll-trigger" href="index">Go Back</a>
       </div>
     </div>
    <!-- <div id="stage" class="img-fluid" style="width: 980px; height: 100%; margin: auto;"></div> -->

@@ -429,4 +429,4 @@
     </section>
     <!--================Blog Area =================-->
 
-<?php include("components/footer.php") ?>
+<?php include("components/footer.php")?>

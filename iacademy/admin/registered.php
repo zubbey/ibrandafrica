@@ -18,6 +18,9 @@ require("./assets/admin_menu.php");
                                 S/N
                             </th>
                             <th>
+                                Student ID
+                            </th>
+                            <th>
                                 Full Name
                             </th>
                             <th>
@@ -42,13 +45,18 @@ require("./assets/admin_menu.php");
                                 State
                             </th>
                             <th>
-                                Comments
+                                Course Type
                             </th>
                             <th>
-                                Course Session
+                                Session
                             </th>
                             <th>
-                                Registered Date
+                                Paid
+                            <th>
+                                Invoice
+                            </th>
+                            <th>
+                                Reg Date
                             </th>
                             </thead>
                             <?php
@@ -60,6 +68,7 @@ require("./assets/admin_menu.php");
                                     echo "<tbody>";
                                     echo "<tr>";
                                     echo "<td class='text-left'>".$row['id']."</td>";
+                                    echo "<td>#".$row['student_id']."</td>";
                                     echo "<td>".$row['fname'].' '.$row['lname']."</td>";
                                     echo "<td>".$row['email']."</td>";
                                     echo "<td>".$row['phone']."</td>";
@@ -68,8 +77,10 @@ require("./assets/admin_menu.php");
                                     echo "<td>".$row['country']."</td>";
                                     echo "<td>".$row['nationality']."</td>";
                                     echo "<td>".$row['state']." ".$row['city']." ".$row['state']."</td>";
-                                    echo "<td>".$row['comments']."</td>";
+                                    echo "<td>".$row['course_type']."</td>";
                                     echo "<td>".$row['course_session']."</td>";
+                                    echo "<td>".$row['paid_amount']."</td>";
+                                    echo "<td>#".$row['invoice_id']."</td>";
                                     echo "<td>".$row['reg_date']."</td>";
                                     echo "</tr>";
                                     echo "</tbody>";

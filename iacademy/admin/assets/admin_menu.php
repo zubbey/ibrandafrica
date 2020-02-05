@@ -1,6 +1,13 @@
 <?php
 require_once ("../config/config-db.php");
 require_once ("../controller/auth_controller.php");
+
+if($_SESSION['admin_session'] != true){
+//    echo "<meta http-equiv=\"refresh\" content=\"0;URL=index\">";
+    header("Location: index");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +18,7 @@ require_once ("../controller/auth_controller.php");
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        IAcademy Dashboard
+
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -22,8 +29,6 @@ require_once ("../controller/auth_controller.php");
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="./assets/demo/demo.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js
-"></script>
 </head>
 
 <body class="body">
@@ -35,44 +40,41 @@ require_once ("../controller/auth_controller.php");
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text logo-mini">
                 <div class="logo-image-small">
-                    <img src="./assets/img/logo-small.png">
+                    <img src="./assets/img/<?php echo $_SESSION['username']?>.png">
                 </div>
             </a>
             <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                Okoro Thankgod
-                <!-- <div class="logo-image-big">
-                  <img src="./assets/img/logo-big.png">
-                </div> -->
+                <?php echo $_SESSION['username']?>
             </a>
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="active ">
+                <li class="dashboard">
                     <a href="./dashboard.php">
                         <i class="nc-icon nc-bank"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
+                <li class="registered">
                     <a href="./registered.php">
                         <i class="nc-icon nc-tile-56"></i>
                         <p>Registered Users</p>
                     </a>
                 </li>
-                <li>
+                <li class="task">
                     <a href="./task.php">
                         <i class="nc-icon nc-layout-11"></i>
                         <p>Tasks</p>
                     </a>
                 </li>
-                <li>
+                <li class="profile">
                     <a href="./profile.php">
                         <i class="nc-icon nc-single-02"></i>
                         <p>Admin Profile</p>
                     </a>
                 </li>
                 <li class="active-pro">
-                    <a href="?sign_out=true">
+                    <a href="?logout=true">
                         <i class="nc-icon nc-key-25"></i>
                         <p>Sign out</p>
                     </a>

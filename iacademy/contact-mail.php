@@ -1,49 +1,5 @@
 <?php
 
-// $toEmail = "info@ibrandafrica.one";
-// $mailHeaders = "From: " . $_POST["fname"] . "<". $_POST["email"] .">\r\n";
-// if(mail($toEmail, $_POST["courses"], $body, $mailHeaders)) {
-// 	echo(
-// 			"<div class='container'>
-// 			<div class='row'>
-// 			<div class='col'>
-// 			<div class='alert alert-success p-4' style='width:50%; position:fixed;z-index:9999;'>
-// 			<button onclick='reFresh()' type='button' class='close btn' data-dismiss='alert' aria-hidden='true'>
-// 			×</button>
-// 			<span class='glyphicon glyphicon-ok'></span> <strong>Success</strong>
-// 			<hr class='message-inner-separator'>
-// 			<p>
-// 				Contact Mail Sent Successfully!.
-// 			</p>
-// 			<hr class='message-inner-separator'>
-// 			</div>
-// 			</div>
-// 			</div>
-// 			</div>
-// 			");
-// } else {
-// 	echo(
-//       "<div class='container'>
-//       <div class='row'>
-//       <div class='col'>
-//       <div class='alert alert-danger p-4' style='position:fixed;z-index:9999;'>
-//       <button onclick='reFresh()' type='button' class='close btn' data-dismiss='alert' aria-hidden='true'>
-//       ×</button>
-//       <span class='glyphicon glyphicon-ok'></span> <strong>Error Sending Email</strong>
-//       <hr class='message-inner-separator'>
-      
-//       <p>
-//       		Something went wrong while trying to connect to the mail server.
-//       </p>
-
-//       </div>
-//       </div>
-//       </div>
-//       </div>
-//       ");
-
-// }
-
     function auto_responce() {
 	$reply_back = $_POST["email"];
 	$reply_subject = "ENROLLMENT FOR:"." ". $_POST["courses"];
@@ -56,7 +12,7 @@
 	mail($reply_back, $reply_subject, $reply_message);
     }
 
-    $to = "info@ibrandafrica.one";
+    $to = "registration@ibrandafrica.one";
 
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];

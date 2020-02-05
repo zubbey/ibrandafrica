@@ -13,7 +13,7 @@
                 ©
                 <script>
                   document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                </script>, Powered By <i class="fa fa-heart heart"></i> iBrand Africa Group
               </span>
             </div>
         </div>
@@ -22,6 +22,7 @@
 </div>
 </div>
 <!--   Core JS Files   -->
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="./assets/js/core/jquery.min.js"></script>
 <script src="./assets/js/core/popper.min.js"></script>
@@ -35,10 +36,46 @@
 <script src="./assets/js/plugins/bootstrap-notify.js"></script>
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="./assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+<script src="./assets/js/jquery.inputFileText.js"></script>
 <!-- IAcademy Dashboard DEMO methods, don't include it in your project! -->
 <script src="./assets/demo/demo.js"></script>
 <script>
+    const dashboard = document.URL.indexOf("/dashboard") >= 0;
+    const registered = document.URL.indexOf("/registered") >= 0;
+    const task = document.URL.indexOf("/task") >= 0;
+    const profile = document.URL.indexOf("/profile") >= 0;
+
+    const dashboard_nav = document.querySelector('ul li.dashboard');
+    const registered_nav = document.querySelector('ul li.registered');
+    const task_nav = document.querySelector('ul li.task');
+    const profile_nav = document.querySelector('ul li.profile');
+
+    const title_el = document.querySelector("title");
+
+    if(dashboard){
+        title_el.innerHTML = "IAcademy | Dashboard";
+        dashboard_nav.classList.add('active');
+    }
+    if(registered){
+        title_el.innerHTML = "IAcademy | Candidates";
+        registered_nav.classList.add('active');
+    }
+    if(task){
+        title_el.innerHTML = "IAcademy | Tasks";
+        task_nav.classList.add('active');
+    }
+    if(profile){
+        title_el.innerHTML = "IAcademy | Profile";
+        profile_nav.classList.add('active');
+    }
+
     $(document).ready(function() {
+        $('#fileToUpload').inputFileText({
+            text: 'Change Course Image'
+        });
+        $('#fileToUploadAdd').inputFileText({
+            text: 'Add Course Image'
+        });
         // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
         demo.initChartsPages();
     });
@@ -144,6 +181,7 @@
 
     if (queryParameters().edit_id){
         $('#editCourseModal').modal('show');
+        document.write('<?php createCourseid();?>');
     }
 
 
@@ -189,11 +227,12 @@
         Swal.fire({
             position: 'center',
             icon: 'error',
-            title: 'There was a problem deleting the data, please check your connection!',
+            title: 'Something went wrong while deleting! please check your connection and try again.',
             showConfirmButton: false,
             timer: 3000
         })
     }
+
 </script>
 </body>
 

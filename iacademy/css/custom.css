@@ -11,14 +11,7 @@
   background: #85d3d8; /* Gecko Browsers */
   color: #197484;
 }
-::-webkit-selection {
-  background: #85d3d8; /* Gecko Browsers */
-  color: #197484;
-}
-::-ms-selection {
-  background: #85d3d8; /* Gecko Browsers */
-  color: #197484;
-}
+
 ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
@@ -183,7 +176,7 @@ a:hover, a:focus{
     transition: color .5s ease;
 }
 a {
-    color: #63f5e8;
+    color: #ffffff;
     -webkit-transition: color .5s ease;
     -moz-transition: color .5s ease;
     -o-transition: color .5s ease;
@@ -230,6 +223,9 @@ h2.text-20 {
 	color: #65c7ce !important;
 	font-size: 1rem;
 }
+.btn.focus, .btn:focus{
+    box-shadow: none !important;
+}
 #mainNav{
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -240,8 +236,9 @@ h2.text-20 {
 	margin-top: 20px;
 	padding: 10px 15px; color: #fff;
 	/*border: 1px solid #65c7ce;*/
-	border-radius: 50px;
-	background-color: #65c7ce;
+    background: #07a8b9;
+    border-radius: 10px;
+    border: 0;
 	text-transform: capitalize;
 	font-size: 14px;
 	visibility: hidden;
@@ -279,10 +276,17 @@ h2.text-20 {
     cursor: url(../pointer.png),pointer!important;
     padding: 12px;
     /* border: solid #f8f9fa 2px; */
-    background: #65c7ce;
-    border-radius: 50px;
+    background: #07a8b9;
+    border-radius: 10px;
+    border: 0;
     color: #fdffff;
     align-content: center;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    background: #1d8190 !important;
+}
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover{
+    color: #ffffff !important;
 }
 button.btn-primary.btn.btn-lg.btn-block {
     background: #65c7ce;
@@ -305,6 +309,9 @@ button.btn-primary.btn.btn-lg.btn-block {
     transition: transform 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
     transition: transform 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
     transition: transform 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
+}
+.btn:active, .btn:focus, .btn:visited{
+    border: 0 !important;
 }
 .d-none{
 	-webkit-transition: all .5s ease-in;
@@ -429,12 +436,13 @@ path{
 }
 .about-section p{
        margin-bottom: 1rem;
+    line-height: 1.5;
 }
 .bg-black{
     background-color: #00aabd !important;
 }
 .projects-section {
-    padding: 10rem 0 3rem 0!important;
+    padding: 5rem 0 3rem 0!important;
 }
 .projects-section .project-text hr {
     border-color: #dc4a3c;
@@ -449,6 +457,12 @@ path{
 	margin-right: 8px;
     margin-bottom: 0;
     margin-left: 8px;
+}
+
+.course_img{
+    height: 250px;
+    object-fit: contain;
+    padding: 30px;
 }
 .card-img-top{
 	background-color:  bisque;
@@ -494,7 +508,10 @@ ul.pagination.justify-content-center {
     background: #65c7ce;
     color: #fff;
 }
-
+.header_area .navbar .nav .nav-item.submenu ul{
+    right: 0px !important;
+    left: auto !important;
+}
 /*============================= FORM STYLE =========================================*/
 .formBox{
 	margin-top: 9px;
@@ -645,7 +662,6 @@ div#Modal {
 }
 .slick-list.dragging
 {
-    cursor:url(../pointer.png), pointer!important;
     cursor: url(../grab.png), pointer!important;
 }
 
@@ -725,6 +741,11 @@ div#Modal {
 .instaimg{
     padding: 10px;
 }
+@media (min-width: 992px){
+    .header_area .navbar .nav .nav-item.submenu ul {
+        left: auto;
+    }
+}
 
 @media (min-width: 320px) and (max-width: 414px){
     img.logo {
@@ -757,6 +778,7 @@ div#Modal {
     }
     .about-section p{
         font-size: 0.8rem;
+        line-height: 1.5;
     }
      .h6, h6{
         font-size: 0.8rem;
@@ -815,5 +837,6 @@ div#Modal {
     }
     .about-section p{
         font-size: 1.3rem;
+        line-height: 1.5;
     }
 }

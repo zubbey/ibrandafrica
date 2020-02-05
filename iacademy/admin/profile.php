@@ -1,5 +1,8 @@
 <?php
 require("./assets/admin_menu.php");
+if(!$_SESSION['admin_session']){
+    header("Location: index");
+}
 ?>
     <div class="content">
         <div class="row">
@@ -11,83 +14,50 @@ require("./assets/admin_menu.php");
                     <div class="card-body">
                         <div class="author">
                             <a href="#">
-                                <img class="avatar border-gray" src="./assets/img/mike.jpg" alt="...">
-                                <h5 class="title">Okoro Thankgod</h5>
+                                <img class="avatar border-gray" src="./assets/img/<?php echo $_SESSION['username']?>.png" alt="...">
+                                <h5 class="title"><?php echo $_SESSION['username']?></h5>
                             </a>
-                            <p class="description">
-                                @codythankgod
-                            </p>
                         </div>
                         <p class="description text-center">
-                            "I like the way you work it
-                            <br> No diggity
-                            <br> I wanna bag it up"
+                            <?php echo $_SESSION['adminEmail']?>
                         </p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Team Members</h4>
+                        <h4 class="card-title">Administrators</h4>
                     </div>
                     <div class="card-body">
                         <ul class="list-unstyled team-members">
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-2 col-2">
-                                        <div class="avatar">
-                                            <img src="./assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                        <?php
+                        $adminSql = "SELECT * FROM admin";
+                        $result = $conn->query($adminSql);
+                        if ($result->num_rows > 0) {
+                            // output data of each row
+                            while($adminRow = $result->fetch_assoc()) {
+                                echo '
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-2 col-2">
+                                            <div class="avatar">
+                                                <img src="./assets/img/'.$adminRow['username'].'.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 col-7">
+                                            '.$adminRow['username'].'
+                                            <br />
+                                            <span class="text-muted">
+                                              <small>'.$adminRow['role'].'</small>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-3 col-3 text-right">
+                                            <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
                                         </div>
                                     </div>
-                                    <div class="col-md-7 col-7">
-                                        Cachy
-                                        <br />
-                                        <span class="text-muted">
-                          <small>Offline</small>
-                        </span>
-                                    </div>
-                                    <div class="col-md-3 col-3 text-right">
-                                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-2 col-2">
-                                        <div class="avatar">
-                                            <img src="./assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7 col-7">
-                                        Ernest
-                                        <br />
-                                        <span class="text-success">
-                          <small>Available</small>
-                        </span>
-                                    </div>
-                                    <div class="col-md-3 col-3 text-right">
-                                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-2 col-2">
-                                        <div class="avatar">
-                                            <img src="./assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-ms-7 col-7">
-                                        Zubbey
-                                        <br />
-                                        <span class="text-danger">
-                          <small>Busy</small>
-                        </span>
-                                    </div>
-                                    <div class="col-md-3 col-3 text-right">
-                                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                                ';
+                            }
+                        }?>
                         </ul>
                     </div>
                 </div>
@@ -103,19 +73,19 @@ require("./assets/admin_menu.php");
                                 <div class="col-md-5 pr-1">
                                     <div class="form-group">
                                         <label>Company (disabled)</label>
-                                        <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
+                                        <input type="text" class="form-control" disabled="" placeholder="Company" value="<?php echo $company;?>">
                                     </div>
                                 </div>
                                 <div class="col-md-3 px-1">
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <input type="text" class="form-control" placeholder="Username" value="michael23">
+                                        <input type="text" class="form-control" placeholder="Username" value="<?php echo $_SESSION['username']?>">
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <label for="exampleInputEmail1">Email Address</label>
+                                        <input type="email" class="form-control" placeholder="<?php echo $_SESSION['adminEmail']?>">
                                     </div>
                                 </div>
                             </div>
@@ -123,41 +93,13 @@ require("./assets/admin_menu.php");
                                 <div class="col-md-6 pr-1">
                                     <div class="form-group">
                                         <label>First Name</label>
-                                        <input type="text" class="form-control" placeholder="Company" value="Chet">
+                                        <input type="text" class="form-control" placeholder="Company" value="" disabled>
                                     </div>
                                 </div>
                                 <div class="col-md-6 pl-1">
                                     <div class="form-group">
                                         <label>Last Name</label>
-                                        <input type="text" class="form-control" placeholder="Last Name" value="Faker">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Address</label>
-                                        <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 pr-1">
-                                    <div class="form-group">
-                                        <label>City</label>
-                                        <input type="text" class="form-control" placeholder="City" value="Melbourne">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 px-1">
-                                    <div class="form-group">
-                                        <label>Country</label>
-                                        <input type="text" class="form-control" placeholder="Country" value="Australia">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 pl-1">
-                                    <div class="form-group">
-                                        <label>Postal Code</label>
-                                        <input type="number" class="form-control" placeholder="ZIP Code">
+                                        <input type="text" class="form-control" placeholder="Last Name" value="" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -165,13 +107,13 @@ require("./assets/admin_menu.php");
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>About Me</label>
-                                        <textarea class="form-control textarea">Oh so, your weak rhyme You doubt I'll bother, reading into it</textarea>
+                                        <textarea class="form-control textarea disabled"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="update ml-auto mr-auto">
-                                    <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
+                                    <button type="submit" class="btn btn-primary btn-round disabled">Update Profile</button>
                                 </div>
                             </div>
                         </form>

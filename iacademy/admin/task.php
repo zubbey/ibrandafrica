@@ -13,11 +13,10 @@ if (isset($_GET['fee_error']) && $_GET['fee_error'] === 'Course Amount is requir
     $invalid_fee= "is-invalid";
     $invalid_fee_Msg = "<div class=\"invalid-feedback\">".$_GET['fee_error']."</div>";
 }
-//if (isset($_GET['no_account']) && $_GET['no_account'] === 'You do not have access to this portal!'){
-//    $invalid_username = "is-invalid";
-//    $invalid_password = "is-invalid";
-//    $invalid_entry_Msg = "<small class=\"invalid-feedback d-block\">".$_GET['no_account']."</small>";
-//}
+if (isset($_GET['image_error']) && $_GET['image_error'] === 'Sorry, there was an error uploading your Course Image. only JPEG, JPG, PNG is allowed'){
+    $invalid_image_Msg = "<div class=\"invalid-feedback d-block\">".$_GET['image_error']."</div>";
+}
+
 
 if (isset($_GET['edit_id'])){
     $course_id = $_GET['edit_id'];
@@ -29,11 +28,14 @@ if (isset($_GET['edit_id'])){
     $course_location = $course['course_location'];
     $course_fee = $course['course_fee'];
     $num_seats = $course['number_of_seats'];
+    $qualification = $course['qualification'];
     $schedule = $course['schedule_date'];
     $detail_title = $course['course_detail_title'];
     $detail_intro = $course['course_detail_intro'];
     $course_image = $course['course_image'];
 }
+
+
 ?>
 
     <div class="content">
@@ -89,7 +91,7 @@ if (isset($_GET['edit_id'])){
                                         echo "<tr>";
                                         echo "<td class='text-left'>".$row['course_id']."</td>";
                                         echo "<td>".$row['course_name']."</td>";
-                                        echo "<td><button onclick=\"location.assign('?view_id=".$row['course_id']."')\"  class='btn-primary'>View Course</button></td>";
+                                        echo "<td><button onclick=\"location.assign('../course_details?course_id=".$row['course_id']."')\"  class='btn-primary'>View Course</button></td>";
                                         echo "<td><button onclick=\"location.assign('?edit_id=".$row['course_id']."')\"  class='btn-info'>Edit</button></td>";
                                         echo "<td class='text-right'><button onclick=\"location.assign('?delete_id=".$row['course_id']."')\" class='btn-danger'>Delete</button></td>";
                                         echo "</tr>";
@@ -107,7 +109,22 @@ if (isset($_GET['edit_id'])){
                     <div class="card-footer ">
                         <hr>
                         <div class="stats">
-                            <i class="fa fa-history"></i>Last Update: 3 minutes ago
+                            <?php
+                            $sql = "SELECT `update_date` FROM avaiable_courses LIMIT 1";
+                            $result = $conn->query($sql);
+                            $row = $result->fetch_assoc();
+                            $time_ago = strtotime($row['update_date']);
+
+                            function convert_seconds($seconds)
+                            {
+                                $dt1 = new DateTime("@0");
+                                $dt2 = new DateTime("@$seconds");
+                                return $dt1->diff($dt2)->format('%a days, %h hours, %i minutes and %s seconds');
+                            }
+
+
+                            echo "<i class=\"fa fa-history\"></i>Last Update: ".convert_seconds($time_ago)."";
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -127,11 +144,15 @@ if (isset($_GET['edit_id'])){
                 </div>
                 <div class="modal-body">
 
-                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="courseName">Course Name</label>
                             <input type="text" class="form-control <?php echo $invalid_course_name; ?>" name="course_name" id="courseName" placeholder="Eg: Photography" value="<?php echo $_GET['course_name'];?>">
-                            <?php echo $invalid_course_name_Msg ?>
+                            <?php echo $invalid_course_name_Msg; ?>
+                        </div>
+                        <div class="my-3">
+                            <input type="file" name="fileToUpload" id="fileToUploadAdd">
+                            <?php echo $invalid_image_Msg; ?>
                         </div>
                         <div class="form-group">
                             <label for="courseLoc">Course Location</label>
@@ -150,8 +171,12 @@ if (isset($_GET['edit_id'])){
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="label-control">Datetime Picker</label>
+                            <label class="label-control">Schedule Date</label>
                             <input type="text" class="form-control datetimepicker" id="datetimepicker" name="schedule_date" value="10AM - 4PM"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="label-control">Qualification</label>
+                            <input type="text" class="form-control" name="qualification" placeholder="Eg: iA Photography Certificate"/>
                         </div>
                         <div class="form-group">
                             <label for="courseDetailTitle">Course Detail Title</label>
@@ -211,10 +236,14 @@ if (isset($_GET['edit_id'])){
                 </div>
                 <div class="modal-body">
 
-                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="courseName">Course Name</label>
                             <input type="text" class="form-control"  name="course_name" id="courseName" value="<?php echo $course_name;?>" disabled>
+                        </div>
+                        <div class="my-3">
+                            <input type="file" name="fileToUpload" id="fileToUpload">
+                            <?php echo $invalid_image_Msg; ?>
                         </div>
                         <div class="form-group">
                             <label for="courseLoc">Course Location</label>
@@ -233,6 +262,10 @@ if (isset($_GET['edit_id'])){
                             </div>
                         </div>
                         <div class="form-group">
+                            <label class="label-control">Qualification</label>
+                            <input type="text" class="form-control" name="qualification" value="<?php echo $qualification;?>"/>
+                        </div>
+                        <div class="form-group">
                             <label class="label-control">Schedule Date</label>
                             <input type="text" class="form-control datetimepicker" name="schedule_date" value="<?php echo $schedule;?>"/>
                         </div>
@@ -245,56 +278,6 @@ if (isset($_GET['edit_id'])){
                             <textarea class="form-control" id="CourseDetailInto" name="course_detail_intro"><?php echo $detail_intro;?></textarea>
                         </div>
 
-                        <div class='form-group'>
-                            <label for='detailPara'>Course Detail Paragraph</label>
-
-                            <?php
-                                $selectPara = mysqli_query($conn, "SELECT * FROM courses_paragraph WHERE course_id = '$course_id'");
-                                if ($selectPara > 0) {
-                                    // output data of each row
-                                    while ($row = mysqli_fetch_array($selectPara)) {
-                                        echo "
-                                                <div class='input_fields_wrap'>
-                                                    <div class='form-row '>
-                                                        <div class='form-group col-md-6'>
-                                                            <input class='form-control' type='text' name='heading[]' value='".$row['heading']."'>
-                                                        </div>
-                                                        <div class='form-group col-md-6'>
-                                                            <input class='form-control' type='text' name='body[]' value='".$row['body']."'>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        ";
-                                    }
-                                }
-                                echo "</div>";
-
-//                                outlines
-                                echo "<div class='form-group'>";
-                                    echo "<label for='detailOutline'>Course Outlines</label>";
-
-                                    $selectOutline = mysqli_query($conn, "SELECT * FROM courses_outline WHERE course_id = '$course_id'");
-                                    if ($selectOutline > 0) {
-                                        // output data of each row
-                                        while ($row = mysqli_fetch_array($selectOutline)) {
-                                            echo "
-                                                    <div class='input_fields_wrap'>
-                                                        <div class='form-row '>
-                                                            <div class='form-group col-md-6'>
-                                                                <input class='form-control' type='text' name='heading2[]' value='".$row['heading']."'>
-                                                            </div>
-                                                            <div class='form-group col-md-6'>
-                                                                <input class='form-control' type='text' name='body2[]' value='".$row['body']."'>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                ";
-                                        }
-                                    }
-                                echo "</div>";
-
-                                $conn->close();
-                            ?>
                         <button type="submit" class="btn btn-primary" name="edit_course_btn">Save Changes</button>
                     </form>
 
