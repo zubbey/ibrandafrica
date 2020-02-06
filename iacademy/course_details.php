@@ -17,7 +17,8 @@ if (isset($_GET['course_id'])){
         $_SESSION['course_title'] = $courseRow['course_detail_title'];
         $_SESSION['course_intro'] = $courseRow['course_detail_intro'];
     }
-} else{
+}
+else{
     unset($_SESSION['course_name']);
     unset($_SESSION['course_image']);
     unset($_SESSION['course_amount']);

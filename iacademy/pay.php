@@ -1,5 +1,8 @@
 <?php
 require ("./components/menu.php");
+if (isset($_SESSION['newCandidate'])){
+    $sql = mysqli_query($conn, "INSERT INTO system_logs (log_msg) VALUES ('".$_SESSION['newCandidate']."')");
+}
 ?>
 <script src="https://js.paystack.co/v1/inline.js"></script>
     <section class="banner_area">
@@ -56,9 +59,10 @@ require ("./components/menu.php");
     //PAYSTACK INTEGRATION
     const course =  "<?php echo $_SESSION['courses']; ?>";
     const courseAmount = "<?php echo $_SESSION['amount']; ?>";
+    const pk_key = config.PAYSTACK_PUBLIC_KEY;
     function payWithPaystack(){
         var handler = PaystackPop.setup({
-            key: 'pk_live_6dd98d765b992e7f7b8f1cdb3efe9df157daef43',
+            key: pk_key,
             email: '<?php echo $_SESSION['emailaddress']; ?>',
             firstname: '<?php echo $_SESSION['fristname']; ?>',
             lastname: '<?php echo $_SESSION['lastname']; ?>',

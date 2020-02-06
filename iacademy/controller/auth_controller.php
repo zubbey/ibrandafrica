@@ -12,7 +12,6 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
     exit();
 }$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 setlocale(LC_ALL,"cch_NG");
-//admin login
 
 // initializing variables
 $errors =  array();
@@ -84,8 +83,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if (count($errors) == 0) {
-//            $date = date("F j, Y, g:i a");
-//            $student_id = RandomString(6);
             $amount_paid = "0";
             $sql="INSERT INTO enrollment_form (courses, fname, lname, email, phone, about, country, nationality, state, course_type, course_session, paid_amount) VALUES ('$course','$fname', '$lname', '$email', '$phone','$about', '$country', '$nationality', '$state', '$course_type', '$schedule', '$amount_paid')";
             $result = mysqli_query($conn, $sql);
@@ -105,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['phone'] = $_POST['phone'];
                     $_SESSION['courses'] = $_POST['course'];
                     $_SESSION['amount'] = $_POST['amount'];
-
+                    $_SESSION['newCandidate'] = "You Have a new Registered Candidate Called : ".$student['fname']." ".$student['lname'];
                     require_once ('./mail.php');
                     autoReply($_POST['email'], $_POST['fname'], $_POST['lname'], $_POST['course']);
 
@@ -136,6 +133,8 @@ function enrollCompleted($paid_amount, $ref){
             $_SESSION['reg_date'] = $user['reg_date'];
             $_SESSION['ref'] = $ref;
             $_SESSION['amount'] = $paid_amount;
+
+            $_SESSION['candidatePaid'] = $user['fname']." ".$user['lname']." Just paid ".$paid_amount;
             echo "<meta http-equiv=\"refresh\" content=\"0;URL=invoice\">";
             exit();
         }
@@ -157,14 +156,6 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-//function resetSession(){
-//    if (isset($_SESSION['candidate_session'])){
-//        $_SESSION['candidate_session'] = false;
-//        unset($_SESSION['email']);
-//        unset($_SESSION['fname']);
-//        unset($_SESSION['lname']);
-//    }
-//}
 
 
 //ADMIN PORTAL ACCESS
@@ -201,9 +192,17 @@ if (isset($_POST['login-btn'])) {
                 $_SESSION['adminRole'] = $user['role'];
                 //SESSION VARIABLE WITH NULL VALUE
                 // flash messages
-                $_SESSION['successlogin'] = "you're logged in.";
-                $_SESSION['loginlog'] = "you logged in at " . date("h:i a");
-                header('location: dashboard?login=true');
+
+                $_SESSION['loginlog'] = "you last logged in at " . date("h:i a");
+                if ($username === "thankgod"){
+                    $_SESSION['newLogin'] = "Thankgod Okoro last logged in at ". date("h:i a");
+                } elseif ($username === "cachy"){
+                    $_SESSION['newLogin'] = "Ginikachi last logged in at ". date("h:i a");
+                } elseif ($username === "ernest"){
+                    $_SESSION['newLogin'] = "Ernest Nnadi last logged in at ". date("h:i a");
+                } elseif ($username === "zubbey"){
+                    $_SESSION['newLogin'] = "Zubbey Just last logged in at ". date("h:i a");
+                }
             } else {
                 $errors['no_account'] = "You do not have access to this portal!";
                 header("Location: ?login=0&no_account=" . $errors['no_account'] . "&username=" . $username);
@@ -278,7 +277,7 @@ if (isset($_POST['add_course_btn'])){
         if($result){
 
             $selectQuery = mysqli_query($conn, "SELECT course_id FROM avaiable_courses WHERE course_name = '$course_name'");
-            $course = mysqli_fetch_assoc($selectQuery);
+
 
             if ($course > 0){
                 //    add to course_paragraph & course_outline if not empty
@@ -311,6 +310,18 @@ if (isset($_POST['add_course_btn'])){
                     $query = substr($query,0,-1); //remove last char
                     $result = mysqli_query($conn, $query);
                 }
+                if ($_SESSION['username'] === "thankgod"){
+                    $_SESSION['courseAdded'] = "Thankgod Okoro Just added a new course named: ".$course_name;
+                }
+                if ($_SESSION['username'] === "cachy"){
+                    $_SESSION['courseAdded'] = "Ginikachi Just added a new course named: ".$course_name;
+                }
+                if ($_SESSION['username'] === "ernest"){
+                    $_SESSION['courseAdded'] = "Ernest Nnadi Just added a new course named: ".$course_name;
+                }
+                if ($_SESSION['username'] === "zubbey"){
+                    $_SESSION['courseAdded'] = "Zubbey Just added a new course named: ".$course_name;
+                }
                 header("Location: ?success=courseCreated");
                 exit();
             } else{
@@ -330,6 +341,7 @@ function createCourseid(){
 }
 
 if (isset($_POST['edit_course_btn'])){
+    $courseName = mysqli_real_escape_string($conn, $_POST['course_name']);
     $course_location = mysqli_real_escape_string($conn, $_POST['course_location']);
     $course_fee = mysqli_real_escape_string($conn, $_POST['course_fee']);
     $no_seats = mysqli_real_escape_string($conn, $_POST['number_of_seats']);
@@ -368,15 +380,27 @@ if (isset($_POST['edit_course_btn'])){
         exit();
     }
     if (count($errors) == 0) {
-        editCourse($conn, $course_id, $course_image, $course_location, $course_fee, $no_seats, $qualification, $schedule, $detail_title, $detail_intro);
+        editCourse($conn, $course_id, $courseName, $course_image, $course_location, $course_fee, $no_seats, $qualification, $schedule, $detail_title, $detail_intro);
     }
 }
 //Edit Courses
-function editCourse($conn, $course_id, $course_image, $course_location, $course_fee, $no_seats, $qualification, $schedule, $detail_title, $detail_intro){
+function editCourse($conn, $course_id, $courseName, $course_image, $course_location, $course_fee, $no_seats, $qualification, $schedule, $detail_title, $detail_intro){
 
     $updateQuery = "UPDATE avaiable_courses SET course_img = '$course_image', course_location = '$course_location', course_fee = '$course_fee', number_of_seats = '$no_seats', qualification = '$qualification', schedule_date = '$schedule', course_detail_title = '$detail_title', course_detail_intro = '$detail_intro', update_date = NOW() WHERE course_id = '$course_id'";
     $result = mysqli_query($conn, $updateQuery);
     if ($result) {
+        if ($_SESSION['username'] === "thankgod"){
+            $_SESSION['courseUpdated'] = "Thankgod Okoro Just updated ".$courseName;
+        }
+        if ($_SESSION['username'] === "cachy"){
+            $_SESSION['courseUpdated'] = "Ginikachi Just updated ".$courseName;
+        }
+        if ($_SESSION['username'] === "ernest"){
+            $_SESSION['courseUpdated'] = "Ernest Nnadi Just updated ".$courseName;
+        }
+        if ($_SESSION['username'] === "zubbey"){
+            $_SESSION['courseUpdated'] = "Zubbey Just updated ".$courseName;
+        }
         header("Location: ?success=courseUpdated");
         unset($_SESSION['editid']);
         exit();
@@ -391,10 +415,25 @@ function editCourse($conn, $course_id, $course_image, $course_location, $course_
 if ($_GET['delete_id']) {
     $id = $_GET['delete_id'];
     $deleteQuery = "DELETE FROM avaiable_courses WHERE course_id = '$id'";
-    if (mysqli_query($conn, $deleteQuery)){
+    $result = mysqli_query($conn, $deleteQuery);
+    if ($result){
+        $deletedCourse = mysqli_fetch_assoc($result);
         mysqli_query($conn,"ALTER TABLE avaiable_courses AUTO_INCREMENT = 0");
         mysqli_query($conn,"ALTER TABLE courses_outline AUTO_INCREMENT = 0");
         mysqli_query($conn,"ALTER TABLE courses_paragraph AUTO_INCREMENT = 0");
+
+        if ($_SESSION['username'] === "thankgod"){
+            $_SESSION['courseDeleted'] = "Thankgod Okoro Just deleted ".$deletedCourse['course_name'];
+        }
+        if ($_SESSION['username'] === "cachy"){
+            $_SESSION['courseDeleted'] = "Ginikachi Just deleted ".$deletedCourse['course_name'];
+        }
+        if ($_SESSION['username'] === "ernest"){
+            $_SESSION['courseDeleted'] = "Ernest Nnadi Just deleted ".$deletedCourse['course_name'];
+        }
+        if ($_SESSION['username'] === "zubbey"){
+            $_SESSION['courseDeleted'] = "Zubbey Just deleted ".$deletedCourse['course_name'];
+        }
         header('location: ?success=deleted');
         exit();
     } else {
@@ -402,6 +441,19 @@ if ($_GET['delete_id']) {
         die($deleteQuery);
     }
 }
+
+//DELETE LOGS
+if (isset($_GET['logid'])){
+    $del_selectedlog = mysqli_query($conn, "DELETE FROM system_logs WHERE id = '".$_GET['logid']."'");
+    mysqli_query($conn,"ALTER TABLE system_logs AUTO_INCREMENT = 1");
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL=dashboard\">";
+    exit();
+}
+
+//$deletelogs = mysqli_query($conn, "DELETE FROM system_logs WHERE log_date > CURRENT_TIMESTAMP - INTERVAL 1 DAY");
+//if ($deletelogs){
+//    mysqli_query($conn,"ALTER TABLE system_logs AUTO_INCREMENT = 1");
+//}
 
 //LOGOUT ADMIN
 if (isset($_GET['logout'])) {
@@ -415,6 +467,6 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['adminEmail']);
     unset($_SESSION['adminRole']);
     // UNSET SESSION VAIRABLE WITH NULL
-    header('location: ?signout=0');
+    header('location: index');
     exit();
 }

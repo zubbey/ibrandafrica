@@ -1,6 +1,18 @@
 <?php
 require_once ("./config/config-db.php");
 require_once ("./controller/auth_controller.php");
+
+//GET VISTORS
+$user_ip = $_SERVER['REMOTE_ADDR'];
+$check_ip = mysqli_query($conn, "SELECT userip FROM visitors WHERE page='homepage' and userip='$user_ip'");
+if(mysqli_num_rows($check_ip)>=1)
+{
+    //not unique user
+}
+else
+{
+    $insertview = mysqli_query($conn, "INSERT INTO visitors (page, userip) VALUE ('homepage','$user_ip')");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

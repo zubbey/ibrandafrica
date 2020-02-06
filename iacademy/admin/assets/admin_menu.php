@@ -2,12 +2,41 @@
 require_once ("../config/config-db.php");
 require_once ("../controller/auth_controller.php");
 
-if($_SESSION['admin_session'] != true){
-//    echo "<meta http-equiv=\"refresh\" content=\"0;URL=index\">";
-    header("Location: index");
+if(!isset($_SESSION['admin_session'])){
+    header("Location: ./");
     exit();
 }
 
+if (isset($_SESSION['loginlog'])){
+    $sql = mysqli_query($conn, "INSERT INTO system_logs (log_msg) VALUES ('".$_SESSION['loginlog']."')");
+    if ($sql){
+        unset($_SESSION['loginlog']);
+    }
+}
+if (isset($_SESSION['newLogin'])){
+    $sql = mysqli_query($conn, "INSERT INTO system_logs (log_msg) VALUES ('".$_SESSION['newLogin']."')");
+    if ($sql){
+        unset($_SESSION['newLogin']);
+    }
+}
+if (isset($_SESSION['courseAdded'])){
+    $sql = mysqli_query($conn, "INSERT INTO system_logs (log_msg) VALUES ('".$_SESSION['courseAdded']."')");
+    if ($sql){
+        unset($_SESSION['courseAdded']);
+    }
+}
+if (isset($_SESSION['courseUpdated'])){
+    $sql = mysqli_query($conn, "INSERT INTO system_logs (log_msg) VALUES ('".$_SESSION['courseUpdated']."')");
+    if ($sql){
+        unset($_SESSION['courseUpdated']);
+    }
+}
+if (isset($_SESSION['courseDeleted'])){
+    $sql = mysqli_query($conn, "INSERT INTO system_logs (log_msg) VALUES ('".$_SESSION['courseDeleted']."')");
+    if ($sql){
+        unset($_SESSION['courseDeleted']);
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +61,7 @@ if($_SESSION['admin_session'] != true){
 </head>
 
 <body class="body">
+<div id="result"></div>
 <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
         <!--
@@ -50,25 +80,25 @@ if($_SESSION['admin_session'] != true){
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li class="dashboard">
-                    <a href="./dashboard.php">
+                    <a href="./dashboard">
                         <i class="nc-icon nc-bank"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li class="registered">
-                    <a href="./registered.php">
+                    <a href="./registered">
                         <i class="nc-icon nc-tile-56"></i>
                         <p>Registered Users</p>
                     </a>
                 </li>
                 <li class="task">
-                    <a href="./task.php">
+                    <a href="./task">
                         <i class="nc-icon nc-layout-11"></i>
                         <p>Tasks</p>
                     </a>
                 </li>
                 <li class="profile">
-                    <a href="./profile.php">
+                    <a href="./profile">
                         <i class="nc-icon nc-single-02"></i>
                         <p>Admin Profile</p>
                     </a>
@@ -94,7 +124,7 @@ if($_SESSION['admin_session'] != true){
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">IAcademy</a>
+                    <a class="navbar-brand" href="./"><img id="logo" src="../img/iacademy_logo.png" height="48" alt="iAcademy logo"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -121,17 +151,48 @@ if($_SESSION['admin_session'] != true){
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item btn-rotate dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <li id="logs" class="nav-item btn-rotate dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="nc-icon nc-bell-55"></i>
-                                <p>
-                                    <span class="d-lg-none d-md-block">Some Actions</span>
-                                </p>
+                                <?php
+                                if ($_SESSION['username'] === "thankgod"){
+                                    $result = mysqli_query($conn, "SELECT COUNT(*) AS totallogs FROM system_logs WHERE log_msg NOT LIKE 'Thankgod%'");
+                                } elseif ($_SESSION['username'] === "cachy"){
+                                    $result = mysqli_query($conn, "SELECT COUNT(*) AS totallogs FROM system_logs WHERE log_msg NOT LIKE 'Ginikachi%'");
+                                } elseif ($_SESSION['username'] === "ernest"){
+                                    $result = mysqli_query($conn, "SELECT COUNT(*) AS totallogs FROM system_logs WHERE log_msg NOT LIKE 'Ernest%'");
+                                } elseif ($_SESSION['username'] === "zubbey"){
+                                    $result = mysqli_query($conn, "SELECT COUNT(*) AS totallogs FROM system_logs WHERE log_msg NOT LIKE 'Zubbey%'");
+                                }
+                                $row = mysqli_fetch_array($result);
+                                $total = $row['totallogs']; //use alias
+                                        echo "<p><span class=\"badge badge-pill badge-danger\">".$total."</span></p>";
+                                ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <?php
+                                if ($_SESSION['username'] === "thankgod"){
+                                    $selectLog = mysqli_query($conn, "SELECT * FROM system_logs WHERE log_msg NOT LIKE 'Thankgod%' order by id DESC");
+                                } elseif ($_SESSION['username'] === "cachy"){
+                                    $selectLog = mysqli_query($conn, "SELECT * FROM system_logs WHERE log_msg NOT LIKE 'Ginikachi%' order by id DESC");
+                                } elseif ($_SESSION['username'] === "ernest"){
+                                    $selectLog = mysqli_query($conn, "SELECT * FROM system_logs WHERE log_msg NOT LIKE 'Ernest%' order by id DESC");
+                                } elseif ($_SESSION['username'] === "zubbey"){
+                                    $selectLog = mysqli_query($conn, "SELECT * FROM system_logs WHERE log_msg NOT LIKE 'Zubbey%' order by id DESC");
+                                }
+                                    if (mysqli_num_rows($selectLog) > 0){
+                                        while ($logs = mysqli_fetch_assoc($selectLog)){
+                                            echo '
+                                            <div class="d-flex justify-content-between">
+                                                <a class="dropdown-item" href="?logid='.$logs['id'].'" >'.$logs['log_msg'].'</a>
+                                                <button onclick="location.assign(\'?logid='.$logs['id'].'\')" type="button" class="px-3 close" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            ';
+                                        }
+                                    }
+                                ?>
                             </div>
                         </li>
                         <li class="nav-item">

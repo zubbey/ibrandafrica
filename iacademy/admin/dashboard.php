@@ -1,5 +1,6 @@
 <?php
 require ("./assets/admin_menu.php");
+
 ?>
 
 <div class="content">
@@ -51,9 +52,38 @@ require ("./assets/admin_menu.php");
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Paid Fees</p>
-                                <p class="card-title">N430,000
-                                <p>
+                                <p class="card-category">Total Amount</p>
+                                <?php
+                                $ch = curl_init();
+
+                                curl_setopt($ch, CURLOPT_URL, 'https://api.paystack.co/transaction/totals');
+                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+
+
+                                $headers = array();
+                                $headers[] = 'Authorization: Bearer sk_live_a8e9cae80da01711f33cd2388cbcfc10b5002263';
+                                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+                                $result = curl_exec($ch);
+                                if($result){
+                                    $data = json_decode($result, true);
+
+                                    $total = $data['data']['total_volume'];
+
+                                    $totalAmount = number_format($total, 2);
+//                                    $all = $data;
+//                                    print_r ($total);
+//                                    $sessiondata = $_SESSION['plandata'];
+
+//                                    $totalAmount = $data['data']['total_volume_by_currency'][0]['currency'];
+                                    echo "<p id='total' class='card-title'>".$total."<p>";
+                                }
+                                if (curl_errno($ch)) {
+                                    echo 'Error:' . curl_error($ch);
+                                }
+                                curl_close($ch);
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -78,8 +108,10 @@ require ("./assets/admin_menu.php");
                         <div class="col-7 col-md-8">
                             <div class="numbers">
                                 <p class="card-category">Visitors</p>
-                                <p class="card-title">23
-                                <p>
+                                <?php
+                                $stmt = mysqli_query($conn, "select id from visitors where page='homepage' ");
+                                echo "<p class='card-title'>".mysqli_num_rows($stmt)."<p>";
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -103,9 +135,31 @@ require ("./assets/admin_menu.php");
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Sessions</p>
-                                <p class="card-title">+45K
-                                <p>
+                                <p class="card-category">Online Payment</p>
+                                <?php
+                                $ch = curl_init();
+
+                                curl_setopt($ch, CURLOPT_URL, 'https://api.paystack.co/transaction/totals');
+                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+
+
+                                $headers = array();
+                                $headers[] = 'Authorization: Bearer sk_live_a8e9cae80da01711f33cd2388cbcfc10b5002263';
+                                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+                                $result = curl_exec($ch);
+                                if($result){
+                                    $data = json_decode($result, true);
+
+                                    $totalpaidOnline = $data['data']['total_transactions'];
+                                    echo "<p class='card-title'>".$totalpaidOnline."<p>";
+                                }
+                                if (curl_errno($ch)) {
+                                    echo 'Error:' . curl_error($ch);
+                                }
+                                curl_close($ch);
+                                ?>
                             </div>
                         </div>
                     </div>

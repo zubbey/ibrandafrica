@@ -239,7 +239,8 @@ if (isset($_GET['edit_id'])){
                     <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="courseName">Course Name</label>
-                            <input type="text" class="form-control"  name="course_name" id="courseName" value="<?php echo $course_name;?>" disabled>
+                            <input type="text" class="form-control" id="courseName" value="<?php echo $course_name;?>" disabled>
+                            <input type="hidden" name="course_name" value="<?php echo $course_name;?>">
                         </div>
                         <div class="my-3">
                             <input type="file" name="fileToUpload" id="fileToUpload">

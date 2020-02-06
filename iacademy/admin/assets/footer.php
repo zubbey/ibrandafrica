@@ -21,15 +21,15 @@
 </footer>
 </div>
 </div>
-<!--   Core JS Files   -->
 
+<!--CONFIG-->
+<script type='text/javascript' src='../config.js'></script>
+<!--   Core JS Files   -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="./assets/js/core/jquery.min.js"></script>
 <script src="./assets/js/core/popper.min.js"></script>
 <script src="./assets/js/core/bootstrap.min.js"></script>
 <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-<!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Chart JS -->
 <script src="./assets/js/plugins/chartjs.min.js"></script>
 <!--  Notifications Plugin    -->
@@ -40,6 +40,7 @@
 <!-- IAcademy Dashboard DEMO methods, don't include it in your project! -->
 <script src="./assets/demo/demo.js"></script>
 <script>
+    const sk_key = config.PAYSTACK_SECRET_KEY;
     const dashboard = document.URL.indexOf("/dashboard") >= 0;
     const registered = document.URL.indexOf("/registered") >= 0;
     const task = document.URL.indexOf("/task") >= 0;
@@ -67,6 +68,12 @@
     if(profile){
         title_el.innerHTML = "IAcademy | Profile";
         profile_nav.classList.add('active');
+    }
+    setInterval("my_function();",5000);
+
+    function my_function(){
+        $('#logs').load(document.URL +  ' #logs');
+        // window.location = location.href;
     }
 
     $(document).ready(function() {

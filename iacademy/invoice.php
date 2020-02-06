@@ -4,6 +4,9 @@ require ("./components/menu.php");
 if (isset($_GET['enrollment']) && $_GET['enrollment'] === "completed"){
     enrollCompleted($_GET['amount'], $_GET['ref']);
 }
+if (isset($_SESSION['candidatePaid'])){
+    $sql = mysqli_query($conn, "INSERT INTO system_logs (log_msg) VALUES ('".$_SESSION['candidatePaid']."')");
+}
 ?>
 <section class="banner_area">
     <div class="banner_inner d-flex align-items-center">
