@@ -93,7 +93,7 @@ if (isset($_GET['edit_id'])){
                                         echo "<td>".$row['course_name']."</td>";
                                         echo "<td><button onclick=\"location.assign('../course_details?course_id=".$row['course_id']."')\"  class='btn-primary'>View Course</button></td>";
                                         echo "<td><button onclick=\"location.assign('?edit_id=".$row['course_id']."')\"  class='btn-info'>Edit</button></td>";
-                                        echo "<td class='text-right'><button onclick=\"location.assign('?delete_id=".$row['course_id']."')\" class='btn-danger'>Delete</button></td>";
+                                        echo "<td class='text-right'><button onclick=\"location.assign('?delete_id=".$row['course_id']."&course=".$row['course_name']."')\" class='btn-danger'>Delete</button></td>";
                                         echo "</tr>";
                                         echo "</tbody>";
                                     }
@@ -113,17 +113,9 @@ if (isset($_GET['edit_id'])){
                             $sql = "SELECT `update_date` FROM avaiable_courses LIMIT 1";
                             $result = $conn->query($sql);
                             $row = $result->fetch_assoc();
-                            $time_ago = strtotime($row['update_date']);
+                            $time_ago = date('F/j/Y',strtotime($row['update_date']));
 
-                            function convert_seconds($seconds)
-                            {
-                                $dt1 = new DateTime("@0");
-                                $dt2 = new DateTime("@$seconds");
-                                return $dt1->diff($dt2)->format('%a days, %h hours, %i minutes and %s seconds');
-                            }
-
-
-                            echo "<i class=\"fa fa-history\"></i>Last Update: ".convert_seconds($time_ago)."";
+                            echo "<i class=\"fa fa-history\"></i>Last Update: ".$time_ago."";
                             ?>
                         </div>
                     </div>

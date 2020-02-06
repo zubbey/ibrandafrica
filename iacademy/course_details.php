@@ -113,7 +113,7 @@ else{
                     <div>
                         <p><?php echo $_SESSION['course_intro'];?></p>
                         <?php
-                        $paraSql = "SELECT * FROM courses_paragraph WHERE course_id = '".$_SESSION['course_id']."' LIMIT 1";
+                        $paraSql = "SELECT * FROM courses_paragraph WHERE course_id = '".$_SESSION['course_id']."'";
                         $result = mysqli_query($conn, $paraSql);
                         while ($paraRow = mysqli_fetch_assoc($result)) {
                             echo '

@@ -6,12 +6,12 @@
 
                     <div class="accordion">
                         <?php
-                        $outlineSql = "SELECT * FROM courses_outline WHERE course_id = '$course_id' LIMIT 1";
+                        $outlineSql = "SELECT * FROM courses_outline WHERE course_id = '".$_SESSION['course_id']."'";
                         $result = mysqli_query($conn, $outlineSql);
                         while ($outlineRow = mysqli_fetch_assoc($result)) {
                             echo '
                             <div class="accordion-item">
-                                <a>'.$outlineRow['heading'].'</a>
+                                <a class="text-black">'.$outlineRow['heading'].'</a>
                                 <div class="content">
                                     <p>'.$outlineRow['body'].'</p>
                                 </div>

@@ -275,13 +275,11 @@ if (isset($_POST['add_course_btn'])){
         $query = "INSERT INTO avaiable_courses (course_name, course_img, course_location, course_fee, number_of_seats, qualification, schedule_date, course_detail_title, course_detail_intro) VALUES('$course_name', '".$_FILES["fileToUpload"]["name"]."', '$course_location', '$course_fee', '$no_seats', '$qualification', '$schedule', '$detail_title', '$detail_intro')";
         $result = mysqli_query($conn, $query);
         if($result){
-
-            $selectQuery = mysqli_query($conn, "SELECT course_id FROM avaiable_courses WHERE course_name = '$course_name'");
-
-
-            if ($course > 0){
+            $selectQuery = mysqli_query($conn, "SELECT * FROM avaiable_courses WHERE course_name = '$course_name'");
+            if (mysqli_num_rows($selectQuery) > 0){
+                $courseRow = mysqli_fetch_assoc($selectQuery);
                 //    add to course_paragraph & course_outline if not empty
-                $course_id = $course['course_id'];
+                $course_id = $courseRow['course_id'];
                 if (!empty($_POST['heading']) && !empty($_POST['body'])){
                     $query = "INSERT INTO courses_paragraph (course_id, heading, body) VALUES ";
                     foreach($_POST['heading'] as $i => $name)
@@ -311,16 +309,16 @@ if (isset($_POST['add_course_btn'])){
                     $result = mysqli_query($conn, $query);
                 }
                 if ($_SESSION['username'] === "thankgod"){
-                    $_SESSION['courseAdded'] = "Thankgod Okoro Just added a new course named: ".$course_name;
+                    $_SESSION['courseAdded'] = "Thankgod Okoro Just added a new course called: ".$course_name;
                 }
                 if ($_SESSION['username'] === "cachy"){
-                    $_SESSION['courseAdded'] = "Ginikachi Just added a new course named: ".$course_name;
+                    $_SESSION['courseAdded'] = "Ginikachi Just added a new course called: ".$course_name;
                 }
                 if ($_SESSION['username'] === "ernest"){
-                    $_SESSION['courseAdded'] = "Ernest Nnadi Just added a new course named: ".$course_name;
+                    $_SESSION['courseAdded'] = "Ernest Nnadi Just added a new course called: ".$course_name;
                 }
                 if ($_SESSION['username'] === "zubbey"){
-                    $_SESSION['courseAdded'] = "Zubbey Just added a new course named: ".$course_name;
+                    $_SESSION['courseAdded'] = "Zubbey Just added a new course called: ".$course_name;
                 }
                 header("Location: ?success=courseCreated");
                 exit();
@@ -414,25 +412,26 @@ function editCourse($conn, $course_id, $courseName, $course_image, $course_locat
 //delete courses
 if ($_GET['delete_id']) {
     $id = $_GET['delete_id'];
+    $_SESSION['course_name'] = $_GET['course'];
+    //        Delete after
     $deleteQuery = "DELETE FROM avaiable_courses WHERE course_id = '$id'";
     $result = mysqli_query($conn, $deleteQuery);
     if ($result){
-        $deletedCourse = mysqli_fetch_assoc($result);
         mysqli_query($conn,"ALTER TABLE avaiable_courses AUTO_INCREMENT = 0");
         mysqli_query($conn,"ALTER TABLE courses_outline AUTO_INCREMENT = 0");
         mysqli_query($conn,"ALTER TABLE courses_paragraph AUTO_INCREMENT = 0");
 
         if ($_SESSION['username'] === "thankgod"){
-            $_SESSION['courseDeleted'] = "Thankgod Okoro Just deleted ".$deletedCourse['course_name'];
+            $_SESSION['courseDeleted'] = "Thankgod Okoro Just deleted ".$_SESSION['course_name'];
         }
         if ($_SESSION['username'] === "cachy"){
-            $_SESSION['courseDeleted'] = "Ginikachi Just deleted ".$deletedCourse['course_name'];
+            $_SESSION['courseDeleted'] = "Ginikachi Just deleted ".$_SESSION['course_name'];
         }
         if ($_SESSION['username'] === "ernest"){
-            $_SESSION['courseDeleted'] = "Ernest Nnadi Just deleted ".$deletedCourse['course_name'];
+            $_SESSION['courseDeleted'] = "Ernest Nnadi Just deleted ".$_SESSION['course_name'];
         }
         if ($_SESSION['username'] === "zubbey"){
-            $_SESSION['courseDeleted'] = "Zubbey Just deleted ".$deletedCourse['course_name'];
+            $_SESSION['courseDeleted'] = "Zubbey Just deleted ".$_SESSION['course_name'];
         }
         header('location: ?success=deleted');
         exit();

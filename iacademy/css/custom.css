@@ -503,6 +503,9 @@ img.card-img-top{
 ul.pagination.justify-content-center {
     margin-top: 30px;
 }
+.text-black{
+    color: black !important;
+}
 .page-item .page-link {
     margin-left: 0;
     background: #65c7ce;
