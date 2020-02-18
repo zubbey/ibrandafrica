@@ -125,11 +125,11 @@ require ("./components/menu.php");
                       <img src="./admin/uploads/'.$row['course_img'].'" class="p-lg-5 img-fluid card-img-top course_img" height="100" alt="">
                       <div class="card-body">
                         <h4 class="card-title">'.$row['course_name'].'</h4>
-                        <p class="card-text comments more">'.$row['course_detail_intro'].'</p>
+                        <p class="card-text comment more">'.$row['course_detail_intro'].'</p>
                       </div>
                       <div class="card-footer">
                         <p class="small">
-                          <h3 class="card-title pricing-card-title">&#8358;'.$row['course_fee'].'</h3>
+                          <h3 class="card-title pricing-card-title">&#8358;'.number_format($row['course_fee']).'</h3>
                           <ul class="list-unstyled mt-3 mb-4">
                             <li>Qualification: <span class="text-muted">'.$row['qualification'].'</span></li>
                           </ul>
@@ -154,10 +154,10 @@ require ("./components/menu.php");
           <div class="col-md-4 mb-3 mb-md-0">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
-                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Address</h4>
+                <i class="fas fa-map-marked-alt mb-2"></i>
+                <h4 class="text-uppercase text-white m-0">Address</h4>
                 <hr class="my-4">
-                <div class=" text-black-50">
+                <div class=" text-white">
                   <p class="h6">iBrand Africa Limited</p>
                   <p class="h6">No 4 Amadi-ama Layout, Trans-Amadi, Phalga 500272, Port Harcourt</p>
                 </div>
@@ -168,11 +168,11 @@ require ("./components/menu.php");
           <div class="col-md-4 mb-3 mb-md-0">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
-                <i class="fas fa-envelope text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Email</h4>
+                <i class="fas fa-envelope mb-2"></i>
+                <h4 class="text-uppercase text-white m-0">Email</h4>
                 <hr class="my-4">
-                <div class=" text-black-50">
-                  <p class="h6"><a href="#">support@iacademy.one</a></p>
+                <div class="text-white">
+                  <p class="h6">support@iacademy.one</p>
                 </div>
               </div>
             </div>
@@ -180,12 +180,12 @@ require ("./components/menu.php");
 
           <div class="col-md-4 mb-3 mb-md-0">
             <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Phone</h4>
-                <hr class="my-4 text-black-50">
-                <div class="h6">+234(080) 212-60000</div>
-                <div class="h6">+234(080) 374-78593</div>
+              <div class="card-body text-center text-white">
+                <i class="fas fa-mobile-alt mb-2"></i>
+                <h4 class="text-uppercase text-white m-0">Phone</h4>
+                <hr class="my-4 ">
+                <p class="h6">+234(080) 212-60000</p>
+                <p class="h6">+234(080) 374-78593</p>
               </div>
             </div>
           </div>

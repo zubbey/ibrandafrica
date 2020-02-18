@@ -1,13 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>iBrand Africa | Home</title>
-	<!-- Bootstrap CSS -->
-	
+
 	<?php include("components/navbar.php"); ?>
 
 
@@ -15,7 +6,7 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img src="https://i.imgur.com/k6ahvo5.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-none d-md-block caption-text">
 					<div class="row fullscreen justify-content-endd-flex align-items-center">
 						<div class="banner-content col-md-6 justify-content-center">
 							<div id="typed-strings1" class="d-none">
@@ -32,7 +23,7 @@
 			</div>
 			<div class="carousel-item">
 				<img src="https://i.imgur.com/Cntsieq.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-none d-md-block caption-text">
 					<div class="banner-content col-md-6 justify-content-center">
 						<div id="typed-strings2" class="d-none">
 							<p>Are Creative.</p>
@@ -47,7 +38,7 @@
 			</div>
 			<div class="carousel-item">
 				<img src="https://i.imgur.com/Eu4WirG.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-none d-md-block caption-text">
 					<div class="banner-content col-md-6 justify-content-center">
 						<div id="typed-strings3" class="d-none">
 							<p>Brand.</p>
@@ -65,7 +56,7 @@
 
 			<div class="carousel-item">
 				<img src="https://svgshare.com/i/Aup.svg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-none d-md-block caption-text">
 					<div class="banner-content col-md-6 justify-content-center">
 						<div id="typed-strings3" class="d-none">
 							<p>Develop.</p>
@@ -379,6 +370,7 @@
 						0v-8l-7.2,0c-8,0-9.8,6-9.8,9.8v5.3 h-4.6V32h4.6c0,10.6,0,23.3,0,23.3h9.7c0,0,0-12.9,0-23.3H42L42.8,23.8z"/>
 					</g>
 				</symbol>
+
 				<symbol id="behance" viewBox="0 0 32 32">
 					<g id="behance">
 						<circle cx="16" cy="16" r="16"/>     
@@ -415,7 +407,9 @@
 				<symbol id="instagram" viewBox="0 0 50 50">
 					<path d="M25 10.8c4.6 0 5.2 0 7 .1 1.7.1 2.6.4 3.2.6.8.3 1.4.7 2 1.3.6.6 1 1.2 1.3 2 .2.6.5 1.5.6 3.2.1 1.8.1 2.4.1 7s0 5.2-.1 7c-.1 1.7-.4 2.6-.6 3.2-.3.8-.7 1.4-1.3 2-.6.6-1.2 1-2 1.3-.6.2-1.5.5-3.2.6-1.8.1-2.4.1-7 .1s-5.2 0-7-.1c-1.7-.1-2.6-.4-3.2-.6-.8-.3-1.4-.7-2-1.3-.6-.6-1-1.2-1.3-2-.2-.6-.5-1.5-.6-3.2-.1-1.8-.1-2.4-.1-7s0-5.2.1-7c.1-1.7.4-2.6.6-3.2.3-.8.7-1.4 1.3-2 .6-.6 1.2-1 2-1.3.6-.2 1.5-.5 3.2-.6 1.8-.1 2.4-.1 7-.1m0-3.1c-4.7 0-5.3 0-7.1.1-1.8.1-3.1.4-4.2.8s-2.1 1-3.1 2-1.6 1.9-2 3.1c-.4 1.1-.7 2.4-.8 4.2-.1 1.8-.1 2.4-.1 7.1 0 4.7 0 5.3.1 7.1.1 1.8.4 3.1.8 4.2s1 2.1 2 3.1 1.9 1.6 3.1 2c1.1.4 2.4.7 4.2.8 1.8.1 2.4.1 7.1.1s5.3 0 7.1-.1c1.8-.1 3.1-.4 4.2-.8s2.1-1 3.1-2 1.6-1.9 2-3.1c.4-1.1.7-2.4.8-4.2.1-1.8.1-2.4.1-7.1s0-5.3-.1-7.1c-.1-1.8-.4-3.1-.8-4.2s-1-2.1-2-3.1-1.9-1.6-3.1-2c-1.1-.4-2.4-.7-4.2-.8-1.8-.1-2.4-.1-7.1-.1z"/><path d="M25 16.1c-4.9 0-8.9 4-8.9 8.9s4 8.9 8.9 8.9 8.9-4 8.9-8.9-4-8.9-8.9-8.9zm0 14.7c-3.2 0-5.8-2.6-5.8-5.8s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.8-2.6 5.8-5.8 5.8z"/><circle cx="34.3" cy="15.7" r="2.1"/>
 				</symbol>
-
+            </svg>
+        </div>
+    </div>
 
 				<section class="section">
 					<div class="container text-center">
@@ -733,6 +727,11 @@
 						$('ul.dropdown-menu').toggleClass("d-block"),ease;
 					});
 				});
+
+                if(window.matchMedia('(min-width:620px) and (max-width: 1280px)').matches)
+                {
+                    $(".caption-text").css('bottom','36% !important');
+                }
 
 			</script>
 		</body>

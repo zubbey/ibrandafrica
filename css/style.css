@@ -1,32 +1,8 @@
-/*----------------------------------------------------
-@File: Default Styles
-@Author: INNOCENT WANAYANWU
 
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
----------------------------------------------------- */
-/*=====================================================================
-@Developed By: Innocent Wanyanwu
-Author E-mail: zubyinnocent@gmail.com
-
-=====================================================================*/
-/*----------------------------------------------------*/
-/*font Variables*/
-/*Color Variables*/
-/*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:700|Roboto:400,500,500i");
 @import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i');
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
-/* Medium Layout: 1280px */
-/* Tablet Layout: 768px */
-/* Mobile Layout: 320px */
-/* Wide Mobile Layout: 480px */
-/*---------------------------------------------------- */
 
-/*----------------------------------------------------*/
 body {
   line-height: 24px;
   font-size: 18px;
@@ -74,10 +50,24 @@ button:focus {
 .p0 {
   padding-left: 0px;
   padding-right: 0px; }
-/*.owl-item.active{width: 100% !important;}
-.owl-stage{width: 100% !important;}*/
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
+
+.header_area .navbar .nav .nav-item{
+  padding: 0 10px !important;
+  margin: 0 !important;
+}
+.navbar-collapse{
+  padding: 0 !important;
+}
+.navbar-brand{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.navbar .navbar-expand-lg .navbar-light{
+  height: 50px !important;
+}
+.header_area{
+  position: fixed !important;
+}
 .section_gap {
   padding: 120px 0; }
   @media (max-width: 991px) {
@@ -2597,21 +2587,21 @@ h6 {
       left: 10%; }
       @media (max-width: 1200px) {
         .about-area .main-title h1:before {
-          left: 12%; } }
+          left: 12%; } .carousel-caption{bottom: 38% !important;}}
       @media (max-width: 991px) {
         .about-area .main-title h1:before {
-          left: 8%; } }
+          left: 8%; } .carousel-caption{bottom: 38% !important;}}
       @media (max-width: 767px) {
         .about-area .main-title h1:before {
-          left: 10%; } }
+          left: 10%; } .carousel-caption{bottom: 38% !important;}}
     .about-area .main-title h1:after {
       left: 5px; }
   @media (max-width: 1024px) {
     .about-area .main-title {
-      padding-bottom: 0px; } }
+      padding-bottom: 0px; } .carousel-caption{bottom: 38% !important;}}
 @media (max-width: 991px) {
   .about-area .about-left {
-    display: none; } }
+    display: none; } .carousel-caption{bottom: 38% !important;}}
 .about-area .primary-btn {
   margin-top: 40px; }
 
@@ -2625,7 +2615,7 @@ h6 {
     .testimonial_area {
       background-image: none; }
       .testimonial_area .testimonial-img {
-        display: none; } }
+        display: none; } .carousel-caption{bottom: 38% !important;} }
   .testimonial_area .testimonial_logos {
     background: #fff;
     padding: 80px 50px;
@@ -2641,7 +2631,7 @@ h6 {
       float: right; }
     @media (max-width: 991px) {
       .testimonial_area .testimonial_logos {
-        display: none; } }
+        display: none; } .carousel-caption{bottom: 38% !important;}}
   .testimonial_area .active_testimonial .owl-dots {
     background: #6187c9;
     height: 25px;
@@ -2700,7 +2690,7 @@ h6 {
     padding-right: 35px; }
     @media (max-width: 767px) {
       .single_testimonial .testimonial_content p {
-        font-size: 18px; } }
+        font-size: 18px; } .carousel-caption .d-none .d-md-block{bottom: 30% !important;} }
 
 /* End Testimonial Area css
 ============================================================================================ */

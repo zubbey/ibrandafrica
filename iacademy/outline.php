@@ -11,7 +11,7 @@
                         while ($outlineRow = mysqli_fetch_assoc($result)) {
                             echo '
                             <div class="accordion-item">
-                                <a class="text-black">'.$outlineRow['heading'].'</a>
+                                <a class="text-black outline">'.$outlineRow['heading'].'</a>
                                 <div class="content">
                                     <p>'.$outlineRow['body'].'</p>
                                 </div>

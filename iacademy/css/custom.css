@@ -169,18 +169,30 @@ body{
 
 }
 a:hover, a:focus{
-    color: #ffffff;
+    color: #ffffff !important;
     -webkit-transition: color .5s ease;
     -moz-transition: color .5s ease;
     -o-transition: color .5s ease;
     transition: color .5s ease;
 }
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #339dc0;
+}
 a {
-    color: #ffffff;
+    color: #28aac0;
     -webkit-transition: color .5s ease;
     -moz-transition: color .5s ease;
     -o-transition: color .5s ease;
     transition: color .5s ease;
+}
+.navbar .nav .nav-item .nav-link{
+    color: #ffffff;
+}
+.coursenav:focus, .coursenav:hover{
+    color: #ffffff !important;
+}
+a.text-black.outline:hover, a.text-black.outline:focus{
+    color: #28aac0 !important;
 }
 h1{
 	font-family: 'Major Mono Display','Karla', monospace, sans-serif;
@@ -270,6 +282,41 @@ h2.text-20 {
     visibility: hidden;
 }
 
+/*for readmore*/
+a.morelink {
+    text-decoration:none;
+    outline: none;
+}
+.morecontent span {
+    display: none;
+}
+.comment {
+    /*width: 400px;*/
+    /*background-color: #f0f0f0;*/
+    margin: 10px;
+}
+
+/*button.swal2-cancel.btn.btn-danger {*/
+/*    border: none !important;*/
+/*    color: #fff !important;*/
+/*}*/
+/*button.swal2-confirm.btn.btn-success{*/
+/*    border: none !important;*/
+/*    color: #fff !important;*/
+/*}*/
+a.morelink{
+    color: #f94101 !important;
+}
+a.morelink:hover, a.morelink:visited{
+    color: #c14906 !important;
+}
+a.morelink.less{
+    color: #f94101 !important;
+}
+a.morelink.less:hover, a.morelink.less:visited{
+    color: #f94101 !important;
+}
+
 .btn:not(:disabled):not(.disabled) {
     width: min-content;
     margin: 5px auto 0 auto;
@@ -285,9 +332,9 @@ h2.text-20 {
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
     background: #1d8190 !important;
 }
-a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover{
-    color: #ffffff !important;
-}
+/*a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover{*/
+/*    color: #ffffff !important;*/
+/*}*/
 button.btn-primary.btn.btn-lg.btn-block {
     background: #65c7ce;
     color: #fff;

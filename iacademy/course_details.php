@@ -64,7 +64,7 @@ else{
                                     while($row = $result->fetch_assoc()) {
                                         echo '
                                             <li class="nav-item">
-                                                <a class="nav-link" href="?course_id='.$row['course_id'].'">'.$row['course_name'].'</a>
+                                                <a style="color:#00aabd;" class="nav-link coursenav" href="?course_id='.$row['course_id'].'">'.$row['course_name'].'</a>
                                             </li>
                                         ';
                                     }
@@ -140,7 +140,7 @@ else{
                     <li>
                         <a class="justify-content-between d-flex" href="#">
                             <p>Course Fee </p>
-                            <span>₦<?php echo $_SESSION['course_amount'];?></span>
+                            <span>₦<?php echo number_format($_SESSION['course_amount']);?></span>
                         </a>
                     </li>
                     <li>
