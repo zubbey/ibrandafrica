@@ -111,7 +111,7 @@ require ("./components/menu.php");
   <section id="courses" class="courses-section bg-light mb-lg-5">
     <div class="container">
       <h2 class="mx-auto mb-lg-5">Available Courses</h2>
-      <div class="card-deck mb-lg-5" id="card-deck0">
+        <div class="row">
 
         <?php
         $sql = "SELECT * FROM avaiable_courses";
@@ -121,6 +121,7 @@ require ("./components/menu.php");
             while($row = $result->fetch_assoc()) {
                 echo
                 '
+                <div class="col-md-4 mb-lg-5" id="card-deck0">
                     <div class="card card-hover">
                       <img src="./admin/uploads/'.$row['course_img'].'" class="p-lg-5 img-fluid card-img-top course_img" height="100" alt="">
                       <div class="card-body">
@@ -137,12 +138,12 @@ require ("./components/menu.php");
                       </div>
                       <button onclick="window.location.assign(\'course_details?course_id='.$row['course_id'].'\')" type="button" id="photo_btn" class="btn-primary btn btn-lg btn-block ">View Course Details</button>
                     </div>
+                </div>
                 ';
             }
         }
         ?>
-
-      </div>
+        </div>
     </div>
   </section>
     <!-- Contact Section -->

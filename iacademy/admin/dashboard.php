@@ -69,15 +69,9 @@ require ("./assets/admin_menu.php");
                                 if($result){
                                     $data = json_decode($result, true);
 
-                                    $total = $data['data']['total_volume'];
+                                    $total = $data['data']['total_volume']/100;
 
-                                    $totalAmount = number_format($total, 2);
-//                                    $all = $data;
-//                                    print_r ($total);
-//                                    $sessiondata = $_SESSION['plandata'];
-
-//                                    $totalAmount = $data['data']['total_volume_by_currency'][0]['currency'];
-                                    echo "<p id='total' class='card-title'>".$total."<p>";
+                                    echo "<p id='total' class='card-title'>&#8358;".number_format($total)."<p>";
                                 }
                                 if (curl_errno($ch)) {
                                     echo 'Error:' . curl_error($ch);
