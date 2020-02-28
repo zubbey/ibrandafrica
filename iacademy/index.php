@@ -173,7 +173,7 @@ require ("./components/menu.php");
                 <h4 class="text-uppercase text-white m-0">Email</h4>
                 <hr class="my-4">
                 <div class="text-white">
-                  <p class="h6">support@iacademy.one</p>
+                  <p class="h6">info@ibrandacademy.one</p>
                 </div>
               </div>
             </div>
@@ -193,13 +193,13 @@ require ("./components/menu.php");
         </div>
 
         <div class="py-4 social d-flex justify-content-center">
-          <a href="https://www.twitter.com/ibrand_academy/" target="_black" class="mx-2">
+          <a href="https://www.twitter.com/ibrandacademy_" target="_black" class="mx-2">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="https://www.facebook.com/ibrand_academy/" target="_blank" class="mx-2">
+          <a href="https://www.facebook.com/ibrandacademy_" target="_blank" class="mx-2">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://www.instagram.com/ibrand_academy/" target="_blank" class="mx-2">
+          <a href="https://www.instagram.com/ibrandacademy_" target="_blank" class="mx-2">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
