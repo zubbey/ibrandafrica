@@ -132,7 +132,7 @@ require ("./components/menu.php");
                         <p class="small">
                           <h3 class="card-title pricing-card-title">&#8358;'.number_format($row['course_fee']).'</h3>
                           <ul class="list-unstyled mt-3 mb-4">
-                            <li>Qualification: <span class="text-muted">'.$row['qualification'].'</span></li>
+                            <li>Certification: <span class="text-muted">'.$row['qualification'].'</span></li>
                           </ul>
                         </p>
                       </div>
