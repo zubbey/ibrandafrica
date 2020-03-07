@@ -2,7 +2,7 @@
 	<?php include("components/navbar.php"); ?>
 
 
-	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleCaptions" class="carousel slide mt-3" data-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img src="https://i.imgur.com/k6ahvo5.jpg" class="d-block w-100" alt="...">
@@ -65,7 +65,7 @@
 
 						<h1 class="last_h1 text-white">We Help Develop Your Future.<span id="typed3" class="type-text"></span></h1>
 						<h3 class="col text-white">Join a vibrant, creative and award-winning student community.</h3>
-						<a href="http://www.ibrandafrica.one/iacademy/" target="_blank" class="primary-btn">Enroll Now</a>
+						<a href="http://ibrandacademy.one" target="_blank" class="primary-btn">Enroll Now</a>
 					</div>
 				</div>
 			</div>
