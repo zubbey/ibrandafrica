@@ -1,738 +1,452 @@
+<?php
+$page = 'home';
+require_once('layouts/header.html')
 
-	<?php include("components/navbar.php"); ?>
+?>
+<style>
+    .slick-dotted.slick-slider {
+        margin-bottom: 10px !important;
+    }
+    .slick-slider{
+        height: 350px;
+    }
+</style>
+	<!-- awa minimal-portfolio, info-block, services-2 and team template -->
+	<div class="container-fluid">
+		<div class="hero">
+			<div class="row">
+				<div class="col xs 12">
+					<div class="banner-slider-wrap  vertical">
+						<div class="swiper3-container hard-full-height" data-mouse="0" data-autoplay="5000" data-loop="1" data-speed="1500" data-center="1" data-space="0" data-pagination-type="bullets" data-mode="vertical">
+							<div class="swiper3-wrapper">
+								<div class="swiper3-slide swiper-no-swiping style1" data-title="Welcome">
+									<div class="slider-banner hard-full-height">
+										<div class="img-bg bg-cover">
+											<img src="https://i.imgur.com/ojWWzPj.jpg" class="s-img-switch" alt="" />
+										</div>
+										<div class="container no-padd-md">
+											<div class="row">
+												<div class="col-xs-12">
+													<h1 class="title">We are<br>iBrand Africa</h1>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper3-slide swiper-no-swiping style1" data-title="Design">
+									<div class="slider-banner hard-full-height">
+										<div class="img-bg bg-cover">
+											<img src="https://i.imgur.com/EnzFadO.jpg" class="s-img-switch" alt="" />
+										</div>
+										<div class="container no-padd-md">
+											<div class="row">
+												<div class="col-xs-12">
+													<h1 class="title">We Design, Develop <br> & Stratiges Brands</h1>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper3-slide swiper-no-swiping style1" data-title="Transformation">
+									<div class="slider-banner hard-full-height">
+										<div class="img-bg bg-cover">
+											<img src="https://i.imgur.com/AhJsCcp.jpg" class="s-img-switch" alt="" />
+										</div>
 
+										<div class="container no-padd-md">
+											<div class="row">
+												<div class="col-xs-12">
+													<h1 class="title">Transform from Ideas<br> to Products</h1>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper3-slide swiper-no-swiping style1" data-title="Winners">
+									<div class="slider-banner hard-full-height">
+										<div class="img-bg bg-cover">
+											<img src="https://i.imgur.com/ASGtCdq.jpg" class="s-img-switch" alt="" />
+										</div>
 
-	<div id="carouselExampleCaptions" class="carousel slide mt-3" data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="https://i.imgur.com/k6ahvo5.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block caption-text">
-					<div class="row fullscreen justify-content-endd-flex align-items-center">
-						<div class="banner-content col-md-6 justify-content-center">
-							<div id="typed-strings1" class="d-none">
-								<p>Have One Goal.</p>
-								<p>Have One Vision.</p>
+										<div class="container no-padd-md">
+											<div class="row">
+												<div class="col-xs-12">
+													<h1 class="title">With us,<br> everyone wins</h1>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-
-							<h1>We <span id="typed1"></span></h1>
-							<h3 class="col">We are a branding, IT and marketing agency with one goal… we help businesses stand out and grow</h3>
-							<a href="contact.php#contact_info" class="primary-btn">Start a Project</a>
+							<div class="swiper3-pagination"></div>
+						</div>
+						<div class="socials">
+							<a href="https://www.facebook.com/ibrandafricagroup" target="_blank">Facebook</a>
+							<a href="https://www.instagram.com/ibrandafricagroup" target="_blank">Instagram</a>
+							<a href="https://www.twitter.com/ibrandafricagroup" target="_blank">Twitter</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="carousel-item">
-				<img src="https://i.imgur.com/Cntsieq.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block caption-text">
-					<div class="banner-content col-md-6 justify-content-center">
-						<div id="typed-strings2" class="d-none">
-							<p>Are Creative.</p>
-							<p>Are Unique.</p>
-						</div>
-
-						<h1>We Are Creative.<span id="typed2" class="type-text"></span></h1>
-						<h3 class="col">Our creative energy shapes the ideas that transforms brands and creates connections with customers and audiences.</h3>
-						<a href="contact.php#contact_info" class="primary-btn">Develop New iDea</a>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="https://i.imgur.com/Eu4WirG.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block caption-text">
-					<div class="banner-content col-md-6 justify-content-center">
-						<div id="typed-strings3" class="d-none">
-							<p>Brand.</p>
-							<p>Design.</p>
-							<p>Innovate.</p>
-						</div>
-
-						<h1 class="last_h1">We Brand. Design. Innovate.<span id="typed3" class="type-text"></span></h1>
-						<h3 class="col">A strong brand confirms your credibility, creates loyalty, connects emotionally with your consumers,
-						and motivates your audience to choose your services.</h3>
-						<a href="about-us.php#team" class="primary-btn">Join the team</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="carousel-item">
-				<img src="https://svgshare.com/i/Aup.svg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block caption-text">
-					<div class="banner-content col-md-6 justify-content-center">
-						<div id="typed-strings3" class="d-none">
-							<p>Develop.</p>
-							<p>Future.</p>
-						</div>
-
-						<h1 class="last_h1 text-white">We Help Develop Your Future.<span id="typed3" class="type-text"></span></h1>
-						<h3 class="col text-white">Join a vibrant, creative and award-winning student community.</h3>
-						<a href="http://ibrandacademy.one" target="_blank" class="primary-btn">Enroll Now</a>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div>
-
-	<!--================End Home Banner Area =================-->
-
-	<!--================ Start Services Area =================-->
-	<section class="section_gap Services_area" id="work">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-6 text-center">
-					<div class="main-title">
-						<h1>What's Cooking?</h1>
-						<p>get to know more about our latest project on web development /design, stationaries, Booklet, T-Shirt, and Products.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row justify-content-center">
-				<div class="col-lg-10">
-					<div class="projects_fillter">
-						<ul class="filter list">
-							<li class="active" data-filter="*">All Categories</li>
-							<li data-filter="#brand">Branding</li>
-							<li data-filter="#creative">Creative Work </li>
-							<li data-filter="#web">Web Design</li>
-							<li data-filter="#app">Mobile App</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="projects_inner row grid gallery">
-				<div class="col-lg-6 col-sm-6 col-sm-12 grid-item" id="brand">
-					<div class="projects_item " >
-						<img class="img-fluid w-100" src="https://i.imgur.com/jvZexiO.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/jvZexiO.jpg" title="PGDS AGENCY LIMITED">
-								<h4>PGDS AGENCY LIMITED</h4>
-							</a>
-							<p>Branding. UX/UI Design. Web Development</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-sm-12 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/JVDAwVc.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/JVDAwVc.jpg" title="PGDS AGENCY LIMITED">
-								<h4>PGDS AGENCY LIMITED</h4>
-							</a>
-							<p>Branding. UX/UI Design. Web Development</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/tIoBDwK.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/tIoBDwK.jpg" title="SMILE NIGERIA">
-								<h4>SMILE NIGERIA</h4>
-							</a>
-							<p>Branding. UX/UI Design.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/NpuBYBg.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/NpuBYBg.jpg" title="SMILE NIGERIA">
-								<h4>SMILE NIGERIA</h4>
-							</a>
-							<p>Branding. UX/UI Design.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-sm-6 app grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/6fXEx98.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/6fXEx98.jpg" title="BLOOMBREED">
-								<h4>BLOOMBREED</h4>
-							</a>
-							<p>Branding. UX/UI Design. App/Web Development</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/0cVzwEY.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/0cVzwEY.jpg" title="NOVEL FORTE LIMITED">
-								<h4>NOVEL FORTE LIMITED</h4>
-							</a>
-							<p>Brand Activation. UX/UI Design. Web Development</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/PerFOQ2.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/PerFOQ2.jpg" title="NOVEL FORTE LIMITED">
-								<h4>NOVEL FORTE LIMITED</h4>
-							</a>
-							<p>Brand Activation. UX/UI Design. Web Development</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand creative grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/ld0AqtT.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/ld0AqtT.jpg" title="NOVEL FORTE LIMITED">
-								<h4>NOVEL FORTE LIMITED</h4>
-							</a>
-							<p>Brand Activation. UX/UI Design. Repositioning</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-sm-6 brand creative grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/Sds1ZJA.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/Sds1ZJA.jpg" title="NOVEL FORTE LIMITED">
-								<h4>NOVEL FORTE LIMITED</h4>
-							</a>
-							<p>Brand Activation. UX/UI Design. Repositioning</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/rCfhqjw.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/rCfhqjw.jpg" title="NOVEL FORTE LIMITED">
-								<h4>Choice Backeries & Confectioneries</h4>
-							</a>
-							<p>Brand Activation. UX/UI Design. Repositioning</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 web grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/JmbqHlz.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/JmbqHlz.jpg" title="NOVEL FORTE LIMITED">
-								<h4>Golden Tulip Port harcourt</h4>
-							</a>
-							<p>Branding. UX/UI Design. Web Development</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/JmbqHlz.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/JmbqHlz.jpg" title="Golden Tulip Port harcourt">
-								<h4>Golden Tulip Port harcourt</h4>
-							</a>
-							<p>Branding. UX/UI Design. Web Development</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/TWbGh1J.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/TWbGh1J.jpg" title="MTN NIGERIA">
-								<h4>NTN NIGERIA</h4>
-							</a>
-							<p>Branding. UX/UI Design.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/OFOqFdP.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/OFOqFdP.jpg" title="MTN NIGERIA">
-								<h4>NTN NIGERIA</h4>
-							</a>
-							<p>Branding. UX/UI Design. Product Design.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/xKlyX9X.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/xKlyX9X.jpg" title="MTN NIGERIA">
-								<h4>NTN NIGERIA</h4>
-							</a>
-							<p>Branding. UX/UI Design. Product Design.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/vilYIXD.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/vilYIXD.jpg" title="MTN NIGERIA">
-								<h4>NTN NIGERIA</h4>
-							</a>
-							<p>Branding. UX/UI Design.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/BcSVf8B.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/BcSVf8B.jpg" title="MTN NIGERIA">
-								<h4>NTN NIGERIA</h4>
-							</a>
-							<p>Branding. UX/UI Design. Product Design.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 creative grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/JeJApBP.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/JeJApBP.jpg" title="EXPLORE AFRICA MAGAZINE">
-								<h4>EXPLORE AFRICA MAGAZINE</h4>
-							</a>
-							<p>Branding. Creative Design. Marketing.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 creative grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="https://i.imgur.com/VxDiBkY.jpg" alt="">
-						<div class="projects_text">
-							<a class="image-popup-vertical-fit" href="https://i.imgur.com/VxDiBkY.jpg" title="EXPLORE AFRICA MAGAZINE">
-								<h4>EXPLORE AFRICA MAGAZINE</h4>
-							</a>
-							<p>Branding. Creative Design. Marketing.</p>
+			<div class="row ">
+				<div class="container">
+					<div class="row margin-lg-120t margin-md-100t margin-sm-80t margin-xs-50t">
+						<div class="col-xs-12">
+							<div class="headings style2">
+								<div class="content">
+									<div class="info">
+										<h5 class="subtitle" style="color:#ffd139">Why choice us?</h5>
+										<h3 class="title" style="color:#ffffff">We're a professional brand and communications agency, ready to put a smile :) on your business.</h3>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!--================ End Services Area =================-->
+			<div class="row margin-lg-70t margin-md-60t margin-sm-50t margin-xs-30t margin-lg-70b margin-md-60b margin-sm-50b margin-xs-30b">
+				<div class="container">
+					<div class="row">
 
-	<!--================ Start About Area =================-->
-	<section class="about-area section_gap gray-bg ">
-		<div class="container">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-lg-6 about-left">
-					<img class="img-fluid" src="https://i.imgur.com/1sH01p6.jpg" alt="">
-				</div>
-				<div class="col-lg-6 col-md-12 about-right ">
-					<div class="main-title text-left">
-						<h1>8 Years in Business</h1>
-					</div>
-					<div class="mb-50 wow fadeIn" data-wow-duration="20s">
-						<p>
-						iBrand Africa has provided branding, web design and digital marketing for clients across the continent since 2011. Our founders and experts are industry veterans ......						</p>
+						<div class="col-xs-12 mb-32">
+							<div class="grid-awa-portfolio-3">
+
+								<div  onclick="window.location.assign(location.pathname + 'work-client?q=novel-forte-limited')" class="grid-item first-big">
+									<img src="img2/0cVzwEY.png" alt="" class="s-img-switch">
+									<div class="content-wrap">
+										<div class="content">
+											<div class="category">Brand Activation. UX/UI Design. Web Development</div>
+											<h5 class="title">
+												<a href="/work-client?q=novel-forte-limited">NOVEL FORTE LIMITED</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+								<div onclick="window.location.assign(location.pathname + 'work-client?q=gojeje-limited')" class="grid-item">
+									<img src="https://i.imgur.com/XUXNZir.jpg" alt="" class="s-img-switch">
+									<div class="content-wrap">
+										<div class="content">
+											<div class="category">Branding. UX/UI Design. App/Web Development</div>
+											<h5 class="title">
+												<a href="/work-client?q=gojeje-limited">GOJEJE LIMITED</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+								<div onclick="window.location.assign(location.pathname + 'work-client?q=choice-bakeries-and-confectioneries')" class="grid-item">
+									<img src="img2/rCfhqjw.jpg" alt="" class="s-img-switch">
+									<div class="content-wrap">
+										<div class="content">
+											<div class="category">Branding. UX/UI Design. Product Design.</div>
+											<h5 class="title">
+												<a href="/work-client?q=choice-bakeries-and-confectioneries">CHOICE BAKERIES & CONFECTIONERIES</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+								<div onclick="window.location.assign(location.pathname + 'work-client?q=krisdera-hotel-limited')" class="grid-item first-long">
+									<img src="https://i.imgur.com/kwRRgUq.jpg" alt="" class="s-img-switch">
+									<div class="content-wrap">
+										<div class="content">
+											<div class="category">Branding. Creative Design. Marketing.</div>
+											<h5 class="title">
+												<a href="/work-client?q=krisdera-hotel-limited">KRISDERA HOTELS LIMITED</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+								<div onclick="window.location.assign(location.pathname + 'work-client?q=soec-optimum-e-and-c-limited')" class="grid-item last-long">
+									<img src="https://i.imgur.com/gocx2Hh.jpg" alt="" class="s-img-switch">
+									<div class="content-wrap">
+										<div class="content">
+											<div class="category">Branding. UX/UI Design. Web Development</div>
+											<h5 class="title">
+												<a href="/work-client?q=soec-optimum-e-and-c-limited">SOEC OPTIMUM E & C LTD</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+								<div onclick="window.location.assign(location.pathname + 'work-client?q=kusnap')" class="grid-item last-big">
+<!--                                    img2/JVDAwVc.jpg-->
+									<img src="img2/ZrcHrrI.jpg" alt="KUSNAP" class="s-img-switch">
+									<div class="content-wrap">
+										<div class="content">
+											<div class="category">Web & Mobile Application & Cooperate Branding </div>
+											<h5 class="title">
+												<a href="/work-client?q=kusnap">KUSNAP</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+								<div onclick="window.location.assign(location.pathname + 'work-client?q=pdgs-agency-limited')" class="grid-item">
+									<img src="img2/JVDAwVc.png" alt="" class="s-img-switch">
+									<div class="content-wrap">
+										<div class="content">
+											<div class="category">Branding. UX/UI Design. Web Development</div>
+											<h5 class="title">
+												<a href="/work-client?q=pdgs-agency-limited">PGDS AGENCY LIMITED</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+								<div onclick="window.location.assign(location.pathname + 'work-client?q=hedo-bec-engineering-and-construction-limited')" class="grid-item">
+									<img src="https://i.imgur.com/OIn8Gqc.jpg" alt="" class="s-img-switch">
+									<div class="content-wrap">
+										<div class="content">
+											<div class="category">Full Brand Activation. Web Development.</div>
+											<h5 class="title">
+												<a href="/work-client?q=hedo-bec-engineering-and-construction-limited">HEDO-BEC ENGINEERING & CONSTRUCTION LIMITED</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
 					</div>
 
-					<a href="about-us.php#about" class="primary-btn">More Info</a>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!--================ End About Area =================-->
 
-	<!-- ===================== Meet the team ==================== -->
-	<div class="page">
-		<div class="page__demo">
-			<svg width="26" height="28" style="display: none;">
-				<symbol id="twitter" viewBox="0 0 26 28">
-					<path d="M25.312 6.375c-0.688 1-1.547 1.891-2.531 2.609 0.016 0.219 0.016 0.438 0.016 0.656 0 6.672-5.078 14.359-14.359 14.359-2.859 0-5.516-0.828-7.75-2.266 0.406 0.047 0.797 0.063 1.219 0.063 2.359 0 4.531-0.797 6.266-2.156-2.219-0.047-4.078-1.5-4.719-3.5 0.313 0.047 0.625 0.078 0.953 0.078 0.453 0 0.906-0.063 1.328-0.172-2.312-0.469-4.047-2.5-4.047-4.953v-0.063c0.672 0.375 1.453 0.609 2.281 0.641-1.359-0.906-2.25-2.453-2.25-4.203 0-0.938 0.25-1.797 0.688-2.547 2.484 3.062 6.219 5.063 10.406 5.281-0.078-0.375-0.125-0.766-0.125-1.156 0-2.781 2.25-5.047 5.047-5.047 1.453 0 2.766 0.609 3.687 1.594 1.141-0.219 2.234-0.641 3.203-1.219-0.375 1.172-1.172 2.156-2.219 2.781 1.016-0.109 2-0.391 2.906-0.781z"></path>
-				</symbol>
-				<symbol id="codepen" viewBox="0 0 28 28">
-					<path d="M3.375 18.266l9.422 6.281v-5.609l-5.219-3.484zM2.406 16.016l3.016-2.016-3.016-2.016v4.031zM15.203 24.547l9.422-6.281-4.203-2.812-5.219 3.484v5.609zM14 16.844l4.25-2.844-4.25-2.844-4.25 2.844zM7.578 12.547l5.219-3.484v-5.609l-9.422 6.281zM22.578 14l3.016 2.016v-4.031zM20.422 12.547l4.203-2.812-9.422-6.281v5.609zM28 9.734v8.531c0 0.391-0.203 0.781-0.531 1l-12.797 8.531c-0.203 0.125-0.438 0.203-0.672 0.203s-0.469-0.078-0.672-0.203l-12.797-8.531c-0.328-0.219-0.531-0.609-0.531-1v-8.531c0-0.391 0.203-0.781 0.531-1l12.797-8.531c0.203-0.125 0.438-0.203 0.672-0.203s0.469 0.078 0.672 0.203l12.797 8.531c0.328 0.219 0.531 0.609 0.531 1z"></path>
-				</symbol>
-				<symbol id="linkedin" viewBox="0 0 24 28">
-					<path d="M5.453 9.766v15.484h-5.156v-15.484h5.156zM5.781 4.984c0.016 1.484-1.109 2.672-2.906 2.672v0h-0.031c-1.734 0-2.844-1.188-2.844-2.672 0-1.516 1.156-2.672 2.906-2.672 1.766 0 2.859 1.156 2.875 2.672zM24 16.375v8.875h-5.141v-8.281c0-2.078-0.75-3.5-2.609-3.5-1.422 0-2.266 0.953-2.641 1.875-0.125 0.344-0.172 0.797-0.172 1.266v8.641h-5.141c0.063-14.031 0-15.484 0-15.484h5.141v2.25h-0.031c0.672-1.062 1.891-2.609 4.672-2.609 3.391 0 5.922 2.219 5.922 6.969z"></path>
-				</symbol>
-			</svg>
+			<div class="row padding-lg-40t padding-xs-20t" style="background-color: #fff;">
+				<div class="col-xs-12">
+					<div class="info-block-wrap style-3">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<div class="images-wrapper">
+										<div class="img-wrap">
+											<img src="https://i.imgur.com/VU4s1mE.jpg" class="" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<div class="title-wrap">
+										<div class="number">
+											<svg class="number-svg" xmlns="http://www.w3.org/2000/svg" height="200" viewBox="0 0 185 140" style="opacity: 1;">
+												<defs>
+													<pattern x="0" y="0" width="185" height="140" patternUnits="userSpaceOnUse" id="pattern4f372ad" viewBox="0 0 185 140">
+														<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://i.imgur.com/EnzFadO.jpg" preserveAspectRatio="none" x="0" y="0" width="185" height="140"></image>
+													</pattern>
+												</defs>
+												<text x="45%" y="50%" dy="50" style="text-anchor: middle;" fill="url('#pattern4f372ad')">7</text>
+											</svg>
+										</div>
+										<h1 class="title">Years experience</h1>
+									</div>
+									<div class="content">
+										<p>iBrand Africa was founded in 2006 by our Passionate business analyst Ernest Nnadi, Through partnerships with creative minds who aspire to unlock the unique value of brand innovation.</p>
+										<p>With collaboration and in-depth consultation, we deliver expert branding, web/app development and brand communications services to help these businesses achieve their potential in full.</p>
+									</div>
+									<!-- <div class="video only-button">
+										<div class="video-content">
+											<a href="https://www.youtube.com/watch?time_continue=2&amp;v=YMurlapfouo" class="play"></a>
+											<span>Watch Video</span>
+										</div>
+										<span class="close fa fa-close"></span>
+									</div> -->
+								</div>
+							</div>
+							<div class="bg-text">about</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-				<symbol id="facebook" viewBox="0 0 64 64">
-					<g id="facebook" viewBox="0 0 64 64">
-						<circle id="circle" cx="32" cy="32" r="32"/>
-						<path id="fb" fill="#FFFFFF" d="M42.8,23.8h-7.4v-4.8c0-1.8,1.2-2.2,2.1-2.2c0.8,0,5.2,0,5.2, 
-						0v-8l-7.2,0c-8,0-9.8,6-9.8,9.8v5.3 h-4.6V32h4.6c0,10.6,0,23.3,0,23.3h9.7c0,0,0-12.9,0-23.3H42L42.8,23.8z"/>
-					</g>
-				</symbol>
+			<div class="row padding-lg-80t padding-xs-60t padding-lg-20b padding-xs-10b" style="background-color: #fff;">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="headings-wrap not-bg-title">
+								<div class="headings style2">
+									<div class="content">
+										<div class="info">
+											<h3 class="title">Our procedure style</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-				<symbol id="behance" viewBox="0 0 32 32">
-					<g id="behance">
-						<circle cx="16" cy="16" r="16"/>     
-						<path fill="white" d="M14.776,15.93c0.416-0.212,0.731-0.446,0.944-0.704c0.382-0.459,0.571-1.066,0.571-1.82
-						c0-0.732-0.189-1.361-0.567-1.886c-0.629-0.857-1.696-1.296-3.204-1.318H6.548v12.36h5.568c0.628,0,1.21-0.055,1.746-0.167
-						c0.538-0.112,1.002-0.318,1.397-0.621c0.35-0.263,0.641-0.587,0.875-0.973c0.367-0.581,0.551-1.238,0.551-1.97
-						c0-0.71-0.162-1.314-0.482-1.812C15.883,16.524,15.407,16.16,14.776,15.93z M9.012,12.35h2.69c0.592,0,1.079,0.064,1.461,0.192
-						c0.443,0.186,0.664,0.566,0.664,1.142c0,0.518-0.168,0.881-0.502,1.085c-0.335,0.204-0.771,0.307-1.308,0.307H9.012V12.35z
-						M13.265,20.2c-0.299,0.145-0.716,0.217-1.252,0.217H9.012v-3.296h3.042c0.531,0.005,0.942,0.076,1.236,0.21
-						c0.526,0.241,0.787,0.682,0.787,1.326C14.077,19.417,13.807,19.93,13.265,20.2z"/>
-						<path fill="white" d="M26.466,16.851c-0.111-0.716-0.354-1.346-0.729-1.889c-0.414-0.616-0.942-1.067-1.579-1.352
-						c-0.638-0.286-1.354-0.428-2.149-0.428c-1.341,0-2.43,0.424-3.269,1.267c-0.839,0.845-1.258,2.06-1.258,3.644
-						c0,1.689,0.464,2.91,1.394,3.658c0.93,0.751,2.003,1.125,3.22,1.125c1.473,0,2.619-0.444,3.438-1.332
-						c0.526-0.56,0.821-1.111,0.886-1.653h-2.441c-0.142,0.268-0.306,0.478-0.491,0.629c-0.341,0.279-0.783,0.419-1.327,0.419
-						c-0.514,0-0.954-0.115-1.318-0.344c-0.601-0.369-0.919-1.012-0.956-1.929h6.657C26.557,17.876,26.531,17.271,26.466,16.851z
-						M19.946,17.088c0.087-0.594,0.299-1.066,0.637-1.414c0.338-0.348,0.814-0.521,1.427-0.521c0.564,0,1.036,0.163,1.418,0.491
-						c0.381,0.33,0.594,0.81,0.637,1.445H19.946z"/>
-						<rect x="19.328" y="10.779" fill="white" width="5.296" height="1.538"/>
-					</g>
-				</symbol>
-				<symbol id="pinterest" viewBox="0 0 32 32">
-					<g id="pinterest-home_1_">
-						<circle cx="16" cy="16" r="16"/>
-						<path fill="white" d="M16.469,7.104c-5.458,0-8.211,3.913-8.211,7.176c0,1.976,0.748,3.734,2.353,4.389
-						c0.263,0.108,0.499,0.004,0.575-0.287c0.053-0.202,0.179-0.71,0.235-0.922c0.076-0.288,0.047-0.389-0.165-0.64
-						c-0.463-0.546-0.759-1.252-0.759-2.253c0-2.903,2.173-5.502,5.656-5.502c3.085,0,4.779,1.885,4.779,4.402
-						c0,3.312-1.465,6.108-3.642,6.108c-1.202,0-2.102-0.994-1.813-2.213c0.345-1.455,1.014-3.026,1.014-4.077
-						c0-0.94-0.505-1.724-1.549-1.724c-1.229,0-2.216,1.271-2.216,2.974c0,1.084,0.366,1.818,0.366,1.818s-1.257,5.327-1.477,6.26
-						c-0.439,1.858-0.066,4.136-0.034,4.366c0.019,0.136,0.193,0.168,0.273,0.065c0.114-0.148,1.577-1.954,2.074-3.759
-						c0.141-0.511,0.808-3.158,0.808-3.158c0.399,0.761,1.565,1.432,2.806,1.432c3.693,0,6.199-3.367,6.199-7.873
-						C23.742,10.277,20.856,7.104,16.469,7.104z"/>
-					</g>
-				</symbol>
-				<symbol id="instagram" viewBox="0 0 50 50">
-					<path d="M25 10.8c4.6 0 5.2 0 7 .1 1.7.1 2.6.4 3.2.6.8.3 1.4.7 2 1.3.6.6 1 1.2 1.3 2 .2.6.5 1.5.6 3.2.1 1.8.1 2.4.1 7s0 5.2-.1 7c-.1 1.7-.4 2.6-.6 3.2-.3.8-.7 1.4-1.3 2-.6.6-1.2 1-2 1.3-.6.2-1.5.5-3.2.6-1.8.1-2.4.1-7 .1s-5.2 0-7-.1c-1.7-.1-2.6-.4-3.2-.6-.8-.3-1.4-.7-2-1.3-.6-.6-1-1.2-1.3-2-.2-.6-.5-1.5-.6-3.2-.1-1.8-.1-2.4-.1-7s0-5.2.1-7c.1-1.7.4-2.6.6-3.2.3-.8.7-1.4 1.3-2 .6-.6 1.2-1 2-1.3.6-.2 1.5-.5 3.2-.6 1.8-.1 2.4-.1 7-.1m0-3.1c-4.7 0-5.3 0-7.1.1-1.8.1-3.1.4-4.2.8s-2.1 1-3.1 2-1.6 1.9-2 3.1c-.4 1.1-.7 2.4-.8 4.2-.1 1.8-.1 2.4-.1 7.1 0 4.7 0 5.3.1 7.1.1 1.8.4 3.1.8 4.2s1 2.1 2 3.1 1.9 1.6 3.1 2c1.1.4 2.4.7 4.2.8 1.8.1 2.4.1 7.1.1s5.3 0 7.1-.1c1.8-.1 3.1-.4 4.2-.8s2.1-1 3.1-2 1.6-1.9 2-3.1c.4-1.1.7-2.4.8-4.2.1-1.8.1-2.4.1-7.1s0-5.3-.1-7.1c-.1-1.8-.4-3.1-.8-4.2s-1-2.1-2-3.1-1.9-1.6-3.1-2c-1.1-.4-2.4-.7-4.2-.8-1.8-.1-2.4-.1-7.1-.1z"/><path d="M25 16.1c-4.9 0-8.9 4-8.9 8.9s4 8.9 8.9 8.9 8.9-4 8.9-8.9-4-8.9-8.9-8.9zm0 14.7c-3.2 0-5.8-2.6-5.8-5.8s2.6-5.8 5.8-5.8 5.8 2.6 5.8 5.8-2.6 5.8-5.8 5.8z"/><circle cx="34.3" cy="15.7" r="2.1"/>
-				</symbol>
-            </svg>
+			<div class="row bg_grey">
+					<div class="col-xs-12 margin-lg-70b margin-lg-35t margin-xs-50b">
+						<div class="services slider">
+							<div class="swiper3-container" data-mouse="0" data-autoplay="10000" data-pagination-type="bullets" data-loop="1" data-speed="500" data-center="0" data-space="0" data-responsive="responsive" data-add-slides="4" data-lg-slides="4" data-md-slides="3" data-sm-slides="2" data-xs-slides="1">
+								<div class="swiper3-wrapper">
+									<div class="swiper3-slide">
+										<div class="number odd">
+											<span>01</span>
+											<img src="img/arrow.png" alt="" class="number-img">
+										</div>
+										<div class="content-slide">
+											<i class="icon-earth-globe"></i>
+											<h5 class="title">We Discover your purpose</h5>
+											<div class="text">Every successful brand has a powerful purpose behind it. People don't buy what you do, but why you do it.
+                                            </div>
+										</div>
+									</div>
+									<div class="swiper3-slide">
+										<div class="number even">
+											<span>02</span>
+											<img src="img/arrow.png" alt="" class="number-img">
+										</div>
+										<div class="content-slide">
+											<i class="icon-letters"></i>
+											<h5 class="title">We research your competitor</h5>
+											<div class="text">We’re always thinking about how to make your brand stand out from what’s out there already. We don’t skip this step in brand building process.
+											</div>
+										</div>
+									</div>
+									<div class="swiper3-slide">
+										<div class="number odd">
+											<span>03</span>
+											<img src="img/arrow.png" alt="" class="number-img">
+										</div>
+										<div class="content-slide">
+											<i class="icon-smartphone-tablet-2"></i>
+											<h5 class="title">We target your audience</h5>
+											<div class="text">When brand building, we keep in mind who exactly you are trying to reach. we tailor your mission and message to meet their exact needs.
+											</div>
+										</div>
+									</div>
+									<div class="swiper3-slide">
+										<div class="number even">
+											<span>04</span>
+											<img src="img/arrow.png" alt="" class="number-img">
+										</div>
+										<div class="content-slide">
+											<i class="icon-pencil-1"></i>
+											<h5 class="title">Brainstorm Your Visuals</h5>
+											<div class="text">Your brand should be visible and reflected in everything that your customer can see, read, and hear.
+											</div>
+										</div>
+									</div>
+                                    <div class="swiper3-slide">
+                                        <div class="number even">
+                                            <span>05</span>
+                                            <img src="img/arrow.png" alt="" class="number-img">
+                                        </div>
+                                        <div class="content-slide">
+                                            <i class="icon-edit-1"></i>
+                                            <h5 class="title">We Develop your Brand Guideline</h5>
+                                            <div class="text">The only thing more heartbreaking than a poorly designed brand identity is a beautifully designed identity that is never used or used incorrectly.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper3-slide">
+                                        <div class="number even">
+                                            <span>06</span>
+                                            <img src="img/arrow.png" alt="" class="number-img">
+                                        </div>
+                                        <div class="content-slide">
+                                            <i class="icon-target-1"></i>
+                                            <h5 class="title">We become your brand’s biggest advocate.</h5>
+                                            <div class="text">When all is done either a small, medium or large scale business, we are your best advocates in marketing your brand.
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+							<div class="swiper3-pagination"></div>
+						</div>
+					</div>
+			</div>
+
+			<div class="row padding-lg-80t padding-md-40t padding-sm-20t padding-xs-10t" style="background-color: #fff;">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="headings style2">
+								<div class="content">
+									<div class="info">
+										<h5 class="subtitle" style="color:#ffd139">our lovely clients</h5>
+										<h3 class="title" style="color:#000">partners and friends we've met<br />on our journey</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row padding-lg-40t padding-md-30t padding-sm-20t padding-xs-10t padding-lg-60b padding-xs-40b">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="line-of-images  logos2 logos">
+								<div class="line-wrap clearfix" data-thumb="true">
+
+									<a href="#" class="col-xs-12 col-sm-6 col-md-3">
+										<img src="https://i.imgur.com/JyZdcPu.png" class="" alt="Total"/>
+									</a>
+									<a href="#" class="col-xs-12 col-sm-6 col-md-3">
+										<img src="https://i.imgur.com/nR1KuER.png" class="" alt="Golden Tulip Hotel"/>
+									</a>
+									<a href="#" class="col-xs-12 col-sm-6 col-md-3">
+										<img src="https://i.imgur.com/2Q4jBNY.png" class="" alt="Novotel Hotel"/>
+									</a>
+									<a href="#" class="col-xs-12 col-sm-6 col-md-3">
+										<img src="https://i.imgur.com/fS2hpoo.png" class="" alt="awa"/>
+									</a>
+									<a href="#" class="col-xs-12 col-sm-6 col-md-3">
+										<img src="https://i.imgur.com/Q2xVBpP.png" class="" alt="Visa Karina"/>
+									</a>
+									<a href="#" class="col-xs-12 col-sm-6 col-md-3">
+										<img src="https://i.imgur.com/qXNJmmK.png" class="" alt="HD Fresh"/>
+									</a>
+									<a href="#" class="col-xs-12 col-sm-6 col-md-3">
+										<img src="https://i.imgur.com/LSObxvN.png" class="" alt="The Clown Place Event Centre"/>
+									</a>
+									<a href="#" class="col-xs-12 col-sm-6 col-md-3">
+										<img src="https://i.imgur.com/3jauWGe.png" class="" alt="Hedo-Bec"/>
+									</a>
+                                    <a href="#" class="col-xs-12 col-sm-6 col-md-3">
+                                        <img src="https://i.imgur.com/Je4eeDx.png" class="" alt="Siraj Oil"/>
+                                    </a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div class="row padding-lg-60t padding-xs-40t " style="background-color: #fff;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="headings-wrap not-bg-title  ">
+                                <div class="headings style2">
+                                    <div class="content">
+                                        <div class="info">
+                                            <h3 class="title">Some of our piece</h3>
+                                            <div class="content">
+                                                <p>We have over a decade of experience in the creative industry, producing exciting experiences for brands that are as smart, as they are effective.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding-lg-60t padding-xs-40t padding-lg-60b padding-xs-40b" style="background-color: #fff;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="loader loading" id="loader-1"></div>
+                            <div id="instagram" class="responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-				<section class="section">
-					<div class="container text-center">
-						<div class="main-title text-center mb-5 col about-center">
-							<h1>Meet the team</h1>
-							<p class="col-lg-6">
-								A brand is more than a logo or website. It’s a story weaved together
-								from ideas and transformed into experiences. There’s no band-aid
-								or quick fix to great branding. We jump in with both feet, uncover
-								the story and help tell it well.
-							</p>
-						</div>
-						<div class="section__content teamy-team">
-							<article class="teamy teamy_style1 teamy_mask-triangle teamy_zoom-rotate-photo">
-								<div class="teamy__layout">
-									<div class="teamy__preview">
-										<img src="https://i.imgur.com/XdvozQ5.jpg" class="teamy__avatar" alt="The demo photo">
-									</div>
-									<div class="teamy__back">
-										<div class="teamy__back-inner">
-											<a href="#0" class="social">
-												<svg class="social__icon"><use xlink:href="#facebook" /></svg>
-												<span class="social__name">Facebook</span>
-											</a>
-											<a href="#0" class="social">
-												<svg class="social__icon"><use xlink:href="#twitter"></use></svg>
-												<span class="social__name">Twitter</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="teamy__content">
-									<h3 class="teamy__name">Ernest Nnadi</h3>
-									<span class="teamy__post">CEO /FOUNDER</span>
-								</div>
-							</article>
-							<article class="teamy teamy_style1 teamy_mask-triangle teamy_zoom-photo">
-								<div class="teamy__layout">
-									<div class="teamy__preview">
-										<img src="https://i.imgur.com/tC7umrG.jpg" class="teamy__avatar" alt="The demo photo">
-									</div>
-									<div class="teamy__back">
-										<div class="teamy__back-inner">
-											<a href="#0" class="social">
-												<svg class="social__icon"><use xlink:href="#twitter"></use></svg>
-												<span class="social__name">Twitter</span>
-											</a>
-											<a href="#0" class="social">
-												<svg class="social__icon"><use xlink:href="#behance"></use></svg>
-												<span class="social__name">behance</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="teamy__content">
-									<h3 class="teamy__name">Zubbey Wanyanwu</h3>
-									<span class="teamy__post">Lead developer /Creative Director</span>
-								</div>
-							</article>
-							<article class="teamy teamy_style1 teamy_mask-triangle teamy_zoom-rotate-photo">
-								<div class="teamy__layout">
-									<div class="teamy__preview">
-										<img src="https://i.imgur.com/M9mEZSg.jpg" class="teamy__avatar" alt="The demo photo">
-									</div>
-									<div class="teamy__back">
-										<div class="teamy__back-inner">
-											<a href="#0" class="social">
-												<svg class="social__icon"><use xlink:href="#twitter"></use></svg>
-												<span class="social__name">Twitter</span>
-											</a>
-											<a href="#0" class="social">
-												<svg class="social__icon"><use xlink:href="#pinterest"></use></svg>
-												<span class="social__name">pinterest</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="teamy__content">
-									<h3 class="teamy__name">Arthur Ginikachi</h3>
-									<span class="teamy__post">App /Web Development Director</span>
-								</div>
-							</article>
-							<article class="teamy teamy_style1 teamy_mask-triangle teamy_zoom-slide-photo">
-								<div class="teamy__layout">
-									<div class="teamy__preview">
-										<img src="https://i.imgur.com/Aunc9ra.jpg" class="teamy__avatar" alt="The demo photo">
-									</div>
-									<div class="teamy__back">
-										<div class="teamy__back-inner">
-											<a href="#0" class="social">
-												<svg class="social__icon"><use xlink:href="#twitter"></use></svg>
-												<span class="social__name">Twitter</span>
-											</a>
-											<a href="#0" class="social">
-												<svg class="social__icon"><use xlink:href="#instagram"></use></svg>
-												<span class="social__name">instagram</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="teamy__content">
-									<h3 class="teamy__name">Henry Denis</h3>
-									<span class="teamy__post">Media Director</span>
-								</div>
-							</article>
-						</div>
-						<a href="about-us.php#team" class="primary-btn" id="team">Meet More</a>
-					</div>
-				</section>
-				<!--================ Start Testimonial Area =================-->
-				<div class="section_gap testimonial_area">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-7 text-left">
-								<div class="active_testimonial owl-carousel" data-slider-id="1">
-									<!-- single testimonial -->
-									<div class="single_testimonial">
-										<div class="testimonial_head">
-											<img src="img/blog/t4.jpg" alt="">
-											<h4>Engr Izuchukwu Agali</h4>
-											<p> CEO, HedoBec Enginerring</p>
-											<div class="review">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>
-										</div>
-										<div class="testimonial_content">
-											<p>iBrand Arica is known for its Çan Do Attitude. Whether it’s a holiday or late evening during weekends, if something has to get done, iBrand Africa makes sure it is done</p>
-										</div>
-									</div>
-
-									<div class="single_testimonial">
-										<div class="testimonial_head">
-											<img src="img/blog/t3.jpg" alt="">
-											<h4>  Mr Henry Kojo .</h4>
-											<p> Comms Mgr MTN Ghana</p>
-											<div class="review">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="far fa-star"></i>
-											</div>
-										</div>
-										<div class="testimonial_content">
-											<p>It’s been a year that we have been associated with iBrand Africa and today I am proud to say that our advertising and branding is right on spot. The credit for such seamless work goes to iBrand Africa </p>
-										</div>
-									</div>
-
-									<div class="single_testimonial">
-										<div class="testimonial_head">
-											<img src="img/blog/t2.jpg" alt="">
-											<h4>Dipti majid</h4>
-											<p>Co Founder Explore Africa Foundation</p>
-											<div class="review">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="far fa-star"></i>
-												<i class="far fa-star"></i>
-											</div>
-										</div>
-										<div class="testimonial_content">
-											<p>From our logo redesigning to digital activities to designing our website, iBrand Africa has played a phenomenal role in giving Explore Africa Foundation a new identity in the digital world. They are one of the best.</p>
-										</div>
-									</div>
-
-									<div class="single_testimonial">
-										<div class="testimonial_head">
-											<img src="img/blog/t1.jpg" alt="">
-											<h4>Mr tope wilson</h4>
-											<p>HR Diamond salt Ltd</p>
-											<div class="review">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="far fa-star"></i>
-												<i class="far fa-star"></i>
-											</div>
-										</div>
-										<div class="testimonial_content">
-											<p>Taking iBrand Africa  on board as our branding and marketing strategist has been one of our best decision. They have been instrumental in successfully rebranding our 10 year old brand.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 offset-lg-1">
-								<div class="testimonial_logos">
-									<div class="main-title">
-										<h1>Partners</h1>
-									</div>
-									<div class="top_logos">
-										<img src="img/brands/logo1.png" alt="">
-										<img src="img/brands/logo2.png" alt="">
-									</div>
-									<div class="mid_logo">
-										<img src="img/brands/logo3.png" alt="">
-									</div>
-									<div class="bottom_logos jus">
-										<img src="img/brands/logo4.png" alt="">
-										<img src="img/brands/logo5.png" alt="">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--================ End Testimonial Area =================-->
-
-				<!--================ Start Newsletter Area =================-->
-				<section class="section_gap newsletter-area">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6 text-center">
-								<div class="main-title">
-									<h1>Whats Trending?</h1>
-									<p>Subscribe to our newsletter to get the latest development today.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row newsletter_form justify-content-center">
-							<div class="col-lg-6 col-md-6 col-sm-6">
-								<div class="d-flex flex-row" id="mc_embed_signup">
-									<form class="w-100" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-									method="get">
-									<div class="navbar-form">
-										<div class="input-group add-on">
-											<input class="form-control" name="EMAIL" placeholder="Your email address" onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Your email address'" required="" type="email">
-											<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
-											<div class="input-group-btn">
-												<button class="genric-btn text-uppercase">
-													Subscribe
-												</button>
-											</div>
-										</div>
-									</div>
-									<div class="info mt-20"></div>
-								</form>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--================ End Newsletter Area =================-->
-			<?php include("components/footer.php")?>
-
-			<script>
-				$(document).ready(function(){
-					$(".owl-carousel").owlCarousel();
-					$('.carousel-caption').css('bottom', '40%');
-
-					$('.carousel').carousel({
-						interval: 5000
-					});
-				});
-
-				$(document).ready(function(){
-					var typed1 = new Typed('#typed1',{
-						stringsElement: '#typed-strings1',
-						typeSpeed:80,
-						startDelay:500,
-						backDelay:5000,
-						loop: true
-					});
-				});
-				$(document).ready(function() {
-
-					$('.image-popup-vertical-fit').magnificPopup({
-						type: 'image',
-						closeOnContentClick: true,
-						mainClass: 'mfp-img-mobile',
-						image: {
-							verticalFit: true
-						}
-
-					});
-
-					$('.image-popup-fit-width').magnificPopup({
-						type: 'image',
-						closeOnContentClick: true,
-						image: {
-							verticalFit: false
-						}
-					});
-
-					$('.image-popup-no-margins').magnificPopup({
-						type: 'image',
-						closeOnContentClick: true,
-						closeBtnInside: false,
-						fixedContentPos: true,
-					        	mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-					        	image: {
-					        		verticalFit: true
-					        	},
-					        	zoom: {
-					        		enabled: true,
-					        		duration: 300 // don't foget to change the duration also in CSS
-					        	}
-
-					        });
-
-					if(window.location.href.includes("team"))
-					{
-						$(document).scrollTop(450);
-					}
-
-					$('#work').on('click',function(){
-						$('ul.dropdown-menu').toggleClass("d-block"),ease;
-					});
-				});
-
-                if(window.matchMedia('(min-width:620px) and (max-width: 1280px)').matches)
-                {
-                    $(".caption-text").css('bottom','36% !important');
-                }
-
-			</script>
-		</body>
-		</html>
+<?php
+require_once('layouts/footer.html')
+?>
