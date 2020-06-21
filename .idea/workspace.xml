@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c65b9fd-52ab-431d-948d-42b894cbfdf9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1brFPlNQRduzLykzHyCxXG8FykS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="StructuralSearchPlugin">
+    <searchConfiguration name="user defined" created="1589384068934" text="chat_opened" recursive="true" caseInsensitive="true" type="PHP" scope_type="PROJECT" scope_descriptor="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="user defined" created="1589383619318" text="fb4eb239-b50e-221b-40de-da1dba08ba9f" recursive="true" caseInsensitive="true" type="PHP" scope_type="PROJECT" scope_descriptor="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="user defined" created="1589383551765" text="Buy Now" recursive="true" caseInsensitive="true" type="PHP" scope_type="PROJECT" scope_descriptor="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="user defined" created="1589383522306" text="uq-themes-sidebar" recursive="true" caseInsensitive="true" type="PHP" scope_type="PROJECT" scope_descriptor="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </searchConfiguration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c65b9fd-52ab-431d-948d-42b894cbfdf9" name="Default Changelist" comment="" />
+      <created>1589382283347</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589382283347</updated>
+      <workItem from="1589382295696" duration="25555000" />
+      <workItem from="1589480629945" duration="26548000" />
+      <workItem from="1589613651817" duration="16280000" />
+      <workItem from="1589713864489" duration="1433000" />
+      <workItem from="1589732126785" duration="2213000" />
+      <workItem from="1589929477792" duration="276000" />
+      <workItem from="1589999850017" duration="433000" />
+      <workItem from="1591878152847" duration="252000" />
+      <workItem from="1591887562938" duration="3344000" />
+      <workItem from="1591917954087" duration="411000" />
+      <workItem from="1591941745217" duration="18654000" />
+      <workItem from="1592061806084" duration="18685000" />
+      <workItem from="1592134088043" duration="17068000" />
+      <workItem from="1592476827894" duration="205000" />
+      <workItem from="1592477587387" duration="618000" />
+      <workItem from="1592478940053" duration="3774000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="142" y="215" width="925" height="339" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1589384068920">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="142" y="215" width="925" height="339" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1280.800@0.0.1280.800" timestamp="1589384068920" />
+    <state x="396" y="207" key="NewPhpClassDialog" timestamp="1589455265810">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="396" y="207" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1589455265810" />
+    <state x="149" y="24" key="SettingsEditor" timestamp="1592478316372">
+      <screen x="0" y="22" width="1280" height="725" />
+    </state>
+    <state x="149" y="24" key="SettingsEditor/0.22.1280.725@0.22.1280.725" timestamp="1592478316372" />
+    <state x="320" y="203" width="639" height="394" key="XPathView.FindDialog.DIMENSION_SERVICE_KEY.SIMPLE" timestamp="1589383825084">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="320" y="203" width="639" height="394" key="XPathView.FindDialog.DIMENSION_SERVICE_KEY.SIMPLE/0.0.1280.800@0.0.1280.800" timestamp="1589383825084" />
+    <state x="319" y="217" key="com.intellij.ide.util.TipDialog" timestamp="1592477633166">
+      <screen x="0" y="22" width="1280" height="725" />
+    </state>
+    <state x="319" y="217" key="com.intellij.ide.util.TipDialog/0.22.1280.725@0.22.1280.725" timestamp="1592477633166" />
+    <state x="310" y="141" width="803" height="582" key="find.popup" timestamp="1592187696560">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="310" y="141" width="803" height="582" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1592187696560" />
+    <state x="310" y="152" width="659" height="518" key="find.popup/0.23.1280.732@0.23.1280.732" timestamp="1591896145663" />
+    <state x="305" y="15" width="670" height="742" key="search.everywhere.popup" timestamp="1591946978288">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="15" width="670" height="742" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1591946978288" />
+    <state x="305" y="37" width="670" height="676" key="search.everywhere.popup/0.23.1280.729@0.23.1280.729" timestamp="1589399010257" />
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history>
+      <element expression="chat_opened" />
+    </find-history>
+  </component>
+</project>
