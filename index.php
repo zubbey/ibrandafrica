@@ -36,7 +36,7 @@ require_once('layouts/header.html')
 								<div class="swiper3-slide swiper-no-swiping style1" data-title="Design">
 									<div class="slider-banner hard-full-height">
 										<div class="img-bg bg-cover">
-											<img src="https://i.imgur.com/EnzFadO.jpg" class="s-img-switch" alt="" />
+											<img src="https://i.imgur.com/VU4s1mE.jpg" class="s-img-switch" alt="" />
 										</div>
 										<div class="container no-padd-md">
 											<div class="row">
@@ -217,7 +217,7 @@ require_once('layouts/header.html')
 								<div class="col-xs-12 col-sm-6">
 									<div class="images-wrapper">
 										<div class="img-wrap">
-											<img src="https://i.imgur.com/VU4s1mE.jpg" class="" alt="" />
+											<img src="https://i.imgur.com/2l3ruze.jpg" class="" alt="" />
 										</div>
 									</div>
 								</div>
