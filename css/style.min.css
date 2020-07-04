@@ -225,7 +225,7 @@ body.lg-on {
 .hero img,
 .single-content img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     display: inline-block;
     border: none
 }
