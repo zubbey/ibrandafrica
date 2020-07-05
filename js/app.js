@@ -1953,58 +1953,58 @@ async function brandingService(route){
     });
 
     /* SOUND EFFECTS */
-    var audioObj = document.createElement("audio");
-    audioObj.volume = 1;
-    audioObj.autoPlay = false;
-    audioObj.preLoad = true;
-    audioObj.controls = true;
-
-    function playSound(audioName) {
-        audioObj.src = $('.main-wrapper').data('sound') + audioName;
-
-        var playPromise = audioObj.play();
-
-        if (playPromise !== undefined) {
-            playPromise.then(function (_) {}).catch(function (error) {});
-        }
-
-    }
-
-    var soundHoverElements = 'a, button, input[type="submit"], .open-search, .mini-cart-wrapper';
-
-    $(soundHoverElements).on('mouseenter', function() {
-        if($('body').hasClass('enable_sound') && winWSound > 767){
-            playSound('hover.mp3');
-        }else if($('body').hasClass('enable_sound') && $('body').hasClass('enable_sound_mob') && winWSound < 768){
-            playSound('hover.mp3');
-        }
-    });
-
-    $(soundHoverElements).on('click', function() {
-        if($('body').hasClass('enable_sound') && winWSound > 767){
-            playSound('click.mp3');
-        }else if($('body').hasClass('enable_sound') && $('body').hasClass('enable_sound_mob') && winWSound < 768){
-            playSound('click.mp3');
-        }
-    });
-
-    $('.mob-nav').on('click', function() {
-
-        if($('body').hasClass('enable_sound') && winWSound > 767){
-            if($(this).hasClass('active') ) {
-                playSound('open.mp3');
-            } else {
-                playSound('close.mp3');
-            }
-        }else if($('body').hasClass('enable_sound') && $('body').hasClass('enable_sound_mob') && winWSound < 768){
-            if($(this).hasClass('active') ) {
-                playSound('open.mp3');
-            } else {
-                playSound('close.mp3');
-            }
-        }
-
-    });
+    // var audioObj = document.createElement("audio");
+    // audioObj.volume = 1;
+    // audioObj.autoPlay = false;
+    // audioObj.preLoad = true;
+    // audioObj.controls = true;
+		//
+    // function playSound(audioName) {
+    //     audioObj.src = $('.main-wrapper').data('sound') + audioName;
+		//
+    //     var playPromise = audioObj.play();
+		//
+    //     if (playPromise !== undefined) {
+    //         playPromise.then(function (_) {}).catch(function (error) {});
+    //     }
+		//
+    // }
+		//
+    // var soundHoverElements = 'a, button, input[type="submit"], .open-search, .mini-cart-wrapper';
+		//
+    // $(soundHoverElements).on('mouseenter', function() {
+    //     if($('body').hasClass('enable_sound') && winWSound > 767){
+    //         playSound('hover.mp3');
+    //     }else if($('body').hasClass('enable_sound') && $('body').hasClass('enable_sound_mob') && winWSound < 768){
+    //         playSound('hover.mp3');
+    //     }
+    // });
+		//
+    // $(soundHoverElements).on('click', function() {
+    //     if($('body').hasClass('enable_sound') && winWSound > 767){
+    //         playSound('click.mp3');
+    //     }else if($('body').hasClass('enable_sound') && $('body').hasClass('enable_sound_mob') && winWSound < 768){
+    //         playSound('click.mp3');
+    //     }
+    // });
+		//
+    // $('.mob-nav').on('click', function() {
+		//
+    //     if($('body').hasClass('enable_sound') && winWSound > 767){
+    //         if($(this).hasClass('active') ) {
+    //             playSound('open.mp3');
+    //         } else {
+    //             playSound('close.mp3');
+    //         }
+    //     }else if($('body').hasClass('enable_sound') && $('body').hasClass('enable_sound_mob') && winWSound < 768){
+    //         if($(this).hasClass('active') ) {
+    //             playSound('open.mp3');
+    //         } else {
+    //             playSound('close.mp3');
+    //         }
+    //     }
+		//
+    // });
 
 
 })(jQuery, window, document);

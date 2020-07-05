@@ -100,11 +100,11 @@
 								</a>
 								<div class="full-menu-wrap">
 									<ul id="menu-short-menu" class="menu">
-										<li class="menu-item"><a href="about">about us</a></li>
-										<li class="menu-item current-menu-item"><a href="services">services</a></li>
-										<li class="menu-item"><a href="works">works</a></li>
-										<li class="menu-item"><a href="contact">contact</a></li>
-										<li class="menu-item"><a href="consultation">Free Consultation</a></li>
+										<li class="menu-item"><a href="./about">about us</a></li>
+										<li class="menu-item current-menu-item"><a href="./services">services</a></li>
+										<li class="menu-item"><a href="./works">works</a></li>
+										<li class="menu-item"><a href="./contact">contact</a></li>
+										<li class="menu-item"><a href="./consultation">Free Consultation</a></li>
 									</ul>
 									<div class="pricing-btn">
 										<a href="project" class="a-btn">Start A Project</a>
