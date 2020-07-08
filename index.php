@@ -44,6 +44,12 @@
   <link rel="stylesheet" href="css/nprogress.css">
   <link rel="stylesheet" href="css/custom.css">
   <style>
+  .slick-dotted.slick-slider {
+    margin-bottom: 10px !important;
+  }
+  .slick-slider{
+    height: 350px;
+  }
   .line-of-images.logos2 a{
     opacity: .5;
   }
@@ -52,6 +58,21 @@
   }
   .call-to-action.simple .left .info-wrap{
     left: 0 !important;
+  }
+  h1.ads-title{
+    font-size: 60px;
+    padding: 80px;
+    text-align: left;
+  }
+  @media only screen and (max-width: 600px) {
+    h1.ads-title {
+      font-size: 44px;
+      padding: 0px;
+      text-align: center;
+    }
+    .banner-slider-wrap .ads-image{
+      display: none;
+    }
   }
   </style>
 </head>
@@ -152,15 +173,6 @@
         </div>
       </div>
     </div>
-
-    <style>
-    .slick-dotted.slick-slider {
-      margin-bottom: 10px !important;
-    }
-    .slick-slider{
-      height: 350px;
-    }
-    </style>
     <!-- awa minimal-portfolio, info-block, services-2 and team template -->
     <div class="container-fluid">
       <div class="hero">
@@ -177,7 +189,7 @@
                       <div class="container no-padd-md">
                         <div class="row">
                           <div class="col-xs-12">
-                            <h1 class="title" style="font-size: 60px; padding: 80px; text-align: left;">Book a free<br><strong>30 minute <br> consultation</strong><br>
+                            <h1 class="title ads-title">Book a free<br><strong>30 minute <br> consultation</strong><br>
                             <a href="./consultation" class="a-btn"> Book now</a></h1>
                           </div>
                         </div>
@@ -186,14 +198,14 @@
                   </div>
                   <div class="swiper3-slide swiper-no-swiping style1" data-title="Design">
                     <div class="slider-banner hard-full-height">
-                      <div class="img-bg bg-cover">
+                      <div class="img-bg bg-cover ads-image">
                         <!-- change -->
                         <img src="img/webonthego-banner.png" class="s-img-switch" alt="" />
                       </div>
                       <div class="container no-padd-md">
                         <div class="row">
                           <div class="col-xs-12">
-                            <h1 class="title" style="font-size: 60px; padding: 80px; text-align: left;">Get your <br> business online <br>at ease<br>
+                            <h1 class="title ads-title">Get your <br> business online <br>at ease<br>
                             <a href="./webonthego" class="a-btn" style="background-color: #fff; color: #27386e"> Get Started</a></h1>
                           </div>
                         </div>
