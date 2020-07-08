@@ -186,7 +186,7 @@
 			<div class="content">
 			<div class="info">
 			<h5 class="subtitle" style="color:#f54ea2">our services</h5>
-			<h3 class="title" style="color:#222222">We will help you to achieve your goals and to grow your business.</h3>
+			<h3 class="title" style="color:#222222">We will help you achieve your goals and grow your business.</h3>
 			</div>
 			</div>
 			</div>
@@ -345,17 +345,17 @@
 			<div class="col-xs-12 no-padd">
 			<div class="call-to-action default">
 			<div class="text-left-wrap" style="background-color:#ffdd65; color: #333">
-			<h4 class="title"  >we believe in creativity</h4>
-			<h4 class="subtitle" >We offer a full range of Web Design Services, Social Media Marketing, Multimedia Galleries, Search Engine Optimization services and more. We specialize in affordable website design services for small to medium businesses</h4>
+			<h4 class="title"  >iBrand Free Consultation</h4>
+			<h4 class="subtitle text-lowercase" >DELIVERING CLARITY & FOCUS TO OWNER-OPERATED BUSINESSES SMALL BUSINESS COACHING & BUSINESS CONSULTING</h4>
 			</div>
 			<div class="image-wrap">
-			<img src="https://i.imgur.com/pI8DwH6.jpg" class="s-img-switch" alt="" />
+			<img src="https://i.imgur.com/RBVSvk0.png" class="s-img-switch" alt="" />
 			</div>
 			<div class="text-right-wrap">
 			<img src="img/dotts.png" alt="" class="s-img-switch">
-			<div class="text">Start a project<br/>with iBrand Africa?</div>
+			<div class="text">Book a free 30 minute consultation <br/>on Branding and Marketing</div>
 			<div class="text-center">
-			<a href="project" class="a-btn">Get Started</a>
+			<a href="./consultation" class="a-btn">Try Now</a>
 			</div>
 			</div>
 			</div>
@@ -394,17 +394,26 @@
 					<h5>explore</h5>
 					<div class="menu-footer-menu-container">
 						<ul id="menu-footer-menu" class="menu">
-							<li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
-								<a href="/about">About us</a>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+								<a href="./about">About us</a>
 							</li>
-							<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
-								<a href="/contact">Contact us</a>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
+								<a href="./contact">Contact us</a>
 							</li>
-							<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
-								<a href="/works">Works</a>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
+								<a href="./works">Works</a>
 							</li>
-							<li id="menu-item-199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
-								<a href="/services">Services</a>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+								<a href="./services">Services</a>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+								<a href="./team">Team</a>
+							</li>
+							<li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+								<a href="./consultation">Free consultation</a>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+								<a href="./project">Start a project</a>
 							</li>
 						</ul>
 					</div>

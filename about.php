@@ -48,8 +48,15 @@
 	.bg_pink {
 		background-color: #fddd64 !important;
 	}
+	.wpb_text_column p{
+		color: #6f6f6f;
+		font-size: 18px;
+	}
 	.top-banner{
 		height: 250px !important;
+	}
+	.loading{
+		padding: 35px;
 	}
 	</style>
 </head>
@@ -181,8 +188,8 @@
 							<div class="wpb_wrapper">
 								<div class="wpb_text_column wpb_content_element " >
 									<div class="wpb_wrapper">
-										<h3 style="text-align: center;"><strong>Here you will find an inspiring team of Design, Strategy & Production<br /></strong>
-											<span>Working together to Create, Restore & Evolve Iconic Brands</span></h3>
+										<h3 style="text-align: center;"><strong>We've been in business since 2011,<br/></strong>
+											<span>Creating, Restoring & Evolving Brands</span></h3>
 											<p>iBrand Africa has provided branding, web design and digital marketing for clients
 												across the continent since 2011. Our founders and experts are industry veterans
 												with years of experience building enduring brands.
@@ -192,7 +199,7 @@
 												Not only do we offer internet solutions, we offer advanced network solutions.
 												Cater to the needs of business by offering a service oriented approach and an
 												attitude that no business is too small and that all clients are equally important.
-												iBrand Africa, armed with a thorough understanding of the latest in Internet-related technologies - we can:</p>
+												iBrand Africa, armed with a thorough understanding of the latest in Internet-related technologies.</p>
 											</div>
 										</div>
 									</div>
@@ -212,162 +219,104 @@
 							</div>
 						</div>
 					</div>
-					<div class="row margin-lg-65b margin-xs-0t margin-xs-30b">
-						<div class="container">
-							<div class="row">
-								<div class="col-sm-6 col-lg-4 col-md-4 col-xs-12">
-									<div class="services center">
-										<div class="content ">
-											<i class="icon-layers-2" style="color:rgb(236, 207, 95)" onmouseover="this.style.color='#dab838'" onmouseout="this.style.color='#fddd64'"></i>
-											<h4 class="title animation">user experience</h4>
-											<div class="text">UX Design Services. Creating intelligently personalized user experiences that are custom tailored to your audience delivering engaging digital experiences.<br>
-											</div>
+
+					<div class="container">
+						<div class="wpb_column vc_column_container vc_col-sm-12  margin-lg-60t"><div class="vc_column-inner vc_custom_1524054209620">
+							<div class="wpb_wrapper">
+								<div class="team-members-wrap clearfix inline_text">
+									<div class="info-wrapper">
+										<h4 class="title">Meet the team</h4>
+										<div class="btn-wrap">
+											<a href="./team" class="a-btn">view all members</a>
 										</div>
 									</div>
-								</div>
-								<div class="col-sm-6 col-lg-4 col-md-4 col-xs-12">
-									<div class="services center">
-										<div class="content ">
-											<i class="icon-bookmark-3" style="color:rgb(236, 207, 95);" onmouseover="this.style.color='#dab838'" onmouseout="this.style.color='#fddd64'"></i>
-											<h4 class="title animation">interface design</h4>
-											<div class="text">We craft user interfaces that fit both brand & product function.<br>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-lg-4 col-md-offset-0 col-md-4 col-sm-offset-3 col-xs-12  margin-sm-25t margin-xs-25t">
-									<div class="services center">
-										<div class="content ">
-											<i class="icon-smartphone" style="color:rgb(236, 207, 95)" onmouseover="this.style.color='#dab838'" onmouseout="this.style.color='#fddd64'"></i>
-											<h4 class="title animation">mobile apps</h4>
-											<div class="text">We cover end-to-end development of mobile apps, from BA and UI/UX design to deployment or online market publication.<br>
-											</div>
-										</div>
-									</div>
+									<ul class="team-list-wrap" id="members">
+										<div class="loader loading" id="loader-1"></div>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- <div class="row margin-lg-110b margin-md-65b margin-xs-30t margin-xs-45b">
-					<div class="col-xs-12">
-					<div class="container">
-					<div class="row">
-					<div class="">
-					<div class="video only-button youtube" data-type-start="click">
-					<div class="video-content">
-					<a href="https://www.youtube.com/watch?time_continue=2&amp;v=YMurlapfouo" class="play"></a>
 				</div>
-				<span class="close fa fa-close"></span>
 			</div>
 		</div>
-	</div>
-</div>
-</div>
-</div> -->
 
-<div class="container">
-	<div class="wpb_column vc_column_container vc_col-sm-12  margin-lg-60t"><div class="vc_column-inner vc_custom_1524054209620">
-		<div class="wpb_wrapper">
-			<div class="team-members-wrap clearfix inline_text">
-				<div class="info-wrapper">
-					<h4 class="title">Meet the team</h4>
-					<div class="btn-wrap">
-						<a href="team" class="a-btn">view all members</a>
+		<footer id="footer" class=" modern footer_bg">
+			<div class="container no-padd">
+				<div class="widg clearfix">
+					<div id="instagram_widget-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 AwaInstagramWidget"><div class="item-wrap">
+						<div class="quze-widget-user quze-widget-border-bottom">
+							<img src="img2/logo_ibrand/brand__logo__white.png" alt="iBrand Africa" class="insta-logo">
+							<div class="instagram-text"><span>follow us on </span>
+								<a href="https://www.instagram.com/ibrandafricagroup/" target="_blank">iBrand Africa Group</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<ul class="team-list-wrap" id="members">
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row margin-lg-110b margin-md-90b margin-sm-70b margin-xs-40b">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="team-members-wrap clearfix inline">
-					<div id="members"></div>
-					<div class="btn-wrap text-center">
-						<a href="contact"
-						class="a-btn">contact us</a>
+				<div id="text-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_text"><div class="item-wrap">
+					<h5>Wanna say hello?</h5>
+					<div class="textwidget">
+						<p><a href="email:info@ibrandafrica.com"><span>info@ibrandafrica.com</span></a></p>
+						<p><a href="tel:+2348021260000">(+234) 8021260000</a></p>
+						<p><a href="tel:+2347020600000">(+234) 7020600000</a></p>
+						<p><a href="tel:+2348021260000">(+234) 8037478593</a></p>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
-</div>
-</div>
-</div>
-
-<footer id="footer" class=" modern footer_bg">
-	<div class="container no-padd">
-		<div class="widg clearfix">
-			<div id="instagram_widget-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 AwaInstagramWidget"><div class="item-wrap">
-				<div class="quze-widget-user quze-widget-border-bottom">
-					<img src="img2/logo_ibrand/brand__logo__white.png" alt="iBrand Africa" class="insta-logo">
-					<div class="instagram-text"><span>follow us on </span>
-						<a href="https://www.instagram.com/ibrandafricagroup/" target="_blank">iBrand Africa Group</a>
+			<div id="nav_menu-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_nav_menu">
+				<div class="item-wrap">
+					<h5>explore</h5>
+					<div class="menu-footer-menu-container">
+						<ul id="menu-footer-menu" class="menu">
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+								<a href="./about">About us</a>
+							</li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
+								<a href="./contact">Contact us</a>
+							</li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
+								<a href="./works">Works</a>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+								<a href="./services">Services</a>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+								<a href="./team">Team</a>
+							</li>
+							<li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+								<a href="./consultation">Free consultation</a>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+								<a href="./project">Start a project</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="text-3" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_text">
+				<div class="item-wrap">
+					<h5>Office</h5>
+					<div class="textwidget">
+						<p>#4 Amadi-ama Trans-Amadi Industrial Layout, Port Harcourt, Nigeria</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="text-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_text"><div class="item-wrap">
-			<h5>Wanna say hello?</h5>
-			<div class="textwidget">
-				<p><a href="email:info@ibrandafrica.com"><span>info@ibrandafrica.com</span></a></p>
-				<p><a href="tel:+2348021260000">(+234) 8021260000</a></p>
-				<p><a href="tel:+2347020600000">(+234) 7020600000</a></p>
-				<p><a href="tel:+2348021260000">(+234) 8037478593</a></p>
-			</div>
+		<div class="col-xs-12 footer-socials text-center col-sm-6">
+			<a href="https://www.facebook.com/ibrandafricagroup" target="_blank">
+		    <i class="fa fa-facebook-square"></i>
+		  </a>
+		  <a href="https://twitter.com/ibrandafricagroup" target="_blank">
+		    <i class="fa fa-twitter"></i>
+		  </a>
+		  <a href="https://www.instagram.com/ibrandafricagroup" target="_blank">
+		    <i class="fa fa-instagram"></i>
+		  </a>
+		</div>
+		<div class="copyright col-xs-12 text-center col-sm-6">©iBrand Africa, Copyright by
+			<a href="http://ibrandafrica.com/">iBrandafrica.com</a>
 		</div>
 	</div>
-	<div id="nav_menu-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_nav_menu">
-		<div class="item-wrap">
-			<h5>explore</h5>
-			<div class="menu-footer-menu-container">
-				<ul id="menu-footer-menu" class="menu">
-					<li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
-						<a href="/about">About us</a>
-					</li>
-					<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
-						<a href="/contact">Contact us</a>
-					</li>
-					<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
-						<a href="/works">Works</a>
-					</li>
-					<li id="menu-item-199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
-						<a href="/services">Services</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div id="text-3" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_text">
-		<div class="item-wrap">
-			<h5>Office</h5>
-			<div class="textwidget">
-				<p>#4 Amadi-ama Trans-Amadi Industrial Layout, Port Harcourt, Nigeria</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="col-xs-12 footer-socials text-center col-sm-6">
-	<a href="https://www.facebook.com/ibrandafricagroup" target="_blank">
-		<i class="fa fa-facebook-square"></i>
-	</a>
-	<a href="https://twitter.com/ibrandafricagroup" target="_blank">
-		<i class="fa fa-twitter"></i>
-	</a>
-	<a href="https://www.instagram.com/ibrandafricagroup" target="_blank">
-		<i class="fa fa-instagram"></i>
-	</a>
-</div>
-<div class="copyright col-xs-12 text-center col-sm-6">©iBrand Africa, Copyright by
-	<a href="http://ibrandafrica.com/">iBrandafrica.com</a>
-</div>
-</div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -416,33 +365,36 @@ mainlogo.src = 'img2/logo_ibrand/brand__logo__white.png';
 hoverlogo.src = 'img2/logo_ibrand/brand__logo.png';
 
 brandingService('team').then(data => {
+	data = data.filter(team => team.date).slice(0, 3);
+
 	data.forEach(member => {
 		$('#members').append(`
 			<li class="team-member clearfix">
-				<div class="member-wrap s-back-switch" style="background-image: url('${member.image}');">
-					<img src="${member.image}" class="s-img-switch" alt="" style="display: none;">
-					<div class="social">
-						<a href="https://www.facebook.com/ibrandafricagroup" target="_blank" class="soc-item">
-							<i class="fa fa fa-facebook-square"></i>
-						</a>
-						<a href="https://twitter.com/ibrandafricagroup" target="_blank" class="soc-item">
-							<i class="fa fa fa-twitter"></i>
-						</a>
-						<a href="https://www.instagram.com/ibrandafricagroup" target="_blank" class="soc-item">
-							<i class="fa fa fa-instagram"></i>
-						</a>
-					</div>
-				</div>
-				<div class="member-info-wrap">
-					<div class="member-info">
-						<h5 class="member-name">${member.fullname}</h5>
-						<div class="member-position">${member.position}</div>
-					</div>
-				</div>
+			<div class="member-wrap s-back-switch" style="background-image: url('${member.image}');">
+			<img src="${member.image}" class="s-img-switch" alt="" style="display: none;">
+			<div class="social">
+			<a href="https://www.facebook.com/ibrandafricagroup" target="_blank" class="soc-item">
+			<i class="fa fa fa-facebook-square"></i>
+			</a>
+			<a href="https://twitter.com/ibrandafricagroup" target="_blank" class="soc-item">
+			<i class="fa fa fa-twitter"></i>
+			</a>
+			<a href="https://www.instagram.com/ibrandafricagroup" target="_blank" class="soc-item">
+			<i class="fa fa fa-instagram"></i>
+			</a>
+			</div>
+			</div>
+			<div class="member-info-wrap">
+			<div class="member-info">
+			<h5 class="member-name">${member.fullname}</h5>
+			<div class="member-position">${member.position}</div>
+			</div>
+			</div>
 			</li>
 			`)
 		})
 	})
+	.then(() => loading.hidden = true);
 </script>
 </body>
 </html>

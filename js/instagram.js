@@ -120,12 +120,16 @@ async function stickImg() {
     });
 }
 
-// let delRes = setInterval(function () {
-//     alert('session deleted!');
-//     localStorage.removeItem('insta');
-// }, 5000);
-//
-//
-// setInterval(function () {
-//     clearInterval(delRes);
-// }, 6000);
+let dayInMilliseconds = 1000 * 60 * 60 * 24;
+
+const deleteInst = new Promise( (resolve) => {
+  let delRes = setInterval(function () {
+      window.localStorage.removeItem('insta');
+      resolve(delRes);
+  }, dayInMilliseconds);
+});
+
+
+deleteInst.then(delRes => {
+  clearInterval(delRes);
+})

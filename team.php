@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>iBrand Africa || Client</title>
+	<title>iBrand Africa || About</title>
 	<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-114x114.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/android-icon-144x144.png">
@@ -38,10 +38,23 @@
 	<link rel="stylesheet" href="css/team.min.css">
 	<link rel="stylesheet" href="css/the_grid.min.css">
 	<link rel="stylesheet" href="css/services_list.min.css">
+	<link rel="stylesheet" href="css/services.min.css">
+	<link rel="stylesheet" href="css/video_btn.min.css">
 	<link rel="stylesheet" href="css/banner_image.min.css">
 	<link rel="stylesheet" href="lib/swiper-master/package/css/swiper.min.css">
 	<link rel="stylesheet" href="css/nprogress.css">
 	<link rel="stylesheet" href="css/custom.css">
+	<style>
+	.bg_pink {
+		background-color: #425a9e !important;
+	}
+	.top-banner{
+		height: 250px !important;
+	}
+	.loading{
+		padding: 35px;
+	}
+	</style>
 </head>
 <body class="woocommerce woocommerce-page enable_sound enable_sound_mob white_bg">
 
@@ -81,14 +94,14 @@
 								</a>
 								<div class="full-menu-wrap">
 									<ul id="menu-short-menu" class="menu">
-										<li class="menu-item"><a href="./about">about us</a></li>
+										<li class="menu-item current-menu-item"><a href="./about">about us</a></li>
 										<li class="menu-item"><a href="./services">services</a></li>
 										<li class="menu-item"><a href="./works">works</a></li>
 										<li class="menu-item"><a href="./contact">contact</a></li>
 										<li class="menu-item"><a href="./consultation">Free Consultation</a></li>
 									</ul>
 									<div class="pricing-btn">
-										<a href="./project" class="a-btn">Start A Project</a>
+										<a href="project" class="a-btn">Start A Project</a>
 									</div>
 									<div class="info-wrap">
 										<div class="additional">
@@ -140,43 +153,60 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="container-fluid portfolio-single-content simple_slider ">
-			<div class="row">
-				<div class="loader loading" id="loader-1"></div>
-				<div class="swiper3-container post-media" data-mouse="0" data-autoplay="5000" data-loop="1" data-speed="1500" data-center="1" data-space="0" data-pagination-type="bullets" data-mode="horizontal">
-					<div id="errorPage" class=""></div>
-					<div id="sliders" class="swiper3-wrapper">
-					</div>
-					<div class="swiper3-pagination"></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<div id="desc" class="desc-wrapper">
-					</div>
-
-					<div id="projectImages" class="images-wrap izotope-container light-gallery insta-wrapper">
-					</div>
-					<!--				<div class="blockquote">this is an excellent company! I personally enjoyed the energy and the professional support the whole team gave to us into creating website.<cite>insightstudio</cite></div>-->
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="single-pagination simple_slider">
-						<div class="pag-prev">
-							<span>
-								<span>check out previous Jobs</span>
-								<span id="getPrevious" class="content" style="cursor: pointer; color: #3d3d3d">Previous project</span>
-							</span>
+		<!-- awa about-us.html template -->
+		<div class="hero">
+			<div class="row bg_pink margin-lg-105b margin-md-85b margin-sm-65b margin-xs-35b">
+				<div class="col-xs-12 no-padd">
+					<div class="container-fluid top-banner top-banner__scene style2 medium_banner center_content simple">
+						<div class="images-wrap" id="scene1">
+							<div class="img-wrap img-wrap-1 layer" data-depth="0.85"><img src="img/fragments/style-2/01.png" alt=""></div>
+							<div class="img-wrap img-wrap-2 layer" data-depth="0.6"><img src="img/fragments/style-2/03.png" alt=""></div>
+							<div class="img-wrap img-wrap-3 layer" data-depth="1.45"><img src="img/fragments/style-2/02.png" alt=""></div>
+							<div class="img-wrap img-wrap-4 layer" data-depth="0.6"><img src="img/fragments/style-2/03.png" alt=""></div>
+							<div class="img-wrap img-wrap-5 layer" data-depth="0.6"><img src="img/fragments/style-2/04.png" alt=""></div>
+							<div class="img-wrap img-wrap-6 layer" data-depth="2.45"><img src="img/fragments/style-2/06.png" alt=""></div>
+							<div class="img-wrap img-wrap-7 layer" data-depth="0.45"><img src="img/fragments/style-2/05.png" alt=""></div>
 						</div>
+						<div class="content">
+							<div class="row">
+								<div class="col-xs-12">
+									<h3 class="title">The Team</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row margin-lg-75b margin-md-55b margin-sm-35b margin-xs-25b">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-10 col-lg-offset-1">
+							<div class="wpb_wrapper">
+								<div class="wpb_text_column wpb_content_element " >
+									<div class="wpb_wrapper">
+										<h3 style="text-align: center;"><strong>Here you will find an inspiring team of Designer, Strategist & Developers<br /></strong>
+											<span>Working together to Create, Restore & Evolve Brands</span></h3>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-						<div class="icon-wrap"><i class="fa fa-th-large"></i></div>
-						<div class="pag-next">
-							<span>
-								<span>check out more jobs</span>
-								<span id="getNext" class="content" style="cursor: pointer; color: #3d3d3d">Next project</span>
-							</span>
+					<div class="container">
+						<div class="wpb_column vc_column_container vc_col-sm-12  margin-lg-60t">
+							<div class="vc_column-inner vc_custom_1524054209620">
+							<div class="wpb_wrapper">
+								<div class="team-members-wrap clearfix inline_text">
+									<div class="info-wrapper">
+										<h4 class="title">Meet the team</h4>
+									</div>
+									<ul class="team-list-wrap" id="members">
+										<div class="loader loading" id="loader-1"></div>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -296,7 +326,7 @@
 <script src="js/lightgallery.min.js"></script>
 <script src="js/team.js"></script>
 <script src="js/banner_slider.js"></script>
-<script src="js/lib/thumbnails-popup.js"></script>
+<script src="js/countTo.js"></script>
 <script src="js/skills.js"></script>
 <script src="js/info_block.js"></script>
 <script src="js/foxlazy.js"></script>
@@ -306,124 +336,35 @@
 mainlogo.src = 'img2/logo_ibrand/brand__logo__white.png';
 hoverlogo.src = 'img2/logo_ibrand/brand__logo.png';
 
-const params = urlParams.get('q');
-
-brandingService('client?q=' + params)
-.then(data => {
-	let errorPage_output = '';
-	let sliders_output = '';
-	let projectImage_output = '';
-
-	if (data == null){
-		errorPage_output += `<h3 class="text-center font-weight-bold text-light">No client found with this: (${params})</h3>`;
-		$('#errorPage').append(errorPage_output);
-		document.body.style.backgroundColor = '#26376e';
-		$('div#errorPage').css('margin-top', '10%');
-		return;
-	}
-
-	data.sliders.forEach(img => {
-		sliders_output += `<div class="swiper3-slide">
-		<div class="image-wrap">
-		<img src="${img}" class="s-img-switch" alt="ibrandfrica works" />
-		</div>
-		</div>`
-	});
-
-	data.projectImages.forEach(project => {
-		projectImage_output += `<a href="${project.image}" class="item-single gallery-item insta-item">
-		<img src="${project.image}" class="" alt="${project.type}" />
-		</a>`
-	});
-
-	let descWrapper = `<div class="info-wrap">
-	<div class="date">${data.projectDate}</div>
-	<div class="info-item-wrap">
-	<div class="item">
-	<div class="name">Clients</div>
-	<div class="text-item"><a href="#" rel="tag">${data.name}</a></div>
-	</div>
-	</div>
-	</div>
-	<div class="text-wrap">
-	<h3 class="title">${data.name}</h3>
-	<div class="text">
-	<p>${data.desc}</p>
-	</div>
-	<div class="btn-wrapper">
-	<a href="${data.clientLink}" target="_blank" class="a-btn">Visit website</a>
-	</div>
-	</div>`;
-
-	$('#sliders').append(sliders_output);
-	$('#projectImages').append(projectImage_output);
-	$('#desc').append(descWrapper);
-})
-.then(() => loading.hidden = true)
-.catch(error => {
-	console.error(error.message)
-});
-
-$('#getNext').on('click', () => {
-	return new Promise(async (resolve, reject) => {
-		await fetch(endpoint +'clients')
-		.then(res => res.json())
-		.then(data => {
-			let pages = [];
-			let nextItem;
-			for (let key in data){
-				pages.push(data[key].slug);
-			}
-
-			let currentPage = data.filter(c => params === c.slug);
-
-			let index = pages.indexOf(currentPage[0].slug);
-			if(index >= 0 && index < pages.length - 1){
-				nextItem = pages[index + 1]
-			}
-			resolve(true);
-			getCurrentURL(nextItem);
-		})
-		.then(() => loading.hidden = true)
-		.catch(error => {
-			console.error(error.message);
-			reject(error)
+brandingService('team').then(data => {
+	data.forEach(member => {
+		$('#members').append(`
+			<li class="team-member clearfix">
+			<div class="member-wrap s-back-switch" style="background-image: url('${member.image}');">
+			<img src="${member.image}" class="s-img-switch" alt="" style="display: none;">
+			<div class="social">
+			<a href="https://www.facebook.com/ibrandafricagroup" target="_blank" class="soc-item">
+			<i class="fa fa fa-facebook-square"></i>
+			</a>
+			<a href="https://twitter.com/ibrandafricagroup" target="_blank" class="soc-item">
+			<i class="fa fa fa-twitter"></i>
+			</a>
+			<a href="https://www.instagram.com/ibrandafricagroup" target="_blank" class="soc-item">
+			<i class="fa fa fa-instagram"></i>
+			</a>
+			</div>
+			</div>
+			<div class="member-info-wrap">
+			<div class="member-info">
+			<h5 class="member-name">${member.fullname}</h5>
+			<div class="member-position">${member.position}</div>
+			</div>
+			</div>
+			</li>
+			`)
 		})
 	})
-});
-
-$('#getPrevious').on('click', () => {
-	return new Promise(async (resolve, reject) => {
-		await fetch(endpoint +'clients')
-		.then(res => res.json())
-		.then(data => {
-			let pages = [];
-			let previousItem;
-			for (let key in data){
-				pages.push(data[key].slug);
-			}
-
-			let currentPage = data.filter(c => params === c.slug);
-
-			let index = pages.indexOf(currentPage[0].slug);
-			if (index >= 0 && index < pages.length - 1) {
-				previousItem = pages[index - 1]
-			}
-			resolve(true);
-			getCurrentURL(previousItem);
-		})
-		.then(() => loading.hidden = true)
-		.catch(error => {
-			console.error(error.message);
-			reject(error)
-		})
-	})
-});
-
-function getCurrentURL(p) {
-	window.location.assign(location.pathname+'?q='+p);
-}
-
+	.then(() => loading.hidden = true);
 </script>
 </body>
 </html>

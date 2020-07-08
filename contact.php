@@ -199,7 +199,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="text col-xs-12 col-sm-6">
-										iBrand Africa was founded in 2006 by our Passionate business analyst Ernest Nnadi, Through partnerships with creative minds who aspire to unlock the unique value of brand innovation.
+										iBrand Africa was founded in 2011 by our Passionate brand strategist Ernest Nnadi, Through partnerships with creative minds who aspire to unlock the unique value of brand innovation.
 										<p>With collaboration and in-depth consultation, we deliver expert branding, web/app development and brand communications services to help these businesses achieve their potential in full.</p>
 									</div>
 									<div class="content-items col-xs-12 col-sm-6">
@@ -254,17 +254,26 @@
 				<h5>explore</h5>
 				<div class="menu-footer-menu-container">
 					<ul id="menu-footer-menu" class="menu">
-						<li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
-							<a href="/about">About us</a>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+							<a href="./about">About us</a>
 						</li>
-						<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
-							<a href="/contact">Contact us</a>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
+							<a href="./contact">Contact us</a>
 						</li>
-						<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
-							<a href="/works">Works</a>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
+							<a href="./works">Works</a>
 						</li>
-						<li id="menu-item-199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
-							<a href="/services">Services</a>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+							<a href="./services">Services</a>
+						</li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+							<a href="./team">Team</a>
+						</li>
+						<li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+							<a href="./consultation">Free consultation</a>
+						</li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+							<a href="./project">Start a project</a>
 						</li>
 					</ul>
 				</div>

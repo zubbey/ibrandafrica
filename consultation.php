@@ -52,6 +52,13 @@
 	.contacts-info-wrap .form input:not([type="submit"]){
 		min-height: none;
 	}
+	.contacts-info-wrap .form input:not([type="submit"]) {
+	  min-height: auto !important;
+	  padding: 5px !important;
+	}
+	.contacts-info-wrap .form input:not([type="submit"]), .contacts-info-wrap .form textarea{
+		margin-bottom: 10px !important;
+	}
 </style>
 </head>
 <body class="woocommerce woocommerce-page enable_sound enable_sound_mob white_bg">
@@ -208,7 +215,7 @@
 				</div>
 			</div>
 
-			<div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1524135835003 vc_row-has-fill" style="position: relative; box-sizing: border-box; width: 100%; background: url('https://i.imgur.com/RBVSvk0.png') no-repeat; background-position: right; background-size: 800px;">
+			<div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1524135835003 vc_row-has-fill" style="position: relative; box-sizing: border-box; width: 100%; background: url('https://i.imgur.com/RBVSvk0.png') no-repeat; background-position: bottom right; background-size: 800px;">
 				<div class="wpb_column vc_column_container vc_col-sm-12  margin-lg-115t margin-md-75t">
 					<div class="vc_column-inner">
 						<div class="wpb_wrapper">
@@ -218,7 +225,7 @@
 								<div class="form btn-style-1">
 									<div role="form" class="wpcf7" id="wpcf7-f809-p2650-o3" lang="en-US" dir="ltr">
 										<div class="screen-reader-response" aria-live="polite"></div>
-										<form id="consultationForm" class="wpcf7-form" novalidate="novalidate">
+										<form id="consultationForm" class="" novalidate="novalidate">
 											<div class="form-group">
 												<label for="availability">Schedule Day</label>
 												<select id="availability" name="availability" class="form-control">
@@ -227,11 +234,11 @@
 												</select>
 											</div>
 											<div class="form-group">
-												<div class="col">
+												<div class="form-group col-md-6" style="padding: 0; padding-right: 5px">
 													<label for="firstname">First Name</label>
 													<input type="text" id="firstname" name="firstname" value=""/>
 												</div>
-												<div class="col">
+												<div class="form-group col-md-6" style="padding: 0">
 													<label for="lastname">Last Name</label>
 													<input type="text" id="lastname" name="lastname" value=""/>
 												</div>
@@ -309,7 +316,7 @@
 									<div class="container">
 										<div class="row">
 											<div class="text col-xs-12 col-sm-6">
-												iBrand Africa was founded in 2006 by our Passionate business analyst Ernest Nnadi, Through partnerships with creative minds who aspire to unlock the unique value of brand innovation.
+												iBrand Africa was founded in 2011 by our Passionate brand strategist Ernest Nnadi, Through partnerships with creative minds who aspire to unlock the unique value of brand innovation.
 												<p>With collaboration and in-depth consultation, we deliver expert branding, web/app development and brand communications services to help these businesses achieve their potential in full.</p>
 											</div>
 											<div class="content-items col-xs-12 col-sm-6">
@@ -364,17 +371,26 @@
 						<h5>explore</h5>
 						<div class="menu-footer-menu-container">
 							<ul id="menu-footer-menu" class="menu">
-								<li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
-									<a href="/about">About us</a>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+									<a href="./about">About us</a>
 								</li>
-								<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
-									<a href="/contact">Contact us</a>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
+									<a href="./contact">Contact us</a>
 								</li>
-								<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
-									<a href="/works">Works</a>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
+									<a href="./works">Works</a>
 								</li>
-								<li id="menu-item-199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
-									<a href="/services">Services</a>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+									<a href="./services">Services</a>
+								</li>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+									<a href="./team">Team</a>
+								</li>
+								<li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+									<a href="./consultation">Free consultation</a>
+								</li>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+									<a href="./project">Start a project</a>
 								</li>
 							</ul>
 						</div>

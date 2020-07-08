@@ -172,12 +172,13 @@
                   <div class="swiper3-slide swiper-no-swiping style1" data-title="Welcome">
                     <div class="slider-banner hard-full-height">
                       <div class="img-bg bg-cover">
-                        <img src="https://i.imgur.com/5IAZ3jH.jpg" class="s-img-switch" alt="" />
+                        <img src="img/bannerbg1.jpg" class="s-img-switch" alt="" />
                       </div>
                       <div class="container no-padd-md">
                         <div class="row">
                           <div class="col-xs-12">
-                            <h1 class="title">Grow your business with<br>iBrand Africa</h1>
+                            <h1 class="title" style="font-size: 60px; padding: 80px; text-align: left;">Book a free<br><strong>30 minute <br> consultation</strong><br>
+                            <a href="./consultation" class="a-btn"> Book now</a></h1>
                           </div>
                         </div>
                       </div>
@@ -193,7 +194,7 @@
                         <div class="row">
                           <div class="col-xs-12">
                             <h1 class="title" style="font-size: 60px; padding: 80px; text-align: left;">Get your <br> business online <br>at ease<br>
-                            <a href="./webonthego" class="a-btn"> Get Started</a></h1>
+                            <a href="./webonthego" class="a-btn" style="background-color: #fff; color: #27386e"> Get Started</a></h1>
                           </div>
                         </div>
                       </div>
@@ -247,7 +248,7 @@
                 <div class="headings style2">
                   <div class="content">
                     <div class="info">
-                      <h5 class="subtitle" style="color:#ffd139">Why choice us?</h5>
+                      <h5 class="subtitle" style="color:#ffd139">Why choose us?</h5>
                       <h3 class="title" style="color:#ffffff">We're a professional brand and communications agency, ready to put a smile :) on your business.</h3>
                     </div>
                   </div>
@@ -388,7 +389,7 @@
                       <h1 class="title">Years experience</h1>
                     </div>
                     <div class="content">
-                      <p>iBrand Africa was founded in 2006 by our Passionate business analyst Ernest Nnadi, Through partnerships with creative minds who aspire to unlock the unique value of brand innovation.</p>
+                      <p>iBrand Africa was founded in 2011 by our Passionate brand strategist Ernest Nnadi, Through partnerships with creative minds who aspire to unlock the unique value of brand innovation.</p>
                       <p>With collaboration and in-depth consultation, we deliver expert branding, web/app development and brand communications services to help these businesses achieve their potential in full.</p>
                     </div>
                     <!-- <div class="video only-button">
@@ -410,13 +411,13 @@
       <div class="col-xs-12" style="padding:0;">
         <div class="call-to-action simple">
           <div class="call-to-action-wrap simple left">
-            <div class="image-wrap s-back-switch" style="background-image: url('img/webonthego-temp.jpg';);">
+            <div class="image-wrap s-back-switch" style="background-image: url('img/webonthego-temp.jpg';); background-size: contain; background-repeat: no-repeat; background-color: white;">
               <img src="img/webonthego-temp.jpg" class="s-img-switch" alt="" style="display: none;">
             </div>
             <div class="info-wrap">
               <h3 class="call-subtitle">WEB ON THE GO</h3>
               <div class="text">
-                <p></p><h1><span style="color: #f54ea2">Affordable</span> Web Development Monthly Packages</h1><p></p>
+                <p></p><h1><span style="color: #f54ea2">Affordable</span> website packages</h1><p></p>
               </div>
               <div class="btn-wrap">
                 <a href="./webonthego" class="a-btn"> Get Started</a>
@@ -596,7 +597,7 @@
                   <div class="info">
                     <h3 class="title">Some of our piece</h3>
                     <div class="content">
-                      <p>We have over a decade of experience in the creative industry, producing exciting experiences for brands that are as smart, as they are effective.</p>
+                      <p>We have years of experience in the creative industry, producing exciting experiences for brands that are as smart, as they are effective.</p>
                     </div>
                   </div>
                 </div>
@@ -636,9 +637,11 @@
     <div id="text-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_text"><div class="item-wrap">
       <h5>Wanna say hello?</h5>
       <div class="textwidget">
-        <p><a href="email:info@ibrandafrica.com"><span>info@ibrandafrica.com</span></a></p>
-        <p><a href="tel:+2348021260000">(+234) 8021260000</a></p>
-      </div>
+				<p><a href="email:info@ibrandafrica.com"><span>info@ibrandafrica.com</span></a></p>
+				<p><a href="tel:+2348021260000">(+234) 8021260000</a></p>
+				<p><a href="tel:+2347020600000">(+234) 7020600000</a></p>
+				<p><a href="tel:+2348021260000">(+234) 8037478593</a></p>
+			</div>
     </div>
   </div>
   <div id="nav_menu-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_nav_menu">
@@ -646,17 +649,26 @@
       <h5>explore</h5>
       <div class="menu-footer-menu-container">
         <ul id="menu-footer-menu" class="menu">
-          <li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
-            <a href="/about">About us</a>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+            <a href="./about">About us</a>
           </li>
-          <li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
-            <a href="/contact">Contact us</a>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
+            <a href="./contact">Contact us</a>
           </li>
-          <li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
-            <a href="/works">Works</a>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
+            <a href="./works">Works</a>
           </li>
-          <li id="menu-item-199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
-            <a href="/services">Services</a>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+            <a href="./services">Services</a>
+          </li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+            <a href="./team">Team</a>
+          </li>
+          <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+            <a href="./consultation">Free consultation</a>
+          </li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+            <a href="./project">Start a project</a>
           </li>
         </ul>
       </div>
@@ -672,17 +684,14 @@
   </div>
 </div>
 <div class="col-xs-12 footer-socials text-center col-sm-6">
-  <a href="https://www.facebook.com/" target="_blank">
+  <a href="https://www.facebook.com/ibrandafricagroup" target="_blank">
     <i class="fa fa-facebook-square"></i>
   </a>
-  <a href="https://twitter.com/" target="_blank">
+  <a href="https://twitter.com/ibrandafricagroup" target="_blank">
     <i class="fa fa-twitter"></i>
   </a>
-  <a href="https://www.instagram.com/" target="_blank">
+  <a href="https://www.instagram.com/ibrandafricagroup" target="_blank">
     <i class="fa fa-instagram"></i>
-  </a>
-  <a href="https://dribbble.com/" target="_blank">
-    <i class="fa fa-dribbble"></i>
   </a>
 </div>
 <div class="copyright col-xs-12 text-center col-sm-6">©iBrand Africa, Copyright by

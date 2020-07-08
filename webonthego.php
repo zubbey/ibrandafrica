@@ -57,6 +57,13 @@
 	.swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea {
 		margin: .3em auto !important;
 	}
+	.pricing-item:hover .pricing-info .price{
+	  color: #FFF !important;
+	}
+	.pricing-item:hover .a-btn, .pricing-item:hover .a-btn-2, .pricing-item:hover .a-btn-3, .pricing-item:hover .a-btn-4 {
+    background-color: #ffffff !important;
+    color: #222222;
+}
 	</style>
 </head>
 <body class="enable_sound enable_sound_mob">
@@ -70,10 +77,10 @@
 						<!-- HEADER -->
 						<header class="right-menu left">
 							<!-- LOGO -->
-							<a href="./" class="logo">
+							<a href="./webonthego" class="logo">
 								<img src="img2/logo_ibrand/webonthego-H-color.png" alt="iBrand Africa" class="main-logo">
-								<img src="img2/logo_ibrand/bwebonthego-H-white.png" alt="iBrand Africa" class="logo-hover">
-								<img src="img2/logo_ibrand/bwebonthego-H-color.png" alt="iBrand Africa" class="main-logo logo-mobile">
+								<img src="img2/logo_ibrand/webonthego-H-white.png" alt="iBrand Africa" class="logo-hover">
+								<img src="img2/logo_ibrand/webonthego-H-color.png" alt="iBrand Africa" class="main-logo logo-mobile">
 							</a>
 							<!-- /LOGO -->
 							<!-- MOB MENU ICON -->
@@ -107,7 +114,7 @@
 								<ul class="menu">
 									<li class="menu-item menu-item-has-children current_page_item"><a href="#" id="pricing">Pricing</a></li>
 									<li class="menu-item menu-item-has-children"><a href="#" id="about">About</a></li>
-									<li class="menu-item menu-item-has-children"><a href="#">FAQs</a></li>
+									<li class="menu-item menu-item-has-children"><a href="#" id="faq">FAQs</a></li>
 								</ul>
 							</nav>
 						</header>
@@ -312,17 +319,26 @@
 				<h5>explore</h5>
 				<div class="menu-footer-menu-container">
 					<ul id="menu-footer-menu" class="menu">
-						<li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
-							<a href="/about">About us</a>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+							<a href="./about">About us</a>
 						</li>
-						<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
-							<a href="/contact">Contact us</a>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
+							<a href="./contact">Contact us</a>
 						</li>
-						<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
-							<a href="/works">Works</a>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">
+							<a href="./works">Works</a>
 						</li>
-						<li id="menu-item-199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
-							<a href="/services">Services</a>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+							<a href="./services">Services</a>
+						</li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+							<a href="./team">Team</a>
+						</li>
+						<li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+							<a href="./consultation">Free consultation</a>
+						</li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199">
+							<a href="./project">Start a project</a>
 						</li>
 					</ul>
 				</div>
@@ -339,14 +355,14 @@
 	</div>
 	<div class="col-xs-12 footer-socials text-center col-sm-6">
 		<a href="https://www.facebook.com/ibrandafricagroup" target="_blank">
-			<i class="fa fa-facebook-square"></i>
-		</a>
-		<a href="https://twitter.com/ibrandafricagroup" target="_blank">
-			<i class="fa fa-twitter"></i>
-		</a>
-		<a href="https://www.instagram.com/ibrandafricagroup" target="_blank">
-			<i class="fa fa-instagram"></i>
-		</a>
+	    <i class="fa fa-facebook-square"></i>
+	  </a>
+	  <a href="https://twitter.com/ibrandafricagroup" target="_blank">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a href="https://www.instagram.com/ibrandafricagroup" target="_blank">
+	    <i class="fa fa-instagram"></i>
+	  </a>
 	</div>
 	<div class="copyright col-xs-12 text-center col-sm-6">©iBrand Africa, Copyright by
 		<a href="http://ibrandafrica.com/">iBrandafrica.com</a>
@@ -396,7 +412,7 @@
 <script src="https://js.paystack.co/v1/inline.js"></script>
 
 <script>
-const pk_key = config.PAYMENT_TPK;
+const pk_key = config.PAYMENT_LPK;
 let output = '';
 brandingService('plan')
 .then(data => {
@@ -624,6 +640,10 @@ $("#about").click(function() {
 	$('html, body').animate({
 		scrollTop: $("#aboutSection").offset().top
 	}, 2000);
+});
+
+$("#faq").click(function() {
+	window.location.assign(location.origin + '/faq')
 });
 </script>
 </body>
