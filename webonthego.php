@@ -492,7 +492,7 @@ function subscribePlan(name, amount){
 			`<div class="d-flex justify-content-between align-items-center">
 			  <h4 class="init">
 					<span class="badge badge-warning">3 Month initial payment</span>
-					<strong>&#8358;${amount * 3}</strong>
+					<strong>${formatCurrency(amount * 3)}</strong>
 			  </h4>
 				</div>` +
 			'<input type="text" id="firstname" class="swal2-input" placeholder="Enter your firstname">' +
@@ -644,6 +644,11 @@ function saveSubscription(data, name, amount, reference){
 			console.error(error.message);
 		})
 	})
+}
+
+// format currency
+function formatCurrency(amount){
+	return new Intl.NumberFormat('en-NG', { style: 'currency', currency: 'NGN' }).format(amount)
 }
 
 // newsletter
