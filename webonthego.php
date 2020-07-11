@@ -62,7 +62,27 @@
 	}
 	.pricing-item:hover .a-btn, .pricing-item:hover .a-btn-2, .pricing-item:hover .a-btn-3, .pricing-item:hover .a-btn-4 {
     background-color: #ffffff !important;
-    color: #222222;
+	  color: #222222;
+	}
+	h1.title {
+		font-size: 6em !important;
+	}
+	.swal2-content{
+		text-align: left !important;
+	}
+	.init .badge{
+		background-color: #ffe000 !important;
+		color: black !important;
+	}
+@media only screen and (max-width: 600px) {
+
+	h1.title {
+	  font-size: 3em !important;
+		margin-bottom: 1em;
+	}
+	.tg-a-btn a, .a-btn {
+    margin-top: 40px;
+	}
 }
 	</style>
 </head>
@@ -466,8 +486,15 @@ function subscribePlan(name, amount){
 	(async () => {
 
 		await Swal.fire({
-			title: 'Personal Info',
+			title: 'Complete your signup',
 			html:
+			'<p>We accept 3 months initial subscription for a start.</p>' +
+			`<div class="d-flex justify-content-between align-items-center">
+			  <h4 class="init">
+					<span class="badge badge-warning">3 Month initial payment</span>
+					<strong>&#8358;${amount * 3}</strong>
+			  </h4>
+				</div>` +
 			'<input type="text" id="firstname" class="swal2-input" placeholder="Enter your firstname">' +
 			'<input type="text" id="lastname" class="swal2-input" placeholder="Enter your surname">' +
 			'<input type="email" id="email" class="swal2-input" placeholder="Enter your email address">' +
@@ -521,7 +548,7 @@ function payWithPaystack(data, amount, name) {
 	var handler = PaystackPop.setup({
 		key: pk_key,
 		email: data.email,
-		amount: amount * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
+		amount: amount * 3 * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
 		currency: 'NGN', // Use GHS for Ghana Cedis or USD for US Dollars
 		firstname: data.firstname,
 		lastname: data.lastname,

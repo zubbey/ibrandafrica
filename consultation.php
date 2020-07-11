@@ -101,10 +101,10 @@
 										<li class="menu-item"><a href="./services">services</a></li>
 										<li class="menu-item"><a href="./works">works</a></li>
 										<li class="menu-item"><a href="./contact">contact</a></li>
-										<li class="menu-item current-menu-item"><a href="./consultation">Free Consultation</a></li>
+										<li class="menu-item current-menu-item"><a href="./consultation">consultation <span class="badge badge-warning">free</span></a></li>
 									</ul>
 									<div class="pricing-btn">
-										<a href="project" class="a-btn">Start A Project</a>
+										<a href="./project" class="a-btn">Start A Project</a>
 									</div>
 									<div class="info-wrap">
 										<div class="additional">

@@ -16,7 +16,6 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/pe-icon-7-stroke.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="css/swiper3.css">
 	<link rel="stylesheet" href="css/simple-line-icons.css">
 	<link rel="stylesheet" href="css/ionicons.min.css">
 	<link rel="stylesheet" href="css/slick.css">
@@ -36,6 +35,7 @@
 	<link rel="stylesheet" href="css/info_block.min.css">
 	<link rel="stylesheet" href="css/services.min.css">
 	<link rel="stylesheet" href="css/team.min.css">
+	<link rel="stylesheet" href="css/swiper3.css">
 	<link rel="stylesheet" href="css/the_grid.min.css">
 	<link rel="stylesheet" href="css/services_list.min.css">
   <link rel="stylesheet" href="css/banner_image.min.css">
@@ -50,6 +50,16 @@
       .top-banner {
     		height: 250px !important;
     	}
+			a.insta-item.col-xs-12.col-sm-6.col-md-4.no-padd .cname {
+				padding: 20px;
+			}
+			a.insta-item.col-xs-12.col-sm-6.col-md-4.no-padd {
+			  text-decoration: none;
+				margin: 40px 0;
+			}
+			.no-padd {
+			    padding: 10px !important;
+			}
   </style>
 </head>
 <body class="woocommerce woocommerce-page enable_sound enable_sound_mob white_bg">
@@ -94,7 +104,7 @@
 									<li class="menu-item"><a href="./services">services</a></li>
 									<li class="menu-item current-menu-item"><a href="./works">works</a></li>
 									<li class="menu-item"><a href="./contact">contact</a></li>
-									<li class="menu-item"><a href="./consultation">Free Consultation</a></li>
+									<li class="menu-item"><a href="./consultation">consultation <span class="badge badge-warning">free</span></a></li>
 								</ul>
 								<div class="pricing-btn">
 									<a href="./project" class="a-btn">Start A Project</a>
@@ -277,7 +287,6 @@
   <script src="js/equalHeightsPlugin.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.fitvids.js"></script>
-  <script src="js/swiper3.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
   <script src="js/fragment.js"></script>
   <script src="js/scrollMonitor.js"></script>
@@ -296,6 +305,7 @@
   <script src="js/services.js"></script>
   <script src="js/lightgallery.min.js"></script>
   <script src="js/lib/thumbnails-popup.js"></script>
+	<script src="js/swiper3.js"></script>
   <script src="js/team.js"></script>
   <script src="js/banner_slider.js"></script>
   <script src="js/countTo.js"></script>
@@ -312,8 +322,9 @@
     .then((data) => {
       let output = '';
       data.forEach(client => {
-        output += `<a href="${location.origin+"/ibrandafrica/work-client?q="+client.slug}" class="insta-item col-xs-12 col-sm-6 col-md-4 no-padd">
-        <img src="${client.sliders[0]}" alt="ibrandafrica-${client.name}">
+        output += `<a href="${location.origin+"/work-client?q="+client.slug}" class="insta-item col-xs-12 col-sm-6 col-md-4 no-padd">
+				<img src="${client.sliders[0]}" alt="ibrandafrica-${client.name}">
+				<div class="cname">${client.name}</div>
         <span class="info-hover"><i><h2 class="font-weight-bold">${client.name}</h2></i></span>
         </a>`
       });

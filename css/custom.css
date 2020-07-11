@@ -25,7 +25,10 @@ nav#topmenu .full-menu-wrap .pricing-btn a.a-btn {
 }
 
 
-
+.badge .warning {
+    color: #26386d !important;
+    background-color: #fddd64 !important;
+}
 
 
 .mb-2{
