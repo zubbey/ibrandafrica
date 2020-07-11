@@ -293,9 +293,9 @@
 											<form id="newsletter" class="wpcf7-form" novalidate="novalidate">
 												<p>
 													<span class="wpcf7-form-control-wrap email-970">
-														<input type="email" name="email-970" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="enter your email" />
+														<input type="email" name="email-970" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="enter your email address" required/>
 													</span>
-													<button onclick="newletterSub()" type="button" class="wpcf7-form-control wpcf7-submit" />Subscribe</button>
+													<button type="submit" class="wpcf7-form-control wpcf7-submit" />Subscribe</button>
 												</p>
 												<div class="wpcf7-response-output wpcf7-display-none">
 												</div>
@@ -539,11 +539,6 @@ function subscribePlan(name, amount){
 	})()
 }
 
-function validEmail(email) {
-	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
-};
-
 function payWithPaystack(data, amount, name) {
 	var handler = PaystackPop.setup({
 		key: pk_key,
@@ -603,8 +598,19 @@ function payWithPaystack(data, amount, name) {
 			saveSubscription(data, name, amount, reference);
 		},
 		onClose: function() {
-			// alert('Transaction was not completed, window closed.');
-			swal("Are you sure?", "Transaction was not completed, window closed.", "warning")
+			Swal.fire({
+			  title: 'Are you sure?',
+			  text: "Transaction will not be completed, if window is closed.",
+			  icon: 'warning',
+			  showCancelButton: true,
+			  confirmButtonColor: '#3085d6',
+			  cancelButtonColor: '#d33',
+			  confirmButtonText: 'No, Continue!'
+			}).then((result) => {
+			  if (result.value) {
+					payWithPaystack(data, amount, name)
+			  }
+			})
 		},
 	});
 	handler.openIframe();
@@ -652,9 +658,42 @@ function formatCurrency(amount){
 }
 
 // newsletter
-function newletterSub(){
-	swal("Well done!", "Thank you for subscribing.", "success")
-}
+
+const newsletterForm = document.querySelector('#newsletter');
+
+newsletterForm.addEventListener('submit', function(event) {
+	event.preventDefault();
+	let value = event.target[0].value;
+
+	if(value === ''){
+		// no input
+		Swal.fire({
+		  icon: 'error',
+		  title: 'Email is required',
+		  showConfirmButton: false,
+		  timer: 5000
+		})
+	} else if(validEmail(value)){
+		Swal.fire({
+		  icon: 'success',
+		  title: 'Thank you for subscribing to our newsletter',
+		  showConfirmButton: false,
+		  timer: 5000
+		})
+	} else {
+		Swal.fire({
+		  icon: 'error',
+		  title: 'Please enter a valid email address',
+		  showConfirmButton: false,
+		  timer: 5000
+		})
+	}
+})
+
+function validEmail(email) {
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+};
 
 $("#pricing").click(function() {
 	$('html, body').animate({
