@@ -206,12 +206,16 @@
 										<div class="content-item">
 											<h5 class="title">address:</h5>
 											<div class="address">#4 Amadi-ama Trans-Amadi Industrial Layout, Port Harcourt, Nigeria</div>
+											<div class="address">Wattle Lane , Imara Daima. Nairobi.
+ Tom Mboya street, Paul Kigunda Plaza , Meru.
+Kenya.</div>
 										</div>
 										<div class="content-item">
 											<h5 class="title">phone:</h5>
 											<a href="tel:+2348021260000" class="email">(+234) 8021260000</a>
 											<a href="tel:+2347020600000" class="email">(+234) 7020600000</a>
 											<a href="tel:+2348037478593" class="email">(+234) 8037478593</a>
+											<a href="tel:+254799649184" class="email">(+254) 799649184</a>
 										</div>
 										<div class="content-item">
 											<h5 class="title">email:</h5>
