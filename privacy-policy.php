@@ -189,10 +189,10 @@
 							<div class="wpb_wrapper">
 								<div class="wpb_text_column wpb_content_element " >
 									<div class="wpb_wrapper">
-										<h1 dir="ltr">
+										<h5 dir="ltr">
 										    IBRAND AFRICA LIMITED (“ibrandafrica”, “we”, “us” or “our”) is committed to
 										    protecting and respecting your personal information and your privacy.
-										</h1>
+										</h5>
 										<p dir="ltr">
 										    This privacy policy (together with our Terms and Conditions and any other
 										    documents referred to it) describes how we will collect, store and use
