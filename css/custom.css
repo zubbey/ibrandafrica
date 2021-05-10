@@ -50,7 +50,12 @@ nav#topmenu .full-menu-wrap .pricing-btn a.a-btn {
     margin-bottom: 64px;
 }
 
-
+#footer * {
+    list-style: none !important;
+}
+.sidebar-item ul li a {
+    color: rgb(255 255 255 / 58%) !important;
+}
 /* ALL LOADERS */
 
 .loader{
