@@ -240,6 +240,14 @@
 						<div class="instagram-text"><span>follow us on </span>
 							<a href="https://www.instagram.com/ibrandafricagroup/" target="_blank">iBrand Africa Group</a>
 						</div>
+						<ul id="menu-footer-menu" class="menu">
+							  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+							    <a href="./privacy-policy">Privacy Policy</a>
+							  </li>
+							  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+							    <a href="./refund-policy">Refund Policy</a>
+							  </li>
+							</ul>
 					</div>
 				</div>
 			</div>
