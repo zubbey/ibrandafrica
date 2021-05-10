@@ -657,11 +657,11 @@
     <div id="text-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_text"><div class="item-wrap">
       <h5>Wanna say hello?</h5>
       <div class="textwidget">
-				<p><a href="email:info@ibrandafrica.com"><span>info@ibrandafrica.com</span></a></p>
-				<p><a href="tel:+2348021260000">(+234) 8021260000</a></p>
-				<p><a href="tel:+2347020600000">(+234) 7020600000</a></p>
-				<p><a href="tel:+2348021260000">(+234) 8037478593</a></p>
-			</div>
+	<p><a href="email:info@ibrandafrica.com"><span>info@ibrandafrica.com</span></a></p>
+	<p><a href="tel:+2348021260000">(+234) 8021260000</a></p>
+	<p><a href="tel:+2347020600000">(+234) 7020600000</a></p>
+	<p><a href="tel:+2348021260000">(+234) 8037478593</a></p>
+	</div>
     </div>
   </div>
   <div id="nav_menu-2" class="sidebar-item col-xs-12 col-sm-6 col-md-3 widget_nav_menu">
