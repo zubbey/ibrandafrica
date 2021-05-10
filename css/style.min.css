@@ -4140,7 +4140,8 @@ caption {
 }
 
 #footer > * {
-    text-transform: none
+    text-transform: none;
+    list-style: none !important;
 }
 
 #footer .widg {
@@ -4379,7 +4380,8 @@ caption {
 }
 
 #footer * {
-    text-transform: none
+    text-transform: none;
+    list-style: none;
 }
 
 #footer .copy_content {
@@ -9689,7 +9691,7 @@ table th {
 
 .sidebar-item ul li a {
     text-decoration: none;
-    color: #222222
+    color: rgb(255 255 255 / 57%);
 }
 
 .sidebar-item select {
