@@ -1,0 +1,22 @@
+:root {
+  --primary-highlight: rgba(0, 0, 0, 0.126);
+}
+
+::selection {
+  background-color: var(--primary-highlight);
+}
+body {
+  background-color: black;
+}
+.ql-container,
+.ql-editor {
+  min-height: 200px !important;
+}
+.ql-editor .ql-video {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+p > img {
+  width: 100%;
+}

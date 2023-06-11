@@ -1,0 +1,11 @@
+export { default as Home } from "./Home";
+export { default as About } from "./About";
+export { default as Blogs } from "./Blogs";
+export { default as Blog } from "./Blog";
+export { default as Services } from "./Services";
+export { default as Work } from "./Work";
+export { default as Works } from "./Works";
+export { default as Contact } from "./Contact";
+export { default as Consultation } from "./Consultation";
+export { default as Print } from "./Print";
+export { default as NotFound } from "./NotFound";
