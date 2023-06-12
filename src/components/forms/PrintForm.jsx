@@ -45,7 +45,7 @@ const formSchema = Yup.object().shape({
   phoneNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
   category: Yup.string().required("Category is required"),
   service: Yup.string().required("Service is required"),
-  message: Yup.string().required("Description is required"),
+  message: Yup.string().required("Project brief is required"),
 });
 
 function PrintForm({ data, selected, cursorEnter, cursorLeave, formRef, onClose }) {
@@ -202,7 +202,7 @@ function PrintForm({ data, selected, cursorEnter, cursorLeave, formRef, onClose 
             )}
             <WhiteTextField
               fullWidth
-              label="Briefly tell us more about what you want to print"
+              label="Tell us briefly about your project"
               multiline
               rows={2}
               {...getFieldProps("message")}

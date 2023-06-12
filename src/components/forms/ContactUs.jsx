@@ -59,7 +59,7 @@ const formSchema = Yup.object().shape({
   name: Yup.string().min(3).required("Your fullname is required"),
   emailAddress: Yup.string().email().required("Email Address is required"),
   phoneNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
-  message: Yup.string().required("Message is required"),
+  message: Yup.string().min(10).required("Project brief is required"),
   date: Yup.string(),
 });
 
