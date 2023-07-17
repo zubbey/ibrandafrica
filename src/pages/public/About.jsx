@@ -16,12 +16,6 @@ function About() {
   const { content, gallery } = useSelector((state) => state);
   const { about } = content;
 
-  const images = useMemo(() => {
-    let arr = [...gallery];
-    arr.sort(() => Math.random() - 0.5);
-    return arr.slice(0, 6);
-  }, [gallery]);
-
   const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
@@ -51,7 +45,7 @@ function About() {
         />
       </Section>
       <Section padding={2}>
-        <GalleryList data={images} isMd={isMd} cursorEnter={cursorView} cursorLeave={cursorLeave} />
+        <GalleryList data={gallery} isMd={isMd} cursorEnter={cursorView} cursorLeave={cursorLeave} />
       </Section>
       <Section size="lg">
         <TeamList data={about.section3.team} title={about.section3.title} subtitle={about.section3.subtitle} />

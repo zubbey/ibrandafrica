@@ -66,13 +66,13 @@ function ServiceList({ data, cursorEnter, cursorLeave }) {
             onMouseEnter={cursorEnter}
             onMouseLeave={cursorLeave}
             data-aos="fade-up"
-            data-aos-delay={`1${index}0`}
-            data-aos-duration="1400"
+            data-aos-delay={`10${index}`}
+            data-aos-duration="1000"
           >
             <Typography variant="h5" color="#FFFFFF" sx={{ mb: 1 }}>
               {service.name}
             </Typography>
-            <StyledText>{`0${index + 1}`}</StyledText>
+            <StyledText>{`01${index}`}</StyledText>
             <Carousel duration={600} interval={interval} indicators={false}>
               {service.jobs[jobIndex].images.map((image, imgIndex) => (
                 <Image key={imgIndex} src={image} alt="..." onClick={() => handleRoute(service)} />

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { cloneElement, forwardRef, useContext, useEffect, useRef, useState } from "react";
+import { forwardRef, useContext, useEffect, useRef, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
@@ -7,7 +7,6 @@ import { ToastContainer } from "react-toastify";
 import { styled, useTheme } from "@mui/material/styles";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Box from "@mui/material/Box";
 import Fade from "@mui/material/Fade";
 import Dialog from "@mui/material/Dialog";
 import { MenuList } from "../../components/list";

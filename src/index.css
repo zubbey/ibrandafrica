@@ -8,6 +8,10 @@
 body {
   background-color: black;
 }
+.appbar__header {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
 .ql-container,
 .ql-editor {
   min-height: 200px !important;

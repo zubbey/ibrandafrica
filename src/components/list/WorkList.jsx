@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 import { textToSlug } from "../../utils";
 
 const Image = styled("img")(({ theme }) => ({
@@ -25,24 +28,71 @@ const StyledChip = styled("div")({
   display: "inline-flex",
 });
 
+const StyledTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) => ({
+  ...theme.typography.h6,
+  width: "100%",
+  borderRadius: 8,
+  textTransform: "capitalize",
+  border: "1px solid rgba(0,0,0,0.5)",
+  color: "#000000",
+  "&.Mui-selected": {
+    color: "#FFFFFF",
+    backgroundColor: "#000000",
+  },
+  [theme.breakpoints.down("md")]: {
+    width: "auto",
+    fontSize: 10,
+  },
+}));
+
 function WorkList({ data }) {
+  const [tab, setTab] = useState(0);
+  const [filteredData, setFilteredData] = useState([]);
+  const categories = useMemo(() => (data?.length ? data?.map((item) => item.name) : []), [data]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (data?.length) {
+      onFilter(data[0].name);
+    }
+  }, [data]);
 
   const handleRoute = (job, service) => {
     const slug = textToSlug(job.title);
     navigate(`/works/${slug}`, { replace: true, state: { ...job, name: service.name } });
   };
 
+  const handleChange = (event, newValue) => {
+    onFilter(event.target.innerText);
+    setTab(newValue);
+  };
+
+  const onFilter = (value) => {
+    const filtered = data.filter((item) => item.name.toLowerCase() === value.toLowerCase());
+    setFilteredData(filtered);
+  };
+
   return (
     <div>
-      {data.map((service, index) => (
+      <Tabs
+        value={tab}
+        onChange={handleChange}
+        variant="scrollable"
+        scrollButtons="auto"
+        aria-label="scrollable auto tabs example"
+        sx={{
+          mb: 8,
+          justifyContent: "space-between",
+        }}
+      >
+        {categories?.map((category, catIndex) => (
+          <StyledTab key={catIndex} label={category} />
+        ))}
+      </Tabs>
+
+      {filteredData.map((service, index) => (
         <Box key={index} sx={{ mb: 10 }}>
           <Box sx={{ width: { xs: "100%", sm: "50%" } }}>
-            <StyledChip data-aos="fade-up">
-              <Typography variant="overline" color="neutral.main" sx={{ fontSize: 14, px: 1 }}>
-                {service.name}
-              </Typography>
-            </StyledChip>
             <Typography variant="h4" fontWeight="bolder" data-aos="fade-up" data-aos-duration="1000" sx={{ mb: 1 }}>
               {service?.title}
             </Typography>

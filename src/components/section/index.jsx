@@ -13,9 +13,10 @@ const Overlay = styled("div")({
   background: "rgba(0,0,0, 0.4)",
 });
 
-function Section({ children, size, background, image, padding }) {
+function Section({ elemetRef, children, size, background, image, padding }) {
   return (
     <Box
+      ref={elemetRef}
       sx={{
         py: padding,
         background: image ? `url(${image}) no-repeat` : background,
@@ -38,7 +39,7 @@ Section.defaultProps = {
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   background: PropTypes.string,
   image: PropTypes.string,
   padding: PropTypes.number,

@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Grow from "@mui/material/Grow";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+
 import Iconify from "../Iconify";
 
 const StackButton = styled(Stack)(({ theme }) => ({
@@ -53,14 +56,22 @@ const Title = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const StyledChip = styled("div")({
-  padding: 10,
-  borderRadius: 20,
-  backgroundColor: "#FFF",
-  position: "relative",
-  display: "inline-flex",
-  margin: "30px 0",
-});
+const StyledTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) => ({
+  ...theme.typography.h6,
+  width: "100%",
+  borderRadius: 8,
+  textTransform: "capitalize",
+  border: "1px solid rgba(255,255,255,0.5)",
+  color: "#FFFFFF",
+  "&.Mui-selected": {
+    color: "#000",
+    backgroundColor: "#FFF",
+  },
+  [theme.breakpoints.down("md")]: {
+    width: "auto",
+    fontSize: 10,
+  },
+}));
 
 const StyledDescBox = styled(Box)(({ theme }) => ({
   display: "none",
@@ -92,16 +103,57 @@ const GrowContent = ({ open, desc, handleSelected, ...props }) => (
 );
 
 function AccordionList({ data, isMd, handleSelected }) {
+  const [tab, setTab] = useState(0);
+  const [filteredData, setFilteredData] = useState([]);
+  const categories = useMemo(() => (data?.length ? data?.map((item) => item.name) : []), [data]);
+
   const [expanded, setExpanded] = useState("panel_Marketing_0");
   const isActive = (value) => Boolean(expanded === value);
 
+  useEffect(() => {
+    if (data?.length) {
+      onFilter(data[0].name);
+    }
+  }, []);
+
+  const handleChange = (event, newValue) => {
+    onFilter(event.target.innerText);
+    setTab(newValue);
+  };
+
+  const onFilter = (value) => {
+    const filtered = data.filter((item) => item.name.toLowerCase() === value.toLowerCase());
+    setFilteredData(filtered);
+
+    if (filtered?.length) {
+      setExpanded(`panel_${value}_0`);
+    }
+  };
+
   return (
     <Box>
-      {data.map((service, index) => (
+      <Tabs
+        value={tab}
+        onChange={handleChange}
+        variant="scrollable"
+        scrollButtons="auto"
+        aria-label="scrollable auto tabs example"
+        sx={{
+          mb: 8,
+          justifyContent: "space-between",
+        }}
+        TabScrollButtonProps={{
+          style: {
+            color: "#FFFF",
+          },
+        }}
+      >
+        {categories?.map((category, catIndex) => (
+          <StyledTab key={catIndex} label={category} />
+        ))}
+      </Tabs>
+      {filteredData.map((service, index) => (
         <Box key={service?.id || index.toString()}>
-          <StyledChip>
-            <Typography variant="h6">{service?.name}</Typography>
-          </StyledChip>
           {service?.features?.length
             ? service?.features?.map((feature, fIndex) => (
                 <StackButton

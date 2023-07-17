@@ -8,7 +8,7 @@ import Logo from "../logo";
 
 function CustomToolbar({ open, contact, handleMenu, cursorEnter, cursorLeave, trigger, isMd }) {
   return (
-    <AppBar sx={{ bgcolor: trigger ? "black" : "transparent" }}>
+    <AppBar className="appbar__header" sx={{ bgcolor: "rgba(0,0,0,0.1)" }}>
       <Container maxWidth="xl">
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {isMd && (

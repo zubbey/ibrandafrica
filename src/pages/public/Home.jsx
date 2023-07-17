@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Meta from "../../components/meta";
-import { AboutHero, HomeHero, ImageHero } from "../../components/hero";
+import { AboutHero, HomeHero, ImageHero, VideoHero } from "../../components/hero";
 import Section from "../../components/section";
 import { MouseContext } from "../../context/mouse";
 import { GalleryList, PartnerList, ServiceList } from "../../components/list";
@@ -16,12 +16,13 @@ function Home() {
   const { services, content, gallery } = useSelector((state) => state);
   const { home, about, service, partners } = content;
   const formRef = useRef(null);
+  const sectionRef = useRef(null);
 
-  const images = useMemo(() => {
-    let arr = [...gallery];
-    arr.sort(() => Math.random() - 0.5);
-    return arr.slice(0, 6);
-  }, [gallery]);
+  // const images = useMemo(() => {
+  //   let arr = [...gallery];
+  //   arr.sort(() => Math.random() - 0.5);
+  //   return arr.slice(0, 6);
+  // }, [gallery]);
 
   const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
@@ -42,16 +43,21 @@ function Home() {
     cursorVariantHandler("default");
   }
 
+  function handleClick() {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <Meta title="Home">
-      <Section size="xl" background="transparent">
-        <HomeHero
+      <VideoHero video="/videos/video.mp4" handleClick={handleClick} />
+      <Section size={false} background="transparent" elemetRef={sectionRef}>
+        {/* <HomeHero
           title={home?.section1?.title}
           desc={home?.section1?.subtitle}
           cursorEnter={cursorEnter}
           cursorLeave={cursorLeave}
           formRef={formRef}
-        />
+        /> */}
         <ServiceList data={services} cursorEnter={cursorView} cursorLeave={cursorLeave} />
       </Section>
 
@@ -67,7 +73,7 @@ function Home() {
         />
       </Section>
       <Section padding={2}>
-        <GalleryList data={images} isMd={isMd} cursorEnter={cursorView} cursorLeave={cursorLeave} />
+        <GalleryList data={gallery} isMd={isMd} cursorEnter={cursorView} cursorLeave={cursorLeave} />
       </Section>
       <Section padding={8} background="transparent">
         <PartnerList data={partners} title="Our Clients" mdMatch={isMd} />
