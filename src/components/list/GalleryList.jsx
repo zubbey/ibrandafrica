@@ -4,7 +4,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { LightBox } from "../modal";
 
-function GalleryList({ data, isMd, cursorEnter, cursorLeave }) {
+function GalleryList({ data, col, isMd, cursorEnter, cursorLeave }) {
   const [index, setIndex] = useState(-1);
   const currentImage = data[index];
   const nextIndex = (index + 1) % data.length;
@@ -25,7 +25,7 @@ function GalleryList({ data, isMd, cursorEnter, cursorLeave }) {
           height: "100%",
           overflow: "hidden",
         }}
-        cols={isMd ? 3 : 1}
+        cols={isMd ? col : 1}
         gap={30}
         rowHeight="auto"
       >
@@ -35,8 +35,8 @@ function GalleryList({ data, isMd, cursorEnter, cursorLeave }) {
             onMouseEnter={cursorEnter}
             onMouseLeave={cursorLeave}
             data-aos="fade-up"
-            data-aos-delay={`1${imgIndex}0`}
-            data-aos-duration="800"
+            data-aos-delay={`10${imgIndex}`}
+            data-aos-duration="300"
             onClick={() => handleClick(imgIndex, item)}
           >
             <img src={item?.image} srcSet={item?.image} alt={item?.caption} loading="lazy" />
@@ -55,9 +55,14 @@ function GalleryList({ data, isMd, cursorEnter, cursorLeave }) {
   );
 }
 
-PropTypes.propTypes = {
+GalleryList.defaultProps = {
+  col: 3,
+};
+
+GalleryList.propTypes = {
   data: PropTypes.array,
-  isMd: PropTypes.bool.isRequired,
+  col: PropTypes.number,
+  isMd: PropTypes.bool,
   cursorEnter: PropTypes.func,
   cursorLeave: PropTypes.func,
 };
